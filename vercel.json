@@ -1,0 +1,21 @@
+{
+  "framework": "vite",
+  "buildCommand": "npm run build",
+  "outputDirectory": "dist",
+  "installCommand": "npm install --omit=dev --no-audit --no-fund",
+  "rewrites": [
+    { "source": "/api/metadata/:tokenId", "destination": "/api/metadata?tokenId=:tokenId" },
+    { "source": "/api/card-image/:tokenId", "destination": "/api/card-image?tokenId=:tokenId" },
+    { "source": "/((?!api/).*)", "destination": "/index.html" }
+  ],
+  "functions": {
+    "api/**/*.js": {
+      "maxDuration": 15
+    }
+  },
+  "build": {
+    "env": {
+      "VERCEL_FORCE_NO_BUILD_CACHE": "1"
+    }
+  }
+}

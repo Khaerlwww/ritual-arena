@@ -1,0 +1,28 @@
+name: Daily Matchmaking
+
+on:
+  schedule:
+    - cron: "0 12 * * *"
+  workflow_dispatch:
+
+concurrency:
+  group: ritual-arena-matchmaking
+  cancel-in-progress: false
+
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: npm
+      - run: npm ci
+      - run: npx ts-node scripts/matchmakingKeeper.ts
+        env:
+          RITUAL_RPC_URL: ${{ secrets.RITUAL_RPC_URL }}
+          ANTHEM_ADDRESS: ${{ secrets.ANTHEM_ADDRESS }}
+          ARENA_ADDRESS: ${{ secrets.ARENA_ADDRESS }}
+          KEEPER_PRIVATE_KEY: ${{ secrets.KEEPER_PRIVATE_KEY }}

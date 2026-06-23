@@ -1,0 +1,70 @@
+# .gitignore — ritual-arena (PUBLIC REPO)
+# Strict gitignore for the public open-source release.
+# Goal: prevent accidental commit of private keys, build artifacts, local state.
+
+# ─── Secrets (CRITICAL) ─────────────────────────────────────────────────
+.env
+.env.*
+!.env.example
+!.env.production.example
+.env.admin.local
+.env.deployer
+.env.vercel
+
+# Wallets & keys
+wallets/
+seeds/
+*.key
+*.pem
+*.p12
+*.pfx
+keystore.json
+mnemonic.txt
+seedphrase.txt
+
+# ─── Build output & cache ────────────────────────────────────────────────
+node_modules/
+dist/
+build/
+out/
+.next/
+.cache/
+.parcel-cache/
+.vite/
+.turbo/
+.vercel/
+.idea/
+.DS_Store
+Thumbs.db
+
+# ─── Hardhat / Solidity ───────────────────────────────────────────────────
+artifacts/
+cache/
+typechain-types/
+typechain/
+coverage/
+coverage.json
+.openzeppelin/
+
+# ─── Local-only data ─────────────────────────────────────────────────────
+data/
+
+# ─── Generated config / temp ─────────────────────────────────────────────
+*.log
+*.tsbuildinfo
+dist-ssr/
+*.bak
+*.tmp
+*.orig
+*~
+
+# ─── Test output ─────────────────────────────────────────────────────────
+coverage/
+junit.xml
+test-results/
+playwright-report/
+
+# ─── Misc ─────────────────────────────────────────────────────────────────
+.eslintcache
+.prettierrc.cache
+.DS_Store
