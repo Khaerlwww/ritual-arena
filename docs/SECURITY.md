@@ -13,7 +13,7 @@ Only `main` receives security fixes. Branches not listed above are not supported
 
 **Do not open a public GitHub issue for security vulnerabilities.**
 
-Email **security@ritualarena.xyz** (or open a [GitHub Security Advisory](https://github.com/Khaerlwww/ritual-arena-experimental/security/advisories/new) on the repository).
+Email **security@ritualarena.xyz** (or open a [GitHub Security Advisory](https://github.com/Khaerlwww/ritual-arena/security/advisories/new) on the repository).
 
 Please include:
 - A clear description of the vulnerability
