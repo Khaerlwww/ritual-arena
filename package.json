@@ -6,22 +6,9 @@
   "scripts": {
     "dev": "vite --host 0.0.0.0",
     "lint": "tsc --noEmit",
-    "check:stale-js": "node scripts/check-stale-js.cjs",
-    "prebuild": "node scripts/check-stale-js.cjs",
     "build": "vite build",
     "test": "hardhat test",
     "compile": "hardhat compile",
-    "deploy:arena": "hardhat run scripts/deploy/arena.js --network ritualTestnet",
-    "deploy:dependent": "hardhat run scripts/deploy/dependent-contracts.js --network ritualTestnet",
-    "deploy:ritual-v5": "node scripts/deploy/ritual-v5.js",
-    "deploy:training:post-p0": "node scripts/deploy/redeploy-training-post-p0.mjs",
-    "deploy:packmanager:v8": "node scripts/deploy/deploy-v8-supply.mjs",
-    "seed:packmanager:v8": "node scripts/seed/seed-v8-supply.mjs",
-    "matchmaking": "ts-node scripts/admin/matchmaking-keeper.ts",
-    "verify:wiring": "node scripts/verify/wiring.js",
-    "verify:ap-support": "node scripts/verify/ap-support.mjs",
-    "verify:forge": "node scripts/verify/forge.mjs",
-    "admin:rewire-arena": "node scripts/admin/rewire-arena.js",
     "audit:prod": "npm audit --omit=dev --audit-level=moderate"
   },
   "dependencies": {

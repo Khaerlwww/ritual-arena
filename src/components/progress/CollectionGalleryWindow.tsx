@@ -353,7 +353,7 @@ function toPackResultCard(c: OwnedPackCard, pool: CollectionPool | null, ownerKe
 }
 
 // ─── Main Window ─────────────────────────────────────────────────────
-export function CollectionGalleryWindow({ address }: { address?: Address }) {
+export function CollectionGalleryWindow({ address, onOpenPacks }: { address?: Address; onOpenPacks?: () => void }) {
   const ownerKey = address ? address.toLowerCase() : null;
   const owned = useOwnedPackNFTs(address);
   const [pool, setPool] = useState<CollectionPool | null>(null);
@@ -522,12 +522,19 @@ export function CollectionGalleryWindow({ address }: { address?: Address }) {
 
       
       {cards.length === 0 ? (
-        <div className="bevel-in bg-[#0a0a0a] p-6 text-center font-mono text-[11px] text-iceaccent/50">
-          <ImageIcon size={32} className="mx-auto text-iceaccent/30" />
-          <p className="mt-3 text-aqua">your collection is empty</p>
-          <p className="mt-1 text-iceaccent/40 text-[10px]">
-            open a pack from the Collection Packs window to start collecting
+        <div className="bevel-in bg-[#0a0a0a] p-7 text-center font-mono text-[11px] text-iceaccent/50">
+          <div className="bevel-out-thin mx-auto mb-3 grid h-14 w-14 place-items-center bg-wgray text-aqua">
+            <ImageIcon size={25} />
+          </div>
+          <p className="font-display text-xl font-black uppercase tracking-[0.12em] text-ice">No Collection Cards yet</p>
+          <p className="mx-auto mt-2 max-w-md text-[11px] leading-5 text-iceaccent/65">
+            Open a Collection Pack to start collecting permanent RitualPackNFT cards.
           </p>
+          {onOpenPacks ? (
+            <button type="button" onClick={onOpenPacks} className="win-btn win-btn-emerald mt-4 inline-flex items-center gap-2">
+              <ImageIcon size={14} /> Open Packs
+            </button>
+          ) : null}
         </div>
       ) : (
         <GalleryGrid cards={filtered} onSelect={setSelected} />

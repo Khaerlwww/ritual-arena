@@ -4,7 +4,7 @@
 //
 // Uses real RitualMark from Logo.tsx. Pure white symbol. No placeholder.
 
-import { useState, useRef, useMemo, type MouseEvent } from "react";
+import { useState, useMemo } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { RitualMark } from "../Logo";
 
@@ -40,26 +40,10 @@ export function PackCard({
   previewCards,
   poolTotal,
 }: PackCardProps) {
-  const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [isHovering, setIsHovering] = useState(false);
   const [showDisabledTip, setShowDisabledTip] = useState(false);
-  const cardRef = useRef<HTMLDivElement>(null);
 
   const isRitual = type === "ritual";
-
-  const handleMouseMove = (e: MouseEvent<HTMLDivElement>) => {
-    if (disabled || !cardRef.current) return;
-    const rect = cardRef.current.getBoundingClientRect();
-    const x = (e.clientX - rect.left) / rect.width - 0.5;
-    const y = (e.clientY - rect.top) / rect.height - 0.5;
-    // Tone down tilt from 8° → 4° for less dramatic motion
-    setTilt({ x: y * 4, y: -x * 4 });
-  };
-
-  const handleMouseLeave = () => {
-    setTilt({ x: 0, y: 0 });
-    setIsHovering(false);
-  };
 
   // Format drop BPS → "59%" / fallback to hardcoded fallback (defensive)
   const dropLabels = useMemo(() => {
@@ -86,14 +70,9 @@ export function PackCard({
 
   return (
     <motion.div
-      ref={cardRef}
       className={`relative cursor-pointer select-none ${disabled ? "opacity-60 cursor-not-allowed" : ""}`}
-      style={{ perspective: 800, transformStyle: "preserve-3d" }}
-      animate={{ rotateX: tilt.x, rotateY: tilt.y, scale: isHovering ? 1.03 : 1 }}
-      transition={{ type: "spring", stiffness: 300, damping: 20 }}
-      onMouseMove={handleMouseMove}
       onMouseEnter={() => { setIsHovering(true); if (disabled) setShowDisabledTip(true); }}
-      onMouseLeave={() => { handleMouseLeave(); setShowDisabledTip(false); }}
+      onMouseLeave={() => { setIsHovering(false); setShowDisabledTip(false); }}
       onClick={disabled ? undefined : onOpen}
     >
       
@@ -124,86 +103,78 @@ export function PackCard({
       </AnimatePresence>
 
       
-      <div className="bevel-out bg-wgray p-[2px] relative z-10">
-        <div className="bevel-in bg-[#0a0a0a] p-4 flex flex-col items-center gap-3">
+      <div className="bevel-out relative z-10 bg-wgray p-[2px]">
+        <div className="bevel-in relative overflow-hidden bg-[#050706] p-4 flex flex-col items-center gap-3">
+          <div
+            className="absolute inset-0 pointer-events-none opacity-60"
+            style={{
+              background: isRitual
+                ? "radial-gradient(circle at 50% 0%, rgba(255,215,106,0.16), transparent 42%), radial-gradient(circle at 0% 100%, rgba(201,184,255,0.12), transparent 38%)"
+                : "radial-gradient(circle at 50% 0%, rgba(72,168,154,0.18), transparent 42%), radial-gradient(circle at 100% 100%, rgba(127,227,210,0.10), transparent 38%)",
+            }}
+          />
 
-          
           <div
             className="relative flex flex-col items-center justify-center overflow-hidden rounded-sm border pack-shimmer"
             style={{
-              width: isRitual ? 150 : 140,
-              height: isRitual ? 235 : 220,
-              borderColor: isRitual ? "#3a3a3a" : "#2a2a2a",
+              width: isRitual ? 158 : 148,
+              height: isRitual ? 244 : 228,
+              borderColor: isRitual ? "rgba(255,215,106,0.42)" : "rgba(127,227,210,0.34)",
               background: isRitual
-                ? "linear-gradient(180deg, #141414 0%, #0a0a0a 50%, #141414 100%)"
-                : "linear-gradient(180deg, #111 0%, #080808 50%, #111 100%)",
+                ? "linear-gradient(160deg, #050505 0%, #151006 35%, #050505 66%, #21130a 100%)"
+                : "linear-gradient(160deg, #04110f 0%, #0b2722 36%, #050706 66%, #0b3b35 100%)",
               boxShadow: isHovering
-                ? `0 0 30px rgba(255,255,255,0.06), inset 0 1px 0 rgba(255,255,255,0.04)`
-                : `0 2px 12px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02)`,
+                ? isRitual
+                  ? "0 0 34px rgba(255,215,106,0.20), inset 0 0 28px rgba(255,215,106,0.06)"
+                  : "0 0 34px rgba(127,227,210,0.16), inset 0 0 28px rgba(127,227,210,0.05)"
+                : "0 2px 14px rgba(0,0,0,0.72), inset 0 1px 0 rgba(255,255,255,0.04)",
             }}
           >
-            
-            <div className={`absolute inset-0 rounded-sm border ${isRitual ? "border-[#444]" : "border-[#333]"}`} />
-
-            
+            <div className="absolute inset-x-0 top-0 h-8 border-b border-white/10 bg-black/30" />
+            <div className="absolute inset-x-0 bottom-0 h-9 border-t border-white/10 bg-black/35" />
+            <div className="absolute left-0 top-0 h-full w-[10px] bg-white/[0.04]" />
+            <div className="absolute right-0 top-0 h-full w-[10px] bg-black/30" />
             <div
-              className="absolute inset-0 opacity-20"
+              className="absolute inset-0 opacity-[0.10]"
               style={{
-                background: "linear-gradient(135deg, rgba(255,255,255,0.06) 0%, transparent 40%, rgba(255,255,255,0.02) 100%)",
+                backgroundImage:
+                  "linear-gradient(90deg, transparent 0 46%, rgba(255,255,255,0.25) 49%, transparent 52%), repeating-linear-gradient(0deg, transparent, transparent 13px, rgba(255,255,255,0.08) 13px, rgba(255,255,255,0.08) 14px)",
               }}
             />
+            <div className="absolute left-1/2 top-[42%] h-[1px] w-[78%] -translate-x-1/2 bg-gradient-to-r from-transparent via-white/35 to-transparent" />
+            <div className="absolute left-1/2 top-[42%] h-11 w-11 -translate-x-1/2 -translate-y-1/2 rotate-45 border border-white/18 bg-black/35" />
 
-            
-            {isRitual && (
-              <div className="absolute inset-0 opacity-[0.03]">
-                <div
-                  className="w-full h-full"
-                  style={{
-                    backgroundImage: `repeating-linear-gradient(45deg, transparent, transparent 8px, rgba(255,255,255,0.04) 8px, rgba(255,255,255,0.04) 9px)`,
-                  }}
-                />
-              </div>
-            )}
-
-            
-            <div className="relative z-10 mt-3 mb-auto">
-              <span className={`font-display text-[10px] font-bold tracking-[0.2em] ${isRitual ? "text-[#888]" : "text-[#666]"}`}>
-                {isRitual ? "RITUAL" : "INITIATE"}
+            <div className="relative z-10 mt-3 mb-auto text-center">
+              <span className={`font-display text-[10px] font-black tracking-[0.28em] ${isRitual ? "text-[#ffd76a]" : "text-aqua"}`}>
+                RITUAL ARENA
               </span>
+              <p className="mt-1 font-mono text-[7px] uppercase tracking-[0.2em] text-iceaccent/35">sealed booster</p>
             </div>
 
-            
-            <div className="relative z-10 flex items-center justify-center">
+            <div className="relative z-10 grid place-items-center">
+              <div
+                className="absolute h-24 w-24 rounded-full blur-xl"
+                style={{ background: isRitual ? "rgba(255,215,106,0.14)" : "rgba(127,227,210,0.12)" }}
+              />
               <RitualMark
-                size={isRitual ? 64 : 52}
+                size={isRitual ? 76 : 64}
                 spin={false}
                 glow={isHovering}
-                shine={false}
+                shine={isHovering}
               />
-              
-              {isHovering && (
-                <motion.div
-                  className="absolute rounded-full"
-                  initial={{ opacity: 0, scale: 0.5 }}
-                  animate={{ opacity: 0.08, scale: 1.8 }}
-                  transition={{ duration: 0.8, repeat: Infinity, repeatType: "reverse" }}
-                  style={{ width: isRitual ? 80 : 64, height: isRitual ? 80 : 64, background: "radial-gradient(circle, white 0%, transparent 70%)" }}
-                />
-              )}
             </div>
 
-            
-            <div className="relative z-10 mt-auto mb-3 flex flex-col items-center gap-1">
-              <span className={`font-display text-sm font-bold ${isRitual ? "text-[#ccc]" : "text-[#aaa]"}`}>
+            <div className="relative z-10 mt-auto mb-3 flex flex-col items-center gap-1 text-center">
+              <span className={`font-display text-[18px] font-black ${isRitual ? "text-[#ffd76a]" : "text-aqua"}`}>
+                {isRitual ? "RITUAL" : "INITIATE"}
+              </span>
+              <span className="bevel-out-thin bg-wgray px-2 py-0.5 font-mono text-[9px] font-bold text-coal">
                 {cost} AP
               </span>
-              <span className="font-mono text-[7px] text-iceaccent/30 tracking-wider">
-                COLLECTION EDITION
+              <span className="font-mono text-[7px] text-iceaccent/35 tracking-wider">
+                RITUAL CHAIN // COLLECTION EDITION
               </span>
             </div>
-
-            
-            <div className="absolute bottom-0 left-0 right-0 h-px bg-gradient-to-r from-transparent via-[#333] to-transparent" />
           </div>
 
           
@@ -233,7 +204,10 @@ export function PackCard({
           
           <div className="relative w-full">
             <button
-              onClick={disabled ? undefined : onOpen}
+              onClick={(event) => {
+                event.stopPropagation();
+                if (!disabled) onOpen?.();
+              }}
               disabled={disabled}
               className={`win-btn w-full text-[10px] py-1.5 ${isRitual ? "win-btn-emerald" : ""} disabled:opacity-40`}
             >

@@ -107,12 +107,15 @@ function PackBody({
 
       
       <motion.div
-        className="relative w-44 h-60 rounded-sm border border-white/[0.08] grid place-items-center overflow-hidden"
+        className="relative grid h-64 w-48 place-items-center overflow-hidden rounded-sm border"
         style={{
-          background: "linear-gradient(160deg, #141414 0%, #0a0a0a 40%, #111 100%)",
+          background: isRitual
+            ? "linear-gradient(160deg, #050505 0%, #1b1207 42%, #050505 72%, #2a1609 100%)"
+            : "linear-gradient(160deg, #03110f 0%, #0b2d28 42%, #050706 72%, #0b3b35 100%)",
+          borderColor: isRitual ? "rgba(255,215,106,0.55)" : "rgba(127,227,210,0.45)",
           boxShadow:
             phase === "charging"
-              ? `0 0 80px ${palette.glow}60, 0 0 160px ${palette.glow}30`
+              ? `0 0 90px ${palette.glow}70, 0 0 170px ${palette.glow}28, inset 0 0 42px rgba(255,255,255,0.06)`
               : "0 4px 30px rgba(0,0,0,0.6)",
         }}
         animate={
@@ -122,8 +125,30 @@ function PackBody({
         }
         transition={{ duration: 0.6, repeat: Infinity, ease: "easeInOut" }}
       >
-        
-        {phase === "charging" && (
+        <div className="absolute inset-x-0 top-0 z-10 border-b border-white/10 bg-black/35 px-3 py-2 text-center">
+          <p className="font-display text-[10px] font-black uppercase tracking-[0.32em] text-ice">RITUAL ARENA</p>
+          <p className="mt-0.5 font-mono text-[7px] uppercase tracking-[0.22em] text-iceaccent/45">seal integrity active</p>
+        </div>
+        <div className="absolute inset-x-0 bottom-0 z-10 border-t border-white/10 bg-black/40 px-3 py-2 text-center">
+          <p className="font-display text-[13px] font-black uppercase tracking-[0.22em]" style={{ color: palette.glow }}>
+            {isRitual ? "RITUAL PACK" : "INITIATE PACK"}
+          </p>
+          <p className="mt-0.5 font-mono text-[7px] uppercase tracking-[0.18em] text-iceaccent/45">unsealing on Ritual Chain</p>
+        </div>
+        <div className="absolute inset-0 opacity-[0.11]" style={{ backgroundImage: "repeating-linear-gradient(0deg, transparent, transparent 12px, rgba(255,255,255,0.10) 12px, rgba(255,255,255,0.10) 13px)" }} />
+        <div className="absolute left-1/2 top-1/2 z-[1] h-[1px] w-[82%] -translate-x-1/2 bg-gradient-to-r from-transparent via-white/50 to-transparent" />
+        <motion.div
+          className="absolute left-1/2 top-1/2 z-[2] grid h-14 w-14 -translate-x-1/2 -translate-y-1/2 rotate-45 place-items-center border bg-black/45"
+          style={{ borderColor: palette.glow }}
+          animate={phase === "burst" ? { scale: [1, 1.35, 0.2], opacity: [1, 1, 0], rotate: [45, 45, 70] } : { scale: 1, opacity: 1 }}
+          transition={{ duration: 0.38, ease: "easeOut" }}
+        >
+          <span className="-rotate-45 font-display text-[9px] font-black uppercase tracking-[0.18em]" style={{ color: palette.glow }}>Seal</span>
+        </motion.div>
+        {phase === "burst" && (
+          <div className="absolute left-1/2 top-1/2 z-[3] h-[90px] w-[2px] -translate-x-1/2 -translate-y-1/2 rotate-[22deg] bg-white shadow-[0_0_18px_white]" />
+        )}
+                {phase === "charging" && (
           <>
             <motion.div
               className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 rounded-full border"
@@ -416,13 +441,16 @@ export function PackOpeningFlow({
         transition={{ duration: 0.5 }}
         className="relative z-10 mb-4 flex flex-col items-center gap-1"
       >
-        <p
-          className="font-mono text-[10px] uppercase tracking-[0.4em]"
+        <span
+          className="bevel-out-thin px-3 py-1 font-display text-[11px] font-black uppercase tracking-[0.28em]"
           style={{ color: mainPalette.glow, textShadow: `0 0 12px ${mainPalette.glow}80` }}
         >
-          ★ Pack Unsealed ★
+          {mainVisual}
+        </span>
+        <p className="font-display text-3xl font-black uppercase tracking-[0.18em] text-ice">
+          PACK OPENED
         </p>
-        <p className="font-display text-2xl font-bold text-ice">
+        <p className="font-mono text-[11px] text-iceaccent/65">
           {cards.length} card{cards.length === 1 ? "" : "s"} received
         </p>
         {txHash && phase === "revealed" && (
@@ -469,7 +497,7 @@ export function PackOpeningFlow({
         {(phase === "fly" || phase === "revealed") && main && (
           <motion.div
             key="cards"
-            className="relative z-10 flex flex-col items-center gap-4"
+            className="relative z-10 flex flex-col items-center gap-5"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1, transition: { duration: 0.2 } }}
           >
@@ -485,7 +513,12 @@ export function PackOpeningFlow({
               <CardFace card={main} size="main" showStats={phase === "revealed"} />
             </motion.div>
 
-            
+            <div className="bevel-in-thin bg-[#061512]/90 px-3 py-2 text-center font-mono text-[10px] text-iceaccent/65">
+              <span className="font-bold uppercase tracking-[0.18em]" style={{ color: mainPalette.glow }}>
+                Main pull · {mainVisual} · Power {main.power}
+              </span>
+            </div>
+
             {secondary.length > 0 && (
               <motion.div
                 className="flex flex-wrap justify-center gap-3"
@@ -532,23 +565,19 @@ export function PackOpeningFlow({
           >
             <motion.button
               onClick={onViewCollection}
-              className="win-btn win-btn-emerald flex items-center gap-2 px-4 py-2 font-ui text-[11px] font-bold"
+              className="win-btn win-btn-emerald flex items-center gap-2 px-5 py-2 font-display text-[12px] font-black uppercase tracking-[0.16em]"
               data-testid="pack-result-view-collection"
-              whileHover={reduceMotion ? {} : { scale: 1.04 }}
-              whileTap={reduceMotion ? {} : { scale: 0.97 }}
             >
               <LayoutGrid size={14} />
               View Collection
             </motion.button>
             <motion.button
               onClick={onOpenAnother}
-              className="win-btn flex items-center gap-2 px-4 py-2 font-ui text-[11px] font-bold"
+              className="win-btn flex items-center gap-2 px-5 py-2 font-display text-[12px] font-black uppercase tracking-[0.16em]"
               data-testid="pack-result-open-another"
-              whileHover={reduceMotion ? {} : { scale: 1.04 }}
-              whileTap={reduceMotion ? {} : { scale: 0.97 }}
             >
               <RotateCw size={14} />
-              Open Another Pack
+              Open Another
             </motion.button>
             <span className="font-mono text-[9px] text-iceaccent/40">
               (Esc to dismiss)

@@ -7,9 +7,11 @@ import { RITUAL_GAS } from "../lib/gasDefaults";
 import { shortTxError } from "../lib/shortTxError";
 import {
   getConnectedAccountForWrite,
+  getSelectedWalletProvider,
   getSharedWalletClient,
   ensureReadyForWrite,
   ensureRitualChain,
+  resetSharedWallet,
   setSharedAddress,
   setSharedChainId,
 } from "../lib/wallet";
@@ -92,7 +94,7 @@ export type CardSnapshot = {
 const DISCONNECTED_KEY = "ritual-anthem:disconnected";
 
 function getProvider() {
-  return typeof window !== "undefined" ? (window as any).ethereum : undefined;
+  return getSelectedWalletProvider();
 }
 
 function isOptedOut() {
@@ -242,7 +244,7 @@ export function useInjectedWallet() {
 
   const disconnect = useCallback(async () => {
     setAddress(undefined);
-    setSharedAddress(undefined);
+    resetSharedWallet();
     setError(undefined);
     setOptedOut(true);
     // Best-effort: revoke the dApp permission in wallets that implement EIP-2255
@@ -466,18 +468,19 @@ export function useAnthemReads(wallet?: Address) {
 export function useAnthemWrites() {
   const [isPending, setIsPending] = useState(false);
   const [txHash, setTxHash] = useState<string>();
-  const walletClient = getSharedWalletClient();
 
   const ensureChain = useCallback(async () => {
+    const walletClient = getSharedWalletClient();
     if (!walletClient) throw new Error("Wallet extension not found.");
     return ensureRitualChain();
-  }, [walletClient]);
+  }, []);
 
   const mintAnthem = useCallback(
     async (args: MintArgs, value?: bigint) => {
       if (!hasAnthemContract) {
         throw new Error("VITE_RITUAL_ANTHEM_ADDRESS is not configured. Deploy the contract to Ritual testnet first.");
       }
+      const walletClient = getSharedWalletClient();
       if (!walletClient) throw new Error("Wallet extension not found.");
 
       // Phase 6: require attestation
@@ -594,11 +597,12 @@ export function useAnthemWrites() {
         setIsPending(false);
       }
     },
-    [walletClient],
+    [],
   );
 
   const checkIn = useCallback(async () => {
     if (!hasAnthemContract) throw new Error("Contract not configured.");
+    const walletClient = getSharedWalletClient();
     if (!walletClient) throw new Error("Wallet extension not found.");
     setIsPending(true);
     setTxHash(undefined);
@@ -620,11 +624,12 @@ export function useAnthemWrites() {
     } finally {
       setIsPending(false);
     }
-  }, [walletClient]);
+  }, []);
 
   const updateMetadata = useCallback(
     async (metadataURI: string, audioURI: string) => {
       if (!hasAnthemContract) throw new Error("Contract not configured.");
+      const walletClient = getSharedWalletClient();
       if (!walletClient) throw new Error("Wallet extension not found.");
       setIsPending(true);
       setTxHash(undefined);
@@ -647,11 +652,12 @@ export function useAnthemWrites() {
         setIsPending(false);
       }
     },
-    [walletClient],
+    [],
   );
 
   const dailyCheckIn = useCallback(async () => {
     if (!hasAnthemContract) throw new Error("Contract not configured.");
+    const walletClient = getSharedWalletClient();
     if (!walletClient) throw new Error("Wallet extension not found.");
     setIsPending(true);
     setTxHash(undefined);
@@ -673,7 +679,7 @@ export function useAnthemWrites() {
     } finally {
       setIsPending(false);
     }
-  }, [walletClient]);
+  }, []);
 
   // ── Phase 6: attestation request ──
   // Calls backend API to get EIP-712 signature from authorized verifier.
@@ -684,6 +690,7 @@ export function useAnthemWrites() {
       params: { xHandle: string }
             | { tokenId: bigint; newPower: number; newRarity: number },
     ): Promise<Attestation> => {
+      const walletClient = getSharedWalletClient();
       if (!walletClient) throw new Error("Wallet extension not found.");
       const account = await getConnectedAccountForWrite();
 
@@ -766,10 +773,12 @@ export function useAnthemWrites() {
         nonce: BigInt(data.nonce),
       };
     },
-    [walletClient]
+    []
   );
 
-  return { isPending, txHash, mintAnthem, checkIn, dailyCheckIn, ensureRitualChain, requestAttestation, hasWallet: Boolean(walletClient) };
+  const hasWallet = Boolean(getSelectedWalletProvider());
+
+  return { isPending, txHash, mintAnthem, checkIn, dailyCheckIn, ensureRitualChain, requestAttestation, hasWallet };
 }
 
 export type OnchainStreak = {

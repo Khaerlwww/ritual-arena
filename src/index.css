@@ -120,10 +120,28 @@ body::before {
   100% { transform: translateX(120%); }
 }
 
+/* Home forged-cards marquee — Magic Eden style endless horizontal pull strip. */
+.forge-marquee-mask {
+  -webkit-mask-image: linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%);
+  mask-image: linear-gradient(90deg, transparent 0%, #000 7%, #000 93%, transparent 100%);
+}
+.forge-card-marquee-track {
+  animation: forgedCardsMarquee 34s linear infinite;
+  will-change: transform;
+}
+.forge-card-marquee-track:hover {
+  animation-play-state: paused;
+}
+@keyframes forgedCardsMarquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+
 @media (prefers-reduced-motion: reduce) {
   .crt-overlay { animation: none; }
   .win-open { animation: none; }
   .pack-shimmer::after { animation: none; }
+  .forge-card-marquee-track { animation: none; }
 }
 
 /* ---- Classic Windows 2000 3D bevels (no borders; pure inset shadows) ---- */

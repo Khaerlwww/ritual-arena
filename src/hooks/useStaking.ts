@@ -16,7 +16,7 @@ import { isAddress, parseEther, type Address } from "viem";
 import { ritualStakingAbi } from "../abi/ritualStaking";
 import { hasStakingContract, ritualTestnet, stakingAddress } from "../lib/chains";
 import { publicClient } from "./useAnthem";
-import { getSharedWalletClient, ensureReadyForWrite } from "../lib/wallet";
+import { getSelectedWalletProvider, getSharedWalletClient, ensureReadyForWrite } from "../lib/wallet";
 import { toApNumber } from "../lib/apFormat";
 import { on, emit } from "../lib/eventBus";
 import { RITUAL_GAS } from "../lib/gasDefaults";
@@ -359,7 +359,6 @@ export function useStakingWrites() {
   /** Granular phase so the UI can render clear status text:
    *  "Claiming AP...", "Staking...", "Unstaking...", "Withdrawing..." */
   const [phase, setPhase] = useState<"idle" | "claiming" | "staking" | "unstaking" | "withdrawing">("idle");
-  const walletClient = getSharedWalletClient();
 
   const run = useCallback(
     async (
@@ -369,6 +368,7 @@ export function useStakingWrites() {
       value?: bigint,
     ) => {
       if (!hasStakingContract) throw new Error("VITE_RITUAL_STAKING_ADDRESS is not configured.");
+      const walletClient = getSharedWalletClient();
       if (!walletClient) throw new Error("Wallet extension not found.");
       setIsPending(true);
       setTxHash(undefined);
@@ -410,14 +410,14 @@ export function useStakingWrites() {
         setPhase("idle");
       }
     },
-    [walletClient],
+    [],
   );
 
   return {
     isPending,
     phase,
     txHash,
-    hasWallet: Boolean(walletClient),
+    hasWallet: Boolean(getSelectedWalletProvider()),
     stake: (amountEther: string) => run("stake", [], "staking", parseEther(amountEther || "0")),
     claimAP: (posId: number) => run("claimAP", [BigInt(posId)], "claiming"),
     claimAllAP: () => run("claimAllAP", [], "claiming"),

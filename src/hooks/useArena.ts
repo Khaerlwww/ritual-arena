@@ -9,7 +9,7 @@ import { ritualArenaAbi } from "../abi/ritualArena";
 import { arenaAddress, apAddress, hasArenaContract, ritualTestnet } from "../lib/chains";
 import { publicClient, zeroAddress } from "./useAnthem";
 import { RITUAL_GAS } from "../lib/gasDefaults";
-import { getSharedWalletClient, ensureReadyForWrite } from "../lib/wallet";
+import { getSelectedWalletProvider, getSharedWalletClient, ensureReadyForWrite } from "../lib/wallet";
 import { shortTxError } from "../lib/shortTxError";
 
 export { arenaAddress, hasArenaContract } from "../lib/chains";
@@ -285,10 +285,10 @@ export function useActiveBattles() {
 export function useArenaWrites() {
   const [isPending, setIsPending] = useState(false);
   const [txHash, setTxHash] = useState<string>();
-  const walletClient = getSharedWalletClient();
 
   const write = useCallback(async (functionName: string, args: unknown[]) => {
     if (!hasArenaContract) throw new Error("VITE_RITUAL_ARENA_ADDRESS not configured");
+    const walletClient = getSharedWalletClient();
     if (!walletClient) throw new Error("Wallet extension not found");
     setIsPending(true);
     setTxHash(undefined);
@@ -305,7 +305,7 @@ export function useArenaWrites() {
     } finally {
       setIsPending(false);
     }
-  }, [walletClient]);
+  }, []);
 
   const createBattle = useCallback(async (walletA: Address, walletB: Address) =>
     write("createBattle", [walletA, walletB]), [write]);
@@ -316,6 +316,7 @@ export function useArenaWrites() {
   // Approve AP spending by Arena contract. Uses max uint256 so user
   // never has to re-approve for subsequent votes.
   const approveAP = useCallback(async () => {
+    const walletClient = getSharedWalletClient();
     if (!walletClient) throw new Error("Wallet extension not found");
     const account = await ensureReadyForWrite();
     const hash = await walletClient.writeContract({
@@ -328,7 +329,7 @@ export function useArenaWrites() {
     setTxHash(hash);
     const receipt = await publicClient.waitForTransactionReceipt({ hash });
     return { hash, receipt };
-  }, [walletClient]);
+  }, []);
 
   const settle = useCallback(async (battleId: bigint) =>
     write("settle", [battleId]), [write]);
@@ -339,5 +340,7 @@ export function useArenaWrites() {
   const setArenaOptOut = useCallback(async (optOut: boolean) =>
     write("setArenaOptOut", [optOut]), [write]);
 
-  return { isPending, txHash, hasWallet: Boolean(walletClient), createBattle, voteAP, approveAP, settle, claimVotedAP, setArenaOptOut };
+  const hasWallet = Boolean(getSelectedWalletProvider());
+
+  return { isPending, txHash, hasWallet, createBattle, voteAP, approveAP, settle, claimVotedAP, setArenaOptOut };
 }

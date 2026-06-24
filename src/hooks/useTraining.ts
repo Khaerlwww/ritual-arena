@@ -3,7 +3,7 @@ import { isAddress, type Address } from "viem";
 import { ritualTrainingAbi } from "../abi/ritualTraining";
 import { hasTrainingContract, ritualTestnet, trainingAddress } from "../lib/chains";
 import { publicClient } from "./useAnthem";
-import { getSharedWalletClient, ensureReadyForWrite } from "../lib/wallet";
+import { getSelectedWalletProvider, getSharedWalletClient, ensureReadyForWrite } from "../lib/wallet";
 import { toApNumber } from "../lib/apFormat";
 import { emit, on } from "../lib/eventBus";
 import { RITUAL_GAS } from "../lib/gasDefaults";
@@ -41,10 +41,6 @@ const emptyProgress: TrainingProgress = {
   canTrain: false,
   secondsLeft: 0,
 };
-
-function getProvider() {
-  return typeof window !== "undefined" ? (window as any).ethereum : undefined;
-}
 
 export function useTrainingProgress(wallet?: Address, tokenId?: number) {
   const [progress, setProgress] = useState<TrainingProgress>(emptyProgress);
@@ -254,11 +250,11 @@ export function useTrainingWrites() {
   const [phase, setPhase] = useState<TrainPhase>("idle");
   const [txHash, setTxHash] = useState<string>();
   const [error, setError] = useState<string>();
-  const walletClient = getSharedWalletClient();
 
   const train = useCallback(
     async (tokenId: number) => {
       if (!hasTrainingContract) throw new Error("VITE_RITUAL_TRAINING_ADDRESS is not configured.");
+      const walletClient = getSharedWalletClient();
       if (!walletClient) throw new Error("Wallet extension not found.");
       setPhase("awaitingSignature");
       setError(undefined);
@@ -321,7 +317,7 @@ export function useTrainingWrites() {
         throw err;
       }
     },
-    [walletClient],
+    [],
   );
 
   const reset = useCallback(() => {
@@ -337,6 +333,6 @@ export function useTrainingWrites() {
     error,
     train,
     reset,
-    hasWallet: Boolean(walletClient),
+    hasWallet: Boolean(getSelectedWalletProvider()),
   };
 }

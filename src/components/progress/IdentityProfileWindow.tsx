@@ -1,4 +1,4 @@
-import { Award, BadgeCheck, CalendarDays, Clock, Fingerprint, Layers, Swords, Trophy, TrendingUp, Zap } from "lucide-react";
+import { Award, BadgeCheck, CalendarDays, Clock, Fingerprint, Hammer, Layers, Swords, Trophy, TrendingUp, Zap } from "lucide-react";
 import type { ReactNode } from "react";
 import type { Address } from "viem";
 import { AnthemCard, type GalleryItem } from "../AnthemCard";
@@ -117,6 +117,7 @@ export function IdentityProfileWindow({
   arenaRank,
   arenaScore,
   onRefresh,
+  onForgeIdentity,
 }: {
   address?: Address;
   identity: IdentityView & { refetch?: () => void; isStale?: boolean };
@@ -136,6 +137,7 @@ export function IdentityProfileWindow({
   arenaRank: "INITIATE" | "ASCENDANT" | "BITTY" | "RITTY" | "RITUALIST" | "RADIANT RITUALIST";
   arenaScore: number;
   onRefresh?: () => void;
+  onForgeIdentity?: () => void;
 }) {
   const cardSnap = useCardSnapshot(address);
   const snap = cardSnap.snapshot && cardSnap.snapshot.snapshotVersion >= 1 ? cardSnap.snapshot : undefined;
@@ -233,9 +235,28 @@ export function IdentityProfileWindow({
     });
   }
   timelineEvents.sort((a, b) => (b.timestamp ?? 0) - (a.timestamp ?? 0));
+  const hasIdentityCard = Boolean(primaryCard || snap);
 
   return (
     <div className="grid gap-3">
+      {!hasIdentityCard ? (
+        <Section title="Identity Card" icon={<Fingerprint size={12} className="text-ice" />}>
+          <div className="grid place-items-center py-7 text-center">
+            <div className="bevel-out-thin mb-3 grid h-14 w-14 place-items-center bg-wgray text-aqua">
+              <Hammer size={25} />
+            </div>
+            <p className="font-display text-xl font-black uppercase tracking-[0.12em] text-ice">No Identity Card yet</p>
+            <p className="mt-2 max-w-md text-[11px] leading-5 text-iceaccent/65">
+              Forge your first Identity Card to unlock Training, Arena, and Packs.
+            </p>
+            {onForgeIdentity ? (
+              <button type="button" onClick={onForgeIdentity} className="win-btn win-btn-emerald mt-4 inline-flex items-center gap-2">
+                <Hammer size={14} /> Forge Identity
+              </button>
+            ) : null}
+          </div>
+        </Section>
+      ) : null}
       <Section title="Identity Summary" icon={<Fingerprint size={12} className="text-ice" />}>
         <div className="mb-3 grid gap-1 text-[11px] sm:grid-cols-2">
           <Row label="Handle" value={<span className="font-handle font-bold">{primaryCard?.xHandle ? `@${primaryCard.xHandle}` : "—"}</span>} />

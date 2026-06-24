@@ -144,6 +144,31 @@ function chainToGalleryItem(c: ChainAnthem): GalleryItem {
   return { ...gen, mood: c.mood || gen.mood, rarity: resolvedRarity(tokenId, gen.score), score: gen.score, tokenId, wallet: c.wallet };
 }
 
+const FEATURED_GENESIS_CARDS: GalleryItem[] = [
+  {
+    ...generateAnthem("0x0000000000000000000000000000000000000a01", "niraj", { genesis: true }),
+    xHandle: "niraj",
+    score: 100,
+    rarity: "GENESIS",
+    preview: true,
+    tokenId: 777,
+    wallet: "0x0000000000000000000000000000000000000a01",
+    trainingLevel: 10,
+  },
+  {
+    ...generateAnthem("0x0000000000000000000000000000000000000b02", "joshsimenhoff", { genesis: true }),
+    xHandle: "joshsimenhoff",
+    score: 100,
+    rarity: "GENESIS",
+    preview: true,
+    tokenId: 778,
+    wallet: "0x0000000000000000000000000000000000000b02",
+    trainingLevel: 10,
+  },
+];
+
+const FEATURED_GENESIS_SNAPSHOT = { currentPower: 100, currentRarity: 5 };
+
 function SideIcon({
   icon: Icon,
   label,
@@ -187,6 +212,65 @@ function WindowLoading({ label = "Loading module" }: { label?: string }) {
     </div>
   );
 }
+
+function uniqueForgedCards(items: GalleryItem[], limit = 10) {
+  const seen = new Set<string>();
+  return items
+    .filter((item) => item.wallet || item.tokenId)
+    .filter((item) => {
+      const key = `${item.tokenId ?? "no-token"}:${(item.wallet ?? "no-wallet").toLowerCase()}`;
+      if (seen.has(key)) return false;
+      seen.add(key);
+      return true;
+    })
+    .slice(0, limit);
+}
+
+function ForgedCardsMarquee({
+  items,
+  snapshotForItem,
+  onOpenGallery,
+}: {
+  items: GalleryItem[];
+  snapshotForItem: (item: GalleryItem) => { currentPower?: number; currentRarity?: number } | undefined;
+  onOpenGallery: () => void;
+}) {
+  const cards = useMemo(() => uniqueForgedCards(items, 10), [items]);
+  const shouldMarquee = cards.length >= 4;
+  const visibleCards = shouldMarquee ? [...cards, ...cards] : cards;
+
+  if (cards.length === 0) {
+    return null;
+  }
+
+  return (
+    <section className="bevel-in-thin relative mt-5 overflow-hidden bg-[#061512] p-2" aria-label="Recently forged Identity Cards">
+      <div className="mb-2 flex items-center justify-between gap-3 px-1">
+        <div>
+          <p className="font-display text-[11px] font-extrabold uppercase tracking-[0.22em] text-aqua">Recently Forged</p>
+          <p className="font-mono text-[10px] text-iceaccent/55">live identity cards onchain</p>
+        </div>
+        <button type="button" onClick={onOpenGallery} className="win-btn !px-2 !py-1 text-[10px]">
+          View all
+        </button>
+      </div>
+
+      <div className={shouldMarquee ? "forge-marquee-mask overflow-hidden" : "overflow-x-auto pb-1"}>
+        <div className={`${shouldMarquee ? "forge-card-marquee-track w-max" : "w-full justify-start"} flex gap-3 py-1`}>
+          {visibleCards.map((item, i) => (
+            <div
+              key={`forged-${item.wallet ?? item.tokenId ?? "card"}-${i}`}
+              className="w-[150px] shrink-0"
+            >
+              <AnthemCard item={item} snapshot={snapshotForItem(item)} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 /**
  * Turn a noisy wallet/network error into one short, human line.
@@ -1431,7 +1515,7 @@ export function RitualAnthemApp() {
         {/* ----- HERO ----- */}
         <DesktopWindow {...wp("home")}>
           <div className="grid items-center gap-6 lg:grid-cols-[1.1fr_.9fr]">
-            <div>
+            <div className="max-w-2xl">
               <span className="inline-flex items-center gap-1.5 bevel-out bg-wgray px-2 py-1 font-ui text-[10px] font-bold text-teal2">
                 <Sparkles size={12} /> Ritual Arena
               </span>
@@ -1466,15 +1550,21 @@ export function RitualAnthemApp() {
               </div>
             </div>
             <div className="grid grid-cols-2 gap-3">
-              {gallery.slice(0, 2).map((g, i) => (
-                <AnthemCard
-                  key={`hero-${i}`}
-                  item={g}
-                  snapshot={snapshotForGalleryItem(g)}
-                />
+              {FEATURED_GENESIS_CARDS.map((card) => (
+                <div key={card.xHandle} className="relative">
+                  <span className="absolute left-2 top-7 z-10 bevel-out-thin bg-[#050505]/85 px-1.5 py-0.5 font-display text-[9px] font-extrabold uppercase tracking-[0.14em] text-[#ffd76a]">
+                    Genesis · 100 Power
+                  </span>
+                  <AnthemCard item={card} snapshot={FEATURED_GENESIS_SNAPSHOT} />
+                </div>
               ))}
             </div>
           </div>
+          <ForgedCardsMarquee
+            items={filteredGallery.length ? filteredGallery : gallery}
+            snapshotForItem={snapshotForGalleryItem}
+            onOpenGallery={() => wm.open("minted")}
+          />
         </DesktopWindow>
 
         {/* ----- CREATE ----- */}
@@ -1672,10 +1762,26 @@ export function RitualAnthemApp() {
               </div>
             ))}
             {filteredGallery.length === 0 ? (
-              <div className="bevel-in-thin bg-[#061512] p-4 font-mono text-[11px] text-iceaccent/65">
-                {gallery.length === 0
-                  ? "No identity cards forged yet. Forge an Identity Card to begin."
-                  : `No ${rarityFilter.toLowerCase()} identity cards found. Train cards to evolve their grade over time.`}
+              <div className="bevel-in-thin bg-[#061512] p-7 text-center font-mono text-[11px] text-iceaccent/65 sm:col-span-2 xl:col-span-3">
+                {gallery.length === 0 ? (
+                  <>
+                    <div className="bevel-out-thin mx-auto mb-3 grid h-14 w-14 place-items-center bg-wgray text-aqua">
+                      <Hammer size={25} />
+                    </div>
+                    <p className="font-display text-xl font-black uppercase tracking-[0.12em] text-ice">No Identity Card yet</p>
+                    <p className="mx-auto mt-2 max-w-md text-[11px] leading-5 text-iceaccent/65">
+                      Forge your first Identity Card to unlock Training, Arena, and Packs.
+                    </p>
+                    <button type="button" onClick={() => wm.open("create")} className="win-btn win-btn-emerald mt-4 inline-flex items-center gap-2">
+                      <Hammer size={14} /> Forge Identity
+                    </button>
+                  </>
+                ) : (
+                  <>
+                    <p className="text-aqua">No {rarityFilter.toLowerCase()} identity cards found.</p>
+                    <p className="mt-1 text-[10px] text-iceaccent/45">Train cards to evolve their grade over time.</p>
+                  </>
+                )}
               </div>
             ) : null}
           </div>
@@ -1719,6 +1825,7 @@ export function RitualAnthemApp() {
               }}
               arenaRank={"INITIATE" as const}
               arenaScore={arenaStats.stats.arenaScore}
+              onForgeIdentity={() => wm.open("create")}
             />
           </Suspense>
         </DesktopWindow>
@@ -1777,7 +1884,7 @@ export function RitualAnthemApp() {
         {/* ----- COLLECTION GALLERY ----- */}
         <DesktopWindow {...wp("gallery")}>
           <Suspense fallback={<WindowLoading label="Loading Collection Gallery" />}>
-            <CollectionGalleryWindow address={address} />
+            <CollectionGalleryWindow address={address} onOpenPacks={() => wm.open("packs")} />
           </Suspense>
         </DesktopWindow>
 
