@@ -1,0 +1,15 @@
+{
+  "name": "ArenaAutomation",
+  "network": "ritualTestnet",
+  "chainId": 1979,
+  "address": "0xCccE01f7eEa0E42757445F25dCB7B93C9d149333",
+  "deployTx": "0x38ed6a6005c34f0f48e6cf09c43e7a5d1a25d0bd8fdab47c264ecfbf5155929f",
+  "blockNumber": 36765953,
+  "deployer": "0x542E1746920eb2e8303b0599561d44ED4e050d62",
+  "arena": "0x003cf5a69920Db892BFe6Eb2154f5CE76bF5060E",
+  "scheduler": "0x56e776BAE2DD60664b69Bd5F865F1180ffB7D58B",
+  "ritualWallet": "0x532F0dF0896F353d8C3DD8cc134e8129DA2a3948",
+  "codeBytes": 5821,
+  "deployedAt": "2026-06-24T01:07:32.285Z",
+  "notes": "Additive scheduler automation module. Core RitualArena remains source of truth; manual settle remains fallback."
+}
