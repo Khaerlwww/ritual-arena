@@ -99,7 +99,7 @@ ritual-arena/
 | `RitualPackNFT` | Pack NFT (ERC-721) |
 | `PackManager` | Pack open, rarity-weighted RNG |
 | `RitualMarketplace` | Listings, escrow, fees |
-| `CardBurner` | Burn NFT → AP (per-rarity rewards) |
+| `CardBurner` / `CardBurnerV2` | Burn NFT → AP (per-rarity rewards) |
 
 ## How to Deploy
 
