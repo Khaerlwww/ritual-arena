@@ -101,9 +101,8 @@ export const NO_PROGRESS: RankProgress = {
  *  - nextRankAt: the identity score threshold at which nextRank unlocks
  *  - progressPct: 0..100 of how far through the current tier
  *
- * Note: thresholds here are *rank scores* (0..1000), but `nextRankAt`
- * is reported as the *identity score* equivalent so the Profile can
- * render a human-friendly target like "Reach 4500 to unlock RITUALIST".
+ * Note: thresholds here are identity scores (0..1000). `nextRankAt`
+ * can be rendered directly by the Profile, e.g. "Reach 450 to unlock RITTY".
  */
 export function rankProgressFromScore(totalScore: number): RankProgress {
   const rs = rankScoreFromIdentityScore(totalScore);

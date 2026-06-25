@@ -174,12 +174,12 @@ All active contracts share:
 **Purpose**: Canonical store of 4 score components + derived `totalScore` + `rank`. **Single source of truth for the leaderboard.**
 
 **Key state** (per wallet, `IdentitySnapshot`):
-- `trainingScore` (≤ 4000)
-- `achievementScore` (≤ 3000)
-- `arenaScore` (≤ 2000)
-- `collectionScore` (≤ 1000)
-- `totalScore` (≤ 10000) — auto-derived, sum of 4 components
-- `rank` (0..5) — auto-derived, normalized rank score
+- `trainingScore` (≤ 400)
+- `achievementScore` (≤ 300)
+- `arenaScore` (≤ 200)
+- `collectionScore` (≤ 100)
+- `totalScore` (≤ 1000) — auto-derived, sum of 4 components
+- `rank` (0..5) — auto-derived from `totalScore` with no normalization
 - `trainingLevel`, `totalXp`, `currentPower`, `currentRarity` — for display
 - `version` (monotonic) and `updatedAt`
 

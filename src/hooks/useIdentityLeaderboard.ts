@@ -145,7 +145,7 @@ export function useIdentityLeaderboard() {
           entries.push({
             wallet: entry.wallet,
             totalScore,
-            rankScore: Math.floor((totalScore * 1000) / 10000),
+            rankScore: totalScore,
             identityTier: rankLabelFromUint(entry.snap.rank),
             trainingLevel: Number(entry.snap.trainingLevel),
             totalXp: Number(entry.snap.totalXp),

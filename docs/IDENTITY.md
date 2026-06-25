@@ -1,106 +1,178 @@
 # Identity System
 
-Ritual Arena has a single canonical Identity Score model. The model is implemented identically in the `IdentityRegistry` contract and the frontend `lib/identityEngine.ts`. All component pushes, formulas, and rank thresholds are the same in both places.
+Ritual Arena uses **one canonical Identity Score scale: 0–1,000**.
+
+The source of truth is `IdentityRegistry.sol`. The frontend must display the same values returned by:
+
+```solidity
+getIdentity(address wallet) → IdentitySnapshot
+```
+
+There is **no 10,000-point score model** in the live contracts.
+
+---
 
 ## Identity Score
 
-`totalScore` = sum of 4 components, capped at **10,000**.
+`totalScore` is the sum of 4 capped components:
 
-| Component | Source | Max | Weight of total |
-|---|---|---|---|
-| Training Score | `RitualTraining.train()` | 4,000 | 40% |
-| Achievement Score | `AchievementRegistry.unlockAchievement()` | 3,000 | 30% |
-| Arena Score | `RitualArena.voteAP()` settlement flow | 2,000 | 20% |
-| Collection Score | `IdentityCard._pushCollectionScore()` + `PackManager` mint pushes | 1,000 | 10% |
-| **Total** | auto-derived | **10,000** | 100% |
+| Component | Source | Max | Weight |
+|---|---|---:|---:|
+| Training Score | `RitualTraining.train()` | 400 | 40% |
+| Achievement Score | `AchievementRegistry.unlockAchievement()` | 300 | 30% |
+| Arena Score | `RitualArena` settlement flow | 200 | 20% |
+| Collection Score | `IdentityCard` / `PackManager` / inventory sync | 100 | 10% |
+| **Total** | auto-derived in `IdentityRegistry` | **1,000** | **100%** |
 
-Each component is independently **capped** to its max in the registry. The total is the sum of the (capped) components.
+Each component is capped independently in `IdentityRegistry`:
 
-## Rank Score (normalized)
+```solidity
+MAX_TRAINING_SCORE    = 400
+MAX_ACHIEVEMENT_SCORE = 300
+MAX_ARENA_SCORE       = 200
+MAX_COLLECTION_SCORE  = 100
+MAX_TOTAL_SCORE       = 1_000
+```
 
-`rankScore = floor((totalScore * 1000) / 10000)` — always in `[0, 1000]`.
+---
 
-| Rank | rankScore range |
-|---|---|
-| INITIATE | 0–99 |
-| ASCENDANT | 100–249 |
-| BITTY | 250–449 |
-| RITTY | 450–699 |
-| RITUALIST | 700–899 |
-| RADIANT RITUALIST | 900–1000 |
+## Rank Score
 
-The rank is auto-derived by `rankForScore(totalScore)` in the registry.
+There is **no normalization step**.
+
+```txt
+rankScore = totalScore
+```
+
+`totalScore` is already in the 0–1,000 range.
+
+| Rank Score | Rank |
+|---:|---|
+| 0–99 | INITIATE |
+| 100–249 | ASCENDANT |
+| 250–449 | BITTY |
+| 450–699 | RITTY |
+| 700–899 | RITUALIST |
+| 900–1000 | RADIANT RITUALIST |
+
+The registry derives rank through:
+
+```solidity
+rankForScore(totalScore)
+```
+
+---
 
 ## Example
 
-A wallet that has forged an Identity Card (Collection Score 200 from power+rarity), trained (Power 50, level 5, 2500 XP, Training Score 2500), won 3 Arena matches (Arena Score 600), and unlocked 12 of 20 achievements (Achievement Score 1800):
+Example wallet:
 
 | Component | Value |
-|---|---|
-| Training Score | 2,500 |
-| Achievement Score | 1,800 |
-| Arena Score | 600 |
-| Collection Score | 200 |
-| **Total** | **5,100** |
-| Rank Score | `floor(5100 × 1000 / 10000) = 510` |
-| **Rank** | **RITTY** (450–699) |
+|---|---:|
+| Training Score | 250 |
+| Achievement Score | 180 |
+| Arena Score | 60 |
+| Collection Score | 23 |
+| **Total** | **513** |
+| **Rank Score** | **513** |
+| **Rank** | **RITTY** |
 
-## Component Caps
+Because:
 
-| Component | Cap |
-|---|---|
-| Training | 4,000 |
-| Achievement | 3,000 |
-| Arena | 2,000 |
-| Collection | 1,000 |
-| Total | 10,000 |
-
-`MAX_TRAINING_SCORE`, `MAX_ACHIEVEMENT_SCORE`, `MAX_ARENA_SCORE`, `MAX_COLLECTION_SCORE`, `MAX_TOTAL_SCORE` are public constants in `IdentityRegistry.sol`.
-
-## Collection Score Formula
-
-Implemented identically in `IdentityCard._calcCollectionScore()` and `PackManager._calcCollectionScoreForPackOwner()`:
-
-```
-powerComponent  = min(currentPower, 100) * 6        (max 600)
-rarityComponent = min(currentRarity, 4) * 75        (max 300)
-countComponent  = min(cardCount, 10) * 10           (max 100)
-                ─────────────
-total           = power + rarity + count, capped at 1000
+```txt
+250 + 180 + 60 + 23 = 513
+513 is in 450–699 → RITTY
 ```
 
-## Where Each Value Comes From
+---
 
-| Field | Read from | Function |
-|---|---|---|
-| `totalScore` | IdentityRegistry | `getIdentity(wallet).totalScore` |
-| `rank` (0..5) | IdentityRegistry | `getIdentity(wallet).rank` |
-| `trainingLevel` | IdentityRegistry | `getIdentity(wallet).trainingLevel` |
-| `currentPower` | IdentityRegistry | `getIdentity(wallet).currentPower` |
-| `currentRarity` | IdentityRegistry | `getIdentity(wallet).currentRarity` |
-| `totalXp` | IdentityRegistry | `getIdentity(wallet).totalXp` |
+## Collection Score
 
-The frontend Profile, Leaderboard, Card Image API, and Metadata API all read from the same IdentityRegistry function (`getIdentity(wallet)`), so the values shown are guaranteed consistent.
+Collection Score is capped at **100**.
+
+There are two on-chain sources that can push collection score:
+
+### 1. Pack inventory source — current primary behavior
+
+`PackManager._pushCollectionScore(user)` uses current PackNFT inventory:
+
+```solidity
+score = min(PackNFT.balanceOf(user), 100)
+```
+
+The collection sync keeper uses the same inventory rule so registry state does not stay stale.
+
+### 2. IdentityCard legacy forge/evolve source
+
+`IdentityCard._calcCollectionScore(wallet)` remains in the contract for forge/evolve snapshot pushes and stays in the same 0–100 scale:
+
+```txt
+powerComponent  = min(currentPower * 0.6, 60)
+rarityComponent = min(currentRarity * 7.5, 30)
+countComponent  = min(identityCardBalance, 10)
+total           = min(power + rarity + count, 100)
+```
+
+When PackManager/inventory sync runs, it can overwrite collection score with the current inventory score.
+
+---
+
+## Values Displayed by UI / APIs
+
+All profile, leaderboard, metadata, and card image surfaces should read from the same registry snapshot:
+
+| Field | Source |
+|---|---|
+| `totalScore` | `getIdentity(wallet).totalScore` |
+| `rank` | `getIdentity(wallet).rank` |
+| `trainingScore` | `getIdentity(wallet).trainingScore` |
+| `achievementScore` | `getIdentity(wallet).achievementScore` |
+| `arenaScore` | `getIdentity(wallet).arenaScore` |
+| `collectionScore` | `getIdentity(wallet).collectionScore` |
+| `trainingLevel` | `getIdentity(wallet).trainingLevel` |
+| `currentPower` | `getIdentity(wallet).currentPower` |
+| `currentRarity` | `getIdentity(wallet).currentRarity` |
+| `totalXp` | `getIdentity(wallet).totalXp` |
+
+---
 
 ## Leaderboard
 
-```
+Leaderboard reads indexed wallets from `IdentityRegistry`:
+
+```solidity
 indexedLength() → uint256
 getIndexedWallets(offset, limit) → address[]
 getIdentity(wallet) → IdentitySnapshot
 ```
 
-Wallets are auto-indexed in `IdentityRegistry` on the first push. The leaderboard reads all indexed wallets, fetches each snapshot, and sorts by `totalScore` descending. No tie-breaking.
+Sorting rule:
 
-Leaderboard re-sorts automatically on:
-- Forge (pushes Collection Score)
-- Train (pushes Training Score)
-- Arena settlement (pushes Arena Score)
-- Achievement unlock (pushes Achievement Score)
-- Pack open (pushes Collection Score)
+```txt
+sort by totalScore descending
+```
 
-The frontend polls every 30 seconds, so the leaderboard is at most 30 seconds behind the canonical onchain state.
+There is no off-chain score formula and no staking multiplier.
 
-## Staking is NOT in Identity Score
+Leaderboard can update after:
 
-`RitualStaking` is intentionally not part of the Identity Score. The `stake` / `unstake` / `claimAP` functions only affect AP balance and yield. They do not modify `totalScore` and do not appear in the leaderboard. Per spec, "staking does not accidentally affect ranking".
+- forge / card snapshot push
+- train
+- arena settlement
+- achievement unlock
+- pack open
+- inventory sync keeper
+
+---
+
+## Staking is NOT Identity Score
+
+`RitualStaking` only affects AP yield/balance.
+
+It does **not** modify:
+
+```txt
+totalScore
+rank
+leaderboard position
+```

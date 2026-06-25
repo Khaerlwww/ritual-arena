@@ -24,8 +24,8 @@ This document defines the official terminology for the Ritual Arena product. Use
 ### Progression
 - **Training** — Train an Identity Card to gain XP, AP, and power.
 - **AP (Arena Points)** — Currency earned through Training and Arena activity. Used to back cards in Arena and to buy packs.
-- **Identity Score** — A composite number (0–10,000) derived from Training, Arena, Achievements, and Collection. Powers the leaderboard.
-- **Identity Rank** — A categorical tier derived from the normalized Identity Score: `INITIATE` → `ASCENDANT` → `BITTY` → `RITTY` → `RITUALIST` → `RADIANT RITUALIST`.
+- **Identity Score** — A composite number (0–1,000) derived from Training, Arena, Achievements, and Collection. Powers the leaderboard.
+- **Identity Rank** — A categorical tier derived directly from Identity Score with no normalization: `INITIATE` → `ASCENDANT` → `BITTY` → `RITTY` → `RITUALIST` → `RADIANT RITUALIST`.
 - **Achievement** — A discrete milestone unlocked by onchain activity. Tracked in `AchievementRegistry`.
 
 ### Competition
