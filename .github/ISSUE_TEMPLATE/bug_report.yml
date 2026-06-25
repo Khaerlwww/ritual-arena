@@ -1,0 +1,40 @@
+name: Bug report
+description: Report a reproducible bug in Ritual Arena
+title: "bug: "
+labels: [bug, needs-triage]
+body:
+  - type: textarea
+    id: summary
+    attributes:
+      label: Summary
+      description: What happened?
+    validations:
+      required: true
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      placeholder: |
+        1. Connect wallet ...
+        2. Click ...
+        3. See ...
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected behavior
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual behavior
+  - type: input
+    id: context
+    attributes:
+      label: Wallet / tx / battle id if relevant
+      description: Do not paste private keys or seed phrases.
+  - type: textarea
+    id: env
+    attributes:
+      label: Environment
+      placeholder: Browser, wallet, chain, commit, deployment URL

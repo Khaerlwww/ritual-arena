@@ -7,9 +7,15 @@
 .env.*
 !.env.example
 !.env.production.example
+!.env.local.example
 .env.admin.local
 .env.deployer
 .env.vercel
+.env.vercel.new
+.env.tmp
+.env.tmp2
+.env.tmp3
+.vercel-cli-token
 
 # Wallets & keys
 wallets/
@@ -18,9 +24,13 @@ seeds/
 *.pem
 *.p12
 *.pfx
+private.json
 keystore.json
 mnemonic.txt
 seedphrase.txt
+*deployer*.key
+*vercel*token*
+*vcp_*
 
 # ─── Build output & cache ────────────────────────────────────────────────
 node_modules/
@@ -34,6 +44,11 @@ out/
 .turbo/
 .vercel/
 .idea/
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+*.swp
+*.swo
 .DS_Store
 Thumbs.db
 
@@ -48,6 +63,7 @@ coverage.json
 
 # ─── Local-only data ─────────────────────────────────────────────────────
 data/
+/data/
 
 # ─── Generated config / temp ─────────────────────────────────────────────
 *.log
@@ -57,14 +73,72 @@ dist-ssr/
 *.tmp
 *.orig
 *~
+.eslintcache
+.prettierrc.cache
+package-lock.json.bak
+yarn.lock.bak
+*.tar.gz
+*.tgz
+*.zip
 
 # ─── Test output ─────────────────────────────────────────────────────────
 coverage/
 junit.xml
 test-results/
 playwright-report/
+playwright/.cache/
 
-# ─── Misc ─────────────────────────────────────────────────────────────────
-.eslintcache
-.prettierrc.cache
-.DS_Store
+# ─── One-off / debug / probe scripts (transient, never commit) ───────────
+_check-*.mjs
+_check-*.cjs
+_check-*.js
+_diag-*.mjs
+_diag-*.cjs
+_diag-*.js
+_fix_env.mjs
+_poll.sh
+_poll-*.sh
+_probe-*.mjs
+_probe-*.cjs
+_probe-*.js
+_probe_*.mjs
+_probe_*.cjs
+_probe_*.js
+_seed_run.sh
+_smoke-*.mjs
+_smoke-*.cjs
+_test-*.mjs
+_test-*.cjs
+_test-*.js
+_verify-*.mjs
+_verify-*.cjs
+_verify-*.js
+
+# archives / legacy
+**/_archive/
+**/_archive_*/
+**/archive/
+scripts/legacy/
+scripts/qa/
+scripts/debug/
+tests-archive/
+tests-archive-*/
+
+# Vercel-specific local/private deploy scripts
+scripts/admin/vercel-*.cjs
+scripts/admin/vercel-*.js
+scripts/deploy/vercel-*.js
+scripts/deploy/vercel-*.mjs
+scripts/deploy/vercel-*.cjs
+scripts/deploy/vercel-*.sh
+scripts/deploy/_run-local-*.js
+scripts/deploy/_seed-testnet.js
+scripts/deploy/ritual-*-vercel*
+scripts/deploy/ritual-*-fresh-full-*.js
+scripts/deploy/ritual-*-fresh-full-*.cjs
+
+# API debug handlers must never be deployed publicly
+api/_probe_*.js
+api/_probe-*.js
+api/_debug_*.js
+api/_debug-*.js

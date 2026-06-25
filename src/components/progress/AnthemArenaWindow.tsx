@@ -331,8 +331,8 @@ function BattleRow({
             refetch={refetch}
             setMsg={setMsg}
             address={wallet}
-            aLabel={a.username ? `@${a.username}` : `Wallet ${battle.walletA.slice(0, 6)}…`}
-            bLabel={b.username ? `@${b.username}` : `Wallet ${battle.walletB.slice(0, 6)}…`}
+            aLabel={a.handle ? `@${a.handle}` : `Wallet ${battle.walletA.slice(0, 6)}…`}
+            bLabel={b.handle ? `@${b.handle}` : `Wallet ${battle.walletB.slice(0, 6)}…`}
             aPct={aPct}
             bPct={bPct}
           />
