@@ -1,7 +1,7 @@
 // src/lib/packManagerAbi.ts
-// PackManager ABI slice — must match contracts/pack/PackManager.sol (V10).
+// PackManager ABI slice — must match contracts/pack/PackManager.sol (current V11 runtime).
 //
-// V10 contract layout (re-deployed 2026-06-21, address 0xAd96175CaA412C3D42BCcF6C59eC2Fc8ee2c8CCb):
+// Current contract layout:
 //   struct PackConfig { uint256 apCost; uint16 bps0..bps4; }    // rarity BPS (0..4)
 //   PackConfig public initiatePack; PackConfig public ritualPack;
 //   RitualPackNFT public immutable card;                        // = PackNFT
@@ -87,7 +87,7 @@ export const PACK_MANAGER_ABI = [
     inputs: [{ name: "packType", type: "uint8" }],
     outputs: [{ name: "", type: "uint256" }],
   },
-  // Per-card supply tracking (V9 supply model — replaces PackNFT's
+  // Per-card supply tracking (current supply model — replaces PackNFT's
   // serialNumber/maxSupply fields from the old V8 layout).
   {
     type: "function",

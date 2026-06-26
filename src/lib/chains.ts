@@ -48,15 +48,15 @@ export const explorerTxUrl = (hash: string) => `${EXPLORER_URL.replace(/\/$/, ""
 export const explorerAddressUrl = (addr: string) => `${EXPLORER_URL.replace(/\/$/, "")}/address/${addr}`;
 
 // ── V11 fresh deploy addresses (2026-06-22) ────────────────────────────
-// Full fresh redeploy: zero state carry-over from V10. Deployer used the
-// new admin key (0x542E...0d62). 10 contracts deployed + wired via
+// Full fresh redeploy: clean V11 state. Deployer used the
+// new admin key (0x542E...0d62). Contracts deployed + wired via
 // scripts/deploy/ritual-v11-fresh-resume*.cjs. Verification of wirings
 // (AP minters, Registry trustedUpdaters, PackNFT minter) confirmed via
 // direct RPC reads of TrustedUpdaterSet + MinterUpdated events.
 const IDENTITY_REGISTRY   = "0x8f4Cb00142979A19997fF90d39FE7839335186bC" as Address;
 const IDENTITY_CARD       = "0xe189382845FF8C938E85ce7E25eB5c89F339ff5E" as Address;
-const RITUAL_TRAINING     = "0xFcf3cDc5fAc5362b5C215E6A0FA5B5245302393c" as Address;
-const RITUAL_ARENA        = "0x003cf5a69920Db892BFe6Eb2154f5CE76bF5060E" as Address; // V11 fresh (2026-06-22) — same ms-timestamp logic as V10 (block.timestamp/1000)
+const RITUAL_TRAINING     = "0xFcD88A76c6147c527c88FBD48d0f97733A96567A" as Address; // V30 training curve (2026-06-25): XP_PER_TRAIN=55, preserves registry totalXp on first train
+const RITUAL_ARENA        = "0x003cf5a69920Db892BFe6Eb2154f5CE76bF5060E" as Address; // V11 fresh (2026-06-22) — ms-aware timestamp logic
 const ACHIEVEMENT_REG     = "0xa0BE4F8091b0bF3F170a643890c330274465E225" as Address;
 const RITUAL_STAKING      = "0xcF2c42076219c2CD426Befe982D6abFE6402ad78" as Address; // V11 fresh (2026-06-22) — same ms-timestamp fix
 const MARKETPLACE         = "0x75dfe1430237269eC6b575F43595B4e565443e22" as Address; // V11 fresh (2026-06-22) — fresh deploy, fresh state

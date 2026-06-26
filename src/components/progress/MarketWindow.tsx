@@ -11,7 +11,7 @@
 //   2. Staking      — Utility Staking tab. Unchanged.
 //
 // The legacy V4 Imprint marketplace has been superseded by this V5
-// marketplace and lives in contracts/archive/imprint/ (not imported).
+// marketplace and is not part of the current public runtime.
 
 import { useCallback, useEffect, useMemo, useState } from "react";
 import { formatEther, parseEther, type Address } from "viem";
@@ -329,8 +329,8 @@ function MarketplaceView({ address }: { address?: Address }) {
           <div className="bevel-in grid gap-2 bg-coal p-2 sm:grid-cols-2 lg:grid-cols-3">
             {myListings.map((l, idx) => {
               const visual = myListingCards[idx];
-              const isV10 = l.nftContract.toLowerCase() === packNftAddress.toLowerCase();
-              const badge = isV10 ? "V10" : "V9 stranded";
+              const isCurrentNft = l.nftContract.toLowerCase() === packNftAddress.toLowerCase();
+              const badge = isCurrentNft ? "V11" : "Legacy listing";
               return (
                 <div key={l.listingId.toString()} className="flex flex-col gap-1">
                   {visual ? (
@@ -341,9 +341,9 @@ function MarketplaceView({ address }: { address?: Address }) {
                       {listingCardMap.loading ? " (loading…)" : ""}
                     </div>
                   )}
-                  {!isV10 && (
+                  {!isCurrentNft && (
                     <div className="bevel-in-thin bg-[#1f0a0a] border border-[#ff8a8a]/40 px-2 py-1 font-mono text-[9px] text-[#ff8a8a]">
-                      references V9 contract — cancel to release
+                      references a legacy contract — cancel to release
                     </div>
                   )}
                   <div className="flex items-center justify-between gap-1 font-mono text-[10px]">
@@ -380,8 +380,8 @@ function MarketplaceView({ address }: { address?: Address }) {
                 const visual = buyableCards.find(
                   (c) => c.instanceId === `nft-${l.tokenId.toString()}`,
                 );
-                const isV10 = l.nftContract.toLowerCase() === packNftAddress.toLowerCase();
-                const badge = isV10 ? "V10" : "V9 stranded";
+                const isCurrentNft = l.nftContract.toLowerCase() === packNftAddress.toLowerCase();
+                const badge = isCurrentNft ? "V11" : "Legacy listing";
                 return (
                   <div key={l.listingId.toString()} className="flex flex-col gap-1">
                     {visual ? (
@@ -465,10 +465,7 @@ function toDisplayCard(
   };
 }
 
-/** Utility Staking — preserved unchanged from the previous build.
- *  Self-contained: uses useStaking / useStakingWrites only. The legacy
- *  Imprint system is archived under contracts/archive/imprint/ and is
- *  not imported. */
+/** Utility Staking — self-contained; uses useStaking / useStakingWrites only. */
 function StakingView({
   address,
   staking,

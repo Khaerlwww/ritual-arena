@@ -47,7 +47,7 @@ interface RecycleBinWindowProps {
   address?: Address;
 }
 
-// V9 InternalRarity names (single source of truth — see contracts/pack/RitualPackNFT.sol)
+// Current InternalRarity names (single source of truth — see contracts/pack/RitualPackNFT.sol)
 const VISUAL_LABELS: Record<number, string> = {
   0: "INITIATE",
   1: "BITTY",
@@ -532,7 +532,7 @@ export function RecycleBinWindow({ address }: RecycleBinWindowProps) {
                   disabled={isGenesis}
                   className="absolute top-2 left-2 z-10 w-4 h-4 accent-aqua"
                 />
-                <CollectionCard card={c} versionBadge="V10" />
+                <CollectionCard card={c} versionBadge="V11" />
               </label>
               <div className="bevel-in-thin bg-[#061512] mt-1 px-2 py-1 font-mono text-[10px] flex items-center justify-between">
                 <span className={RARITY_COLORS[rarityNum] ?? "text-ice"}>

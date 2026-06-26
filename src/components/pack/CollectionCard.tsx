@@ -20,8 +20,7 @@ import type { PackResultCard } from "../../types/packCard";
 
 interface CollectionCardProps {
   card: PackResultCard;
-  /** Optional badge to display in the title bar — e.g. "V10" to disambiguate
-   *  the active contract from stranded V9 NFTs that have the same visual. */
+  /** Optional badge to display in the title bar — e.g. "V11" to mark the current active card contract. */
   versionBadge?: string;
 }
 

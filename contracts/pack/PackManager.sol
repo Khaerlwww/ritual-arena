@@ -26,7 +26,7 @@ struct PoolCard {
     string  role;
     uint16  power;
     string  baseURI;
-    uint256 maxSupply;  // V9: per-card supply cap (0 = use rarity default)
+    uint256 maxSupply;  // per-card supply cap (0 = use rarity default)
 }
 
 interface IIdentityRegistryForPackManager {
@@ -77,7 +77,7 @@ contract PackManager is Ownable, ReentrancyGuard {
     mapping(uint8 => uint256) public maxByRarity;     // cap (0 = unlimited, default from setter)
     mapping(uint8 => uint256) public serialByRarity;  // next serial for this rarity
 
-    // V9: per-card supply tracking
+    // per-card supply tracking
     mapping(uint256 => uint256) public mintedByCardId; // cardId => count minted
     mapping(uint256 => uint256) public maxSupplyOf;    // cardId => max supply (set on add)
     mapping(uint8  => uint256) public defaultMaxByRarity; // rarity => default if card.maxSupply == 0
@@ -139,7 +139,7 @@ contract PackManager is Ownable, ReentrancyGuard {
         maxByRarity[5] = 3;   // GENESIS
 
         initiatePack = PackConfig({
-            apCost: 50 ether,   // V9: 50 AP
+            apCost: 50 ether,   // 50 AP
             bps0: 7000,         // INITIATE        70%
             bps1: 2000,         // BITTY           20%
             bps2: 700,          // RITTY           7%
@@ -147,7 +147,7 @@ contract PackManager is Ownable, ReentrancyGuard {
             bps4: 50            // RADIANT         0.5%
         });
         ritualPack = PackConfig({
-            apCost: 75 ether,   // V9: 75 AP
+            apCost: 75 ether,   // 75 AP
             bps0: 0,            // INITIATE        0% (no COMMON in ritual)
             bps1: 5000,         // BITTY           50%
             bps2: 3000,         // RITTY           30%
@@ -155,7 +155,7 @@ contract PackManager is Ownable, ReentrancyGuard {
             bps4: 500           // RADIANT         5%
         });
 
-        // V9: per-rarity default max supply
+        // per-rarity default max supply
         defaultMaxByRarity[0] = 30;  // INITIATE  (COMMON)
         defaultMaxByRarity[1] = 20;  // BITTY     (RARE)
         defaultMaxByRarity[2] = 10;  // RITTY     (EPIC)
@@ -198,7 +198,7 @@ contract PackManager is Ownable, ReentrancyGuard {
         if (packType > uint8(PackType.RITUALIST)) revert UnknownPackType();
         if (c.rarity > uint8(InternalRarity.GENESIS)) revert InvalidRarity();
         if (packType == 0) initiatePool.push(c); else ritualPool.push(c);
-        // V9: record per-card max supply
+        // record per-card max supply
         if (c.maxSupply > 0) maxSupplyOf[c.cardId] = c.maxSupply;
         emit PoolCardAdded(packType, c.cardId, c.rarity);
     }
@@ -214,7 +214,7 @@ contract PackManager is Ownable, ReentrancyGuard {
         }
     }
 
-    /// @notice V9: Set per-rarity default max supply. Used when a PoolCard has
+    /// @notice Set per-rarity default max supply. Used when a PoolCard has
     ///         maxSupply == 0. Set after addPoolCardBatch to apply to all cards
     ///         of that rarity that didn't specify an explicit value.
     function setDefaultMaxByRarity(uint8 rarity, uint256 max) external onlyOwner {
@@ -222,7 +222,7 @@ contract PackManager is Ownable, ReentrancyGuard {
         defaultMaxByRarity[rarity] = max;
     }
 
-    /// @notice V9: Admin-mint a GENESIS card to a recipient. Bypasses pack
+    /// @notice Admin-mint a GENESIS card to a recipient. Bypasses pack
     ///         BPS, AP cost, and rarity pools. Caller must own a cardId in the
     ///         genesisCards list (added via addGenesisCard).
     function mintGenesisAdmin(address to, uint256 cardId) external onlyOwner returns (uint256 tokenId) {
@@ -248,7 +248,7 @@ contract PackManager is Ownable, ReentrancyGuard {
     PoolCard[] private _genesisCards;
     mapping(uint256 => uint256) private _genesisCardIdx;
 
-    /// @notice V9: Add a GENESIS card to the admin-mint pool.
+    /// @notice Add a GENESIS card to the admin-mint pool.
     function addGenesisCard(PoolCard calldata c) external onlyOwner {
         if (c.rarity != uint8(InternalRarity.GENESIS)) revert InvalidRarity();
         _genesisCardIdx[c.cardId] = _genesisCards.length;
@@ -318,7 +318,7 @@ contract PackManager is Ownable, ReentrancyGuard {
             // 3) Assign per-rarity serial
             uint256 serial = ++serialByRarity[rarity];
             mintedByRarity[rarity]++;
-            mintedByCardId[pc.cardId]++; // V9: per-card supply tracking
+            mintedByCardId[pc.cardId]++; // per-card supply tracking
 
             // 4) Mint — power is randomized within the rarity's power band
             //    (PowerPerRarity), so cards of the same rarity have varied
@@ -491,7 +491,7 @@ contract PackManager is Ownable, ReentrancyGuard {
         for (uint256 i = 0; i < len; i++) {
             PoolCard memory pc = packType == 0 ? initiatePool[i] : ritualPool[i];
             if (pc.rarity != rarity) continue;
-            // V9: skip cards that hit their per-card maxSupply
+            // skip cards that hit their per-card maxSupply
             uint256 cap = maxSupplyOf[pc.cardId] == 0 ? defaultMaxByRarity[rarity] : maxSupplyOf[pc.cardId];
             if (cap > 0 && mintedByCardId[pc.cardId] >= cap) continue;
             // skip already-picked cardIds in this same pack

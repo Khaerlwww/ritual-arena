@@ -255,7 +255,7 @@ function CardDetailModal({ card, onClose }: { card: PackResultCard; onClose: () 
           </button>
         </div>
         <div className="bevel-in bg-coal p-4">
-          <CollectionCard card={card} versionBadge="V10" />
+          <CollectionCard card={card} versionBadge="V11" />
           <pre className="mt-3 font-mono text-[10px] text-iceaccent/70 whitespace-pre-wrap leading-relaxed">
 {[
   card.rarity,
@@ -300,7 +300,7 @@ function GalleryGrid({
           onClick={() => onSelect(c)}
           className="text-left transition-transform hover:scale-[1.02]"
         >
-          <CollectionCard card={c} versionBadge="V10" />
+          <CollectionCard card={c} versionBadge="V11" />
         </button>
       ))}
     </div>

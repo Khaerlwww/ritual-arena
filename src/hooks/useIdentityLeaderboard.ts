@@ -14,6 +14,7 @@ import { publicClient } from "./useAnthem";
 import { identityRegistryAbi } from "../abi/identityRegistry";
 import { identityRegistryAddress, hasIdentityRegistry, zeroAddress } from "../lib/chains";
 import { rankLabelFromUint, RANK_UNKNOWN, type RankLabelOrUnknown } from "../lib/identityRanks";
+import { isHiddenProductWallet } from "../lib/hiddenWallets";
 
 export interface IdentityLeaderboardEntry {
   wallet: Address;
@@ -140,6 +141,7 @@ export function useIdentityLeaderboard() {
         const entries: IdentityLeaderboardEntry[] = [];
         for (const entry of snaps) {
           if (!entry) continue;
+          if (isHiddenProductWallet(entry.wallet)) continue;
           const totalScore = Number(entry.snap.totalScore);
           if (totalScore === 0) continue; // skip unsynced
           entries.push({

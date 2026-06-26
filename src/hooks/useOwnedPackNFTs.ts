@@ -1,7 +1,7 @@
 // src/hooks/useOwnedPackNFTs.ts
 // Reads the list of RitualPackNFT tokenIds owned by `address` from chain
 // (via the contract's `tokensOfOwnerByIndex`), then loads each token's
-//   `cardData` in parallel using the shared `readCardDataV10` helper.
+//   `cardData` in parallel using the shared `readCardData` helper.
 //
 // This is the **source of truth** — localStorage is never used for
 // ownership. The pack engine stores only animation/cache state in
@@ -34,7 +34,7 @@ export interface UseOwnedPackNFTsResult {
   refetch: () => Promise<void>;
 }
 
-const V9_PACK_NFT_ADDRESS = CANONICAL_PACK_NFT_ADDRESS;
+const CURRENT_PACK_NFT_ADDRESS = CANONICAL_PACK_NFT_ADDRESS;
 
 export function useOwnedPackNFTs(address?: Address): UseOwnedPackNFTsResult {
   const [cards, setCards] = useState<OwnedPackCard[]>([]);
@@ -53,7 +53,7 @@ export function useOwnedPackNFTs(address?: Address): UseOwnedPackNFTsResult {
   const wallet = (address ?? getSharedAddress())?.toLowerCase() as
     | Address
     | undefined;
-  const packNftAddress: Address = V9_PACK_NFT_ADDRESS as Address;
+  const packNftAddress: Address = CURRENT_PACK_NFT_ADDRESS as Address;
 
   const refetch = useCallback(async () => {
     if (!wallet || !packNftAddress) {
@@ -94,7 +94,7 @@ export function useOwnedPackNFTs(address?: Address): UseOwnedPackNFTsResult {
 
       if (mySeq !== requestSeqRef.current) return;
 
-      // Parallel cardData + supply reads (V9: cardData from PackNFT,
+      // Parallel cardData + supply reads (Current runtime: cardData from PackNFT,
       // serialNumber/maxSupply from PackManager).
       const settled = await readCardWithSupplyBatch(tokenIds);
 

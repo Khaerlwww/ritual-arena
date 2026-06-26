@@ -539,9 +539,9 @@ export function PackWindow({
             (showInitiateGate && (!apReady || apBalance < initiateCost))
           }
           disabledReason={
-            !address ? "Connect wallet dulu"
-              : isTxActive ? "Transaksi lagi jalan"
-              : showInitiateGate && !apReady ? "AP belum siap"
+            !address ? undefined
+              : isTxActive ? "Transaction in progress"
+              : showInitiateGate && !apReady ? "AP is not ready"
               : showInitiateGate && apBalance < initiateCost
                 ? "Insufficient AP"
               : undefined
@@ -561,9 +561,9 @@ export function PackWindow({
             (showRitualGate && (!apReady || apBalance < ritualistCost))
           }
           disabledReason={
-            !address ? "Connect wallet dulu"
-              : isTxActive ? "Transaksi lagi jalan"
-              : showRitualGate && !apReady ? "AP belum siap"
+            !address ? undefined
+              : isTxActive ? "Transaction in progress"
+              : showRitualGate && !apReady ? "AP is not ready"
               : showRitualGate && apBalance < ritualistCost
                 ? "Insufficient AP"
               : undefined

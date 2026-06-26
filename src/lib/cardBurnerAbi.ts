@@ -1,6 +1,6 @@
 // Auto-extracted from artifacts/contracts/burner/CardBurnerV2.sol/CardBurnerV2.json
-// V2 reads rarity from V10 RitualPackNFT via raw staticcall + assembly
-// (V10 cardData emits a non-standard ABI layout that breaks Solidity's
+// V2 reads rarity from current RitualPackNFT via raw staticcall + assembly
+// (current cardData emits a non-standard ABI layout that breaks Solidity's
 // built-in struct decoder).
 export const CARD_BURNER_ABI = [
   {

@@ -2,7 +2,7 @@
 // Resolve `cardData(tokenId)` for an arbitrary list of RitualPackNFT
 // tokenIds (not just the connected wallet's own).
 //
-// V9 model: each NFT has packType, cardId, rarity, power, role, mintedAt.
+// Current model: each NFT has packType, cardId, rarity, power, role, mintedAt.
 // serialNumber + maxSupply come from PackManager (mintedByCardId / maxSupplyOf).
 // Uses readCardWithSupplyBatch from packNftReads (single multicall per token).
 

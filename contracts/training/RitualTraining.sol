@@ -7,6 +7,21 @@ import {ReentrancyGuard} from "@openzeppelin/contracts/utils/ReentrancyGuard.sol
 
 interface IRitualAP { function mint(address to, uint256 amount) external; }
 interface IIdentityRegistry {
+    struct IdentitySnapshot {
+        uint256 trainingScore;
+        uint256 achievementScore;
+        uint256 arenaScore;
+        uint256 collectionScore;
+        uint256 totalScore;
+        uint8 rank;
+        uint256 trainingLevel;
+        uint256 totalXp;
+        uint16 currentPower;
+        uint8 currentRarity;
+        uint32 version;
+        uint64 updatedAt;
+    }
+    function getIdentity(address wallet) external view returns (IdentitySnapshot memory);
     function updateTraining(address wallet, uint256 trainingScore, uint256 trainingLevel, uint256 totalXp) external;
 }
 interface IRitualAnthem {
@@ -24,7 +39,7 @@ interface IRitualAnthem {
 ///         deploy time. Total AP supply is hard-capped at 21M AP
 ///         (cap enforced inside RitualAP, not here).
 contract RitualTraining is Ownable, Pausable, ReentrancyGuard {
-    uint256 public constant XP_PER_TRAIN = 25;
+    uint256 public constant XP_PER_TRAIN = 55; // 30-day path: ~37 trains at 20h cadence reaches 400 Training Score
     uint256 public constant AP_PER_TRAIN = 25 * 10 ** 18;
     uint256 public constant LEVEL_SIZE = 500;
     uint256 public constant TRAINING_COOLDOWN_MS = 72_000_000;  // 20 hours in ms
@@ -93,7 +108,17 @@ contract RitualTraining is Ownable, Pausable, ReentrancyGuard {
         uint256 tokenId = uint256(uint160(msg.sender));
 
         CardProgress storage p = cardProgress[tokenId];
-        if (p.createdAt == 0) p.createdAt = uint64(block.timestamp);
+        if (p.createdAt == 0) {
+            p.createdAt = uint64(block.timestamp);
+            // Preserve progress when this upgraded Training contract replaces an older one.
+            // The canonical registry stores the last synced totalXp, so the first train on
+            // the new contract continues from the old progress instead of overwriting it.
+            IIdentityRegistry.IdentitySnapshot memory snap = identityRegistry.getIdentity(msg.sender);
+            if (snap.totalXp > 0) {
+                p.totalXp = snap.totalXp;
+                p.trainCount = uint64(snap.totalXp / XP_PER_TRAIN);
+            }
+        }
         uint256 cd = _cooldown();
         if (uint256(p.lastTrainedAt) != 0 && block.timestamp < uint256(p.lastTrainedAt) + cd) revert CooldownActive();
 

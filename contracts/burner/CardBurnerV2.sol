@@ -4,9 +4,9 @@ pragma solidity ^0.8.24;
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
 import {ReentrancyGuard} from "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
-/// @notice Minimal interface for the RitualPackNFT V10 burn surface.
+/// @notice Minimal interface for the RitualPackNFT burn surface.
 /// @dev    We deliberately do NOT import the `cardData` struct here, because
-///         V10 emits a non-standard ABI layout for `cardData(tokenId)`:
+///         The NFT contract emits a non-standard ABI layout for `cardData(tokenId)`:
 ///           [slot 0]  packType (uint8, full 32B slot)
 ///           [slot 1]  cardId   (uint256, full 32B slot)
 ///           [slot 2]  rarity   (uint8, full 32B slot)
@@ -15,7 +15,7 @@ import {ReentrancyGuard} from "@openzeppelin/contracts/utils/ReentrancyGuard.sol
 ///           [slot 5]  mintedAt (uint64, full 32B slot)
 ///           [slot 6+] string length + UTF-8 content
 ///         This layout breaks Solidity's built-in ABI decoder (it reads the
-///         wrong byte for `rarity`), which is why V10's `burnCard`/`burnCards`
+///         wrong byte for `rarity`), which is why `burnCard`/`burnCards`
 ///         reverted with no reason on every ritual NFT (tx 0x3936…).
 ///
 ///         We avoid the broken decoder entirely by reading the rarity via
@@ -31,8 +31,8 @@ interface IRitualAP {
 }
 
 /// @title  Card Burner V2 — NFT Sink with manual rarity decoder
-/// @notice Same economic surface as CardBurner V10, but reads rarity from
-///         V10 RitualPackNFT via a raw `staticcall` + assembly slice,
+/// @notice Same economic surface as CardBurner, but reads rarity from
+///         RitualPackNFT via a raw `staticcall` + assembly slice,
 ///         bypassing Solidity's broken struct decoder for the non-standard
 ///         cardData layout. Identical burn rates, owner, and approval model.
 contract CardBurnerV2 is Ownable, ReentrancyGuard {
@@ -40,7 +40,7 @@ contract CardBurnerV2 is Ownable, ReentrancyGuard {
     IRitualAP      public immutable ap;
 
     /// @notice burnRates[rarity] = AP wei paid for burning a card of that rarity.
-    ///         Default table matches CardBurner V10 (docs/CONTRACTS.md):
+    ///         Default table matches CardBurner (docs/CONTRACTS.md):
     ///           0 INITIATE           ->  5e18 (5 AP)
     ///           1 BITTY              -> 15e18 (15 AP)
     ///           2 RITTY              -> 50e18 (50 AP)
@@ -83,8 +83,8 @@ contract CardBurnerV2 is Ownable, ReentrancyGuard {
         emit BurnRateUpdated(rarity, amount);
     }
 
-    /// @notice Read rarity from V10 RitualPackNFT.cardData() via raw staticcall.
-    /// @dev    V10 emits the rarity as a full 32-byte slot at offset 64-95,
+    /// @notice Read rarity from RitualPackNFT.cardData() via raw staticcall.
+    /// @dev    The NFT contract emits the rarity as a full 32-byte slot at offset 64-95,
     ///         with the rarity value in the LAST byte (matches standard
     ///         uint8 ABI placement). The earlier decoder tripped because
     ///         it assumed a standard packed struct layout; we read the
@@ -94,7 +94,7 @@ contract CardBurnerV2 is Ownable, ReentrancyGuard {
         (bool ok, bytes memory result) = address(packNFT).staticcall(data);
         if (!ok || result.length < 96) revert CardDataReadFailed();
         // Rarity lives at the LAST byte of the second 32-byte slot (= byte 95).
-        // V10 layout: slot0 = packType, slot1 = cardId, slot2 = rarity.
+        // Current layout: slot0 = packType, slot1 = cardId, slot2 = rarity.
         uint8 r = uint8(result[95]);
         return r;
     }

@@ -27,15 +27,15 @@ Returns ERC-721 metadata JSON for an IdentityCard token.
 ```json
 {
   "name": "Ritual Arena #1",
-  "description": "@sharxlr's Ritual Arena Identity Card. Power 8 | Grade: COMMON. ...",
+  "description": "@sharxlr's Ritual Arena Identity Card. Power 8 | Grade: INITIATE. ...",
   "image": "https://ritual-arenav0.vercel.app/api/card-image/1",
   "external_url": "https://ritual-arenav0.vercel.app",
   "attributes": [
     { "trait_type": "Power", "value": 8 },
-    { "trait_type": "Grade", "value": "COMMON" },
+    { "trait_type": "Grade", "value": "INITIATE" },
     { "trait_type": "Rarity Rank", "value": 0 },
     { "trait_type": "Initial Power", "value": 1 },
-    { "trait_type": "Initial Grade", "value": "COMMON" },
+    { "trait_type": "Initial Grade", "value": "INITIATE" },
     { "trait_type": "Snapshot Version", "value": 1 },
     { "trait_type": "Last Evolved", "value": "5m ago" },
     { "trait_type": "Genesis", "value": false }
@@ -73,7 +73,7 @@ Signs an EIP-712 forge attestation. The signer key is held server-side and never
   "wallet": "0x...",
   "xHandle": "sharxlr",
   "chainId": 1979,
-  "contractAddress": "0xeb6dF756e604Eda802b046dE3A904C143cB0f322",
+  "contractAddress": "0xe189382845FF8C938E85ce7E25eB5c89F339ff5E",
   "expiry": 1781320844000,
   "nonce": 99999
 }

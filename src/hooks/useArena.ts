@@ -7,6 +7,7 @@ import { useCallback, useEffect, useState } from "react";
 import { isAddress, type Address } from "viem";
 import { ritualArenaAbi } from "../abi/ritualArena";
 import { arenaAddress, apAddress, hasArenaContract, ritualTestnet } from "../lib/chains";
+import { isHiddenProductWallet } from "../lib/hiddenWallets";
 import { publicClient, zeroAddress } from "./useAnthem";
 import { RITUAL_GAS } from "../lib/gasDefaults";
 import { getSelectedWalletProvider, getSharedWalletClient, ensureReadyForWrite } from "../lib/wallet";
@@ -143,7 +144,9 @@ export function useArenaLeaderboard(offset = 0, limit = 20) {
       const r = (await publicClient.readContract({
         address: arenaAddress, abi: ritualArenaAbi, functionName: "getLeaderboard", args: [BigInt(offset), BigInt(limit)],
       })) as readonly [readonly Address[], readonly bigint[]];
-      setRows(r[0].map((w, i) => ({ wallet: w, arenaScore: Number(r[1][i]) })));
+      setRows(r[0]
+        .map((w, i) => ({ wallet: w, arenaScore: Number(r[1][i]) }))
+        .filter((row) => !isHiddenProductWallet(row.wallet)));
       setSupported(true);
     } catch {
       setSupported(false);
@@ -287,7 +290,7 @@ export function useArenaWrites() {
   const [txHash, setTxHash] = useState<string>();
 
   const write = useCallback(async (functionName: string, args: unknown[]) => {
-    if (!hasArenaContract) throw new Error("VITE_RITUAL_ARENA_ADDRESS not configured");
+    if (!hasArenaContract) throw new Error("Arena is unavailable right now.");
     const walletClient = getSharedWalletClient();
     if (!walletClient) throw new Error("Wallet extension not found");
     setIsPending(true);

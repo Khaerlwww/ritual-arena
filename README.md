@@ -1,132 +1,90 @@
 # Ritual Arena
 
-> A self-sovereign identity protocol for community-driven NFT collections.
-
-Ritual Arena is a complete on-chain identity system that lets users forge a personal
-identity card, train it through community interaction, and compete in a peer-driven
-arena — all powered by ERC-721 NFTs and an ERC-20 reputation token.
+> On-chain identity game on Ritual Chain testnet: forge an identity, train it, collect cards, battle in Arena, stake RITUAL, and grow Identity Score.
 
 ## Features
 
-- **Forge identity** — Mint a unique identity NFT tied to your wallet
-- **Train** — Stake RITUAL to earn XP, level up, and evolve power
-- **Open packs** — Spend AP to mint NFT editions from a rarity-weighted pool
-- **Burn** — Sacrifice editions for AP based on rarity
-- **Arena** — Match into battles, vote with AP, climb the leaderboard
-- **Staking** — Stake RITUAL to earn AP passively
+- **Forge Identity** — Mint a Ritual Anthem / Identity Card.
+- **Train** — Earn XP and Training Score.
+- **Open Packs** — Spend AP to mint RitualPackNFT cards.
+- **Collection Score** — Card-count score from PackNFT ownership.
+- **Arena** — Battle, vote with AP, and climb the leaderboard.
+- **Staking** — Stake RITUAL to earn AP.
+- **Recycle Cards** — Burn eligible cards for AP rewards.
 
 ## Tech Stack
 
-- **Frontend**: React 19 + TypeScript + Vite
-- **Web3**: viem (no ethers.js), EIP-712 signed forge attestations
-- **Smart Contracts**: Solidity 0.8.24, Hardhat, OpenZeppelin
-- **Backend**: 9 Vercel serverless functions (Node 22)
+- **Frontend**: React + TypeScript + Vite
+- **Web3**: viem, direct Ritual Chain RPC reads/writes
+- **Contracts**: Solidity 0.8.24, Hardhat, OpenZeppelin
+- **API**: Vercel serverless functions for forge, metadata, images, IPFS, and avatar proxy
 - **Styling**: Tailwind CSS
 
 ## Quick Start
 
 ```bash
-# Install
 npm install
-
-# Configure
 cp .env.example .env
-# Edit .env with your contract addresses
-
-# Develop
 npm run dev
-
-# Build
 npm run build
 ```
 
-## Project Structure
+The frontend uses canonical V11 fallback addresses in `src/lib/chains.ts`. Env vars are optional overrides/documentation; do not commit real secrets.
 
-```
-ritual-arena/
-├── src/                 # React frontend
-│   ├── components/      # UI components
-│   ├── hooks/           # Web3 React hooks
-│   ├── lib/             # Helpers (chains, ABI, power engine, etc.)
-│   ├── abi/             # Contract ABIs
-│   ├── types/           # TypeScript types
-│   └── shared/          # Shared code (worker, etc.)
-│
-├── api/                 # Vercel serverless functions
-│   ├── forge.js         # EIP-712 forge attestation signer
-│   ├── card-image.js    # NFT card image renderer
-│   ├── metadata.js      # ERC-721 metadata
-│   ├── pack/            # Pack NFT endpoints
-│   ├── ipfs.js          # IPFS upload proxy
-│   └── proxy-avatar.js  # Discord avatar proxy
-│
-├── contracts/           # Solidity sources
-│   ├── identity/        # IdentityCard (forge, snapshot)
-│   ├── pack/            # PackManager, RitualPackNFT
-│   ├── arena/           # RitualArena (battle system)
-│   ├── staking/         # RitualStaking (AP rewards)
-│   ├── registry/        # IdentityRegistry (score snapshot)
-│   ├── burner/          # CardBurner (NFT → AP sink)
-│   ├── marketplace/     # RitualMarketplace
-│   └── training/        # RitualTraining (XP, level)
-│
-├── public/              # Static FE assets
-│
-├── docs/                # User-facing documentation
-│
-├── test/                # Test suites
-│
-├── hardhat.config.cjs   # Hardhat config
-├── vercel.json          # Vercel build config
-├── vite.config.ts       # Vite config
-├── package.json
-├── tsconfig.json
-├── tailwind.config.ts
-└── postcss.config.cjs
-```
-
-## Smart Contracts (11 total)
+## Active V11 Contracts
 
 | Contract | Purpose |
-|----------|---------|
-| `RitualAnthem` (IdentityCard) | Soulbound identity NFT, snapshot evolution |
-| `RitualAP` | Reputation token, mintable by stakers/keepers |
-| `IdentityRegistry` | Score snapshot, trusted updaters |
-| `AchievementRegistry` | On-chain achievements |
-| `RitualTraining` | XP/level per tokenId, 20h cooldown |
-| `RitualArena` | Battle creation, voting, settlement |
-| `RitualStaking` | Stake RITUAL, earn AP |
-| `RitualPackNFT` | Pack NFT (ERC-721) |
-| `PackManager` | Pack open, rarity-weighted RNG |
-| `RitualMarketplace` | Listings, escrow, fees |
-| `CardBurner` / `CardBurnerV2` | Burn NFT → AP (per-rarity rewards) |
+|---|---|
+| `RitualAP` | AP token used across training, arena, packs, marketplace, staking, and burner flows |
+| `IdentityRegistry` | Canonical score snapshot: training, achievement, arena, collection, total, rank |
+| `RitualAnthem` / `IdentityCard` | Identity NFT and snapshot surface |
+| `AchievementRegistry` | Achievement score updates |
+| `RitualTraining` | XP, training score, power/rarity progression |
+| `RitualArena` | Battle creation, AP voting, settlement, arena score |
+| `RitualStaking` | Stake RITUAL and earn AP |
+| `RitualPackNFT` | NFT card contract |
+| `PackManager` | Pack opening and card minting |
+| `RitualMarketplace` | Listings, escrow, AP listing fee |
+| `CardBurnerV2` | Burn eligible cards for AP rewards |
+| `ArenaAutomation` | Optional automation helper contract |
 
-## How to Deploy
+Current canonical addresses are documented in [`docs/CONTRACTS.md`](docs/CONTRACTS.md).
 
-This repository is the **runtime** — for production deployment, you'll need:
+## Project Structure
 
-1. A deployer EOA with ETH/RITUAL for gas
-2. Set up `.env.admin.local` with `PRIVATE_KEY=...` (never commit)
-3. Run Hardhat scripts to deploy contracts to your target chain
-4. Update `.env` with the deployed contract addresses
-5. Deploy frontend to Vercel (or any static host)
+```txt
+src/                  React frontend
+api/                  Vercel serverless functions
+contracts/            Current Solidity sources only
+deployments/current/  Public-safe deployment metadata
+docs/                 Public docs
+public/               Static assets
+```
 
-For operational tooling (admin scripts, seed scripts, deployment records),
-see the separate private repository.
+This public repo intentionally excludes private ops files, seed wallets, local env files, and historical/debug contracts.
+
+## Scripts
+
+```bash
+npm run lint       # TypeScript check
+npm run build      # Production build
+npm run compile    # Hardhat compile
+npm run test       # Contract tests
+```
 
 ## Documentation
 
-- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md) — System design
-- [`docs/CONTRACTS.md`](docs/CONTRACTS.md) — Smart contract reference
-- [`docs/IDENTITY.md`](docs/IDENTITY.md) — Identity card mechanics
-- [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md) — How to deploy
-- [`docs/API.md`](docs/API.md) — Serverless function reference
-- [`docs/SECURITY.md`](docs/SECURITY.md) — Security model
+- [`docs/ARCHITECTURE.md`](docs/ARCHITECTURE.md)
+- [`docs/CONTRACTS.md`](docs/CONTRACTS.md)
+- [`docs/IDENTITY.md`](docs/IDENTITY.md)
+- [`docs/DEPLOYMENT.md`](docs/DEPLOYMENT.md)
+- [`docs/API.md`](docs/API.md)
+- [`SECURITY.md`](SECURITY.md)
+
+## Security
+
+Never commit real secrets, private keys, seed wallet files, or API tokens. Use local-only env files for private deployments.
 
 ## License
 
 MIT — see [LICENSE](LICENSE).
-
-## Contributing
-
-PRs welcome. For security issues, please email directly (not via public issue tracker).

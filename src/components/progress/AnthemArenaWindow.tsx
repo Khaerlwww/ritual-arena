@@ -145,10 +145,18 @@ function MyArenaCard({ wallet }: { wallet?: Address }) {
   const { stats, supported, refetch } = useArenaStats(wallet);
   const { ids: recentIds } = useRecentBattles(wallet);
 
+  if (!wallet) {
+    return (
+      <div className="bevel-in bg-coal p-3 font-mono text-[11px] text-iceaccent/65">
+        Connect your wallet to view Arena stats.
+      </div>
+    );
+  }
+
   if (!supported) {
     return (
       <div className="bevel-in bg-coal p-3 font-mono text-[11px] text-[#E0C15A]">
-        Arena contract not configured. Set <code>VITE_RITUAL_ARENA_ADDRESS</code> in your env.
+        Arena is unavailable right now.
       </div>
     );
   }

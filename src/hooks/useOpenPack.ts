@@ -228,7 +228,7 @@ export function useOpenPack(): UseOpenPackResult {
           throw new Error("Pack open transaction reverted on-chain (no state available for trace)");
         }
 
-        // Decode PackOpenedBatch event (V9 emits one batch event per pack
+        // Decode PackOpenedBatch event (one batch event per pack
         // with the 3 tokenIds in an array — much easier than 3 individual
         // PackOpened events).
         const tokenIdList: bigint[] = [];

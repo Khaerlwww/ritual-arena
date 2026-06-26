@@ -99,7 +99,7 @@ contract RitualPackNFT is ERC721Enumerable, ERC721URIStorage, AccessControl {
     /// @dev    GENESIS (rarity 5) is rejected — admin-only mint tier that
     ///         must remain ultra-scarce. Use CardBurner to earn AP; burning
     ///         a Common card yields 5 AP, Mythic yields 500 AP (see
-    ///         contracts/burner/CardBurner.sol).
+    ///         contracts/burner/CardBurnerV2.sol).
     function burn(uint256 tokenId) external {
         address owner = ownerOf(tokenId);
         if (!_isBurnAuthorized(owner, msg.sender, tokenId)) revert("Caller is not owner nor approved");
