@@ -8,7 +8,7 @@
 //   1. Component mounts, fetches owned cards + burn rates
 //   2. User checks the cards they want to recycle
 //   3. (one-time) User clicks "Approve Burner" → setApprovalForAll
-//   4. User clicks "Recycle Selected" → CardBurner.burnCards([...ids])
+//   4. User clicks "Recycle Selected" → batch recycle selected cards
 //   5. AP lands in wallet, NFTs gone — UI updates via event bus
 //
 // A "Burn History" panel sits at the very top of the window, sourced from
@@ -47,7 +47,7 @@ interface RecycleBinWindowProps {
   address?: Address;
 }
 
-// Current InternalRarity names (single source of truth — see contracts/pack/RitualPackNFT.sol)
+// V9 InternalRarity names (single source of truth for display labels)
 const VISUAL_LABELS: Record<number, string> = {
   0: "INITIATE",
   1: "BITTY",
@@ -74,6 +74,22 @@ const RARITY_COLORS: Record<number, string> = {
   4: "text-[#c9b8ff]",
   5: "text-[#f472b6]",
 };
+
+const RARITY_FILTERS = ["ALL", "INITIATE", "BITTY", "RITTY", "RITUALIST", "RADIANT RITUALIST", "GENESIS"] as const;
+type RarityFilter = typeof RARITY_FILTERS[number];
+type RaritySort = "low-high" | "high-low";
+
+function rarityIndex(rarity: PackResultCard["rarity"] | RarityFilter): number {
+  switch (rarity) {
+    case "INITIATE": return 0;
+    case "BITTY": return 1;
+    case "RITTY": return 2;
+    case "RITUALIST": return 3;
+    case "RADIANT RITUALIST": return 4;
+    case "GENESIS": return 5;
+    default: return -1;
+  }
+}
 
 function ownedCardToDisplayCard(
   c: OwnedPackCard,
@@ -167,6 +183,8 @@ export function RecycleBinWindow({ address }: RecycleBinWindowProps) {
   const [approved, setApproved] = useState<boolean | null>(null);
   const [approveError, setApproveError] = useState<string | undefined>();
   const [pool, setPool] = useState<CollectionPool | null>(null);
+  const [rarityFilter, setRarityFilter] = useState<RarityFilter>("ALL");
+  const [raritySort, setRaritySort] = useState<RaritySort>("low-high");
 
   // Auto-check approval status on mount + whenever wallet changes, so the
   // burn button reflects reality (don't make the user click Approve twice).
@@ -248,11 +266,21 @@ export function RecycleBinWindow({ address }: RecycleBinWindowProps) {
     [owned.cards, pool, ownerKey],
   );
 
+  const displayedCards = useMemo(() => {
+    const filtered = rarityFilter === "ALL"
+      ? cards
+      : cards.filter((c) => c.rarity === rarityFilter);
+    return [...filtered].sort((a, b) => {
+      const delta = rarityIndex(a.rarity) - rarityIndex(b.rarity);
+      return raritySort === "low-high" ? delta : -delta;
+    });
+  }, [cards, rarityFilter, raritySort]);
+
   const totalSelectedAp = useMemo(() => {
     let total = 0n;
     for (const c of cards) {
       if (selected.has(c.instanceId)) {
-        const rate = burnRates[c.rarity as unknown as number] ?? 0n;
+        const rate = burnRates[rarityIndex(c.rarity)] ?? 0n;
         total += rate;
       }
     }
@@ -269,8 +297,8 @@ export function RecycleBinWindow({ address }: RecycleBinWindowProps) {
   }, []);
 
   const selectAll = useCallback(() => {
-    setSelected(new Set(cards.filter((c) => c.rarity !== "GENESIS").map((c) => c.instanceId)));
-  }, [cards]);
+    setSelected(new Set(displayedCards.filter((c) => c.rarity !== "GENESIS").map((c) => c.instanceId)));
+  }, [displayedCards]);
 
   const selectNone = useCallback(() => {
     setSelected(new Set());
@@ -399,7 +427,7 @@ export function RecycleBinWindow({ address }: RecycleBinWindowProps) {
         </div>
         <div className="bevel-in bg-coal p-3 font-mono text-[10px] text-iceaccent/70">
           <p>
-            <span className="text-aqua">Drag your unwanted cards here to recycle them into AP Energy.</span>
+            <span className="text-aqua">Select unwanted cards, then recycle them into AP Energy.</span>
           </p>
           <p className="mt-1 grid grid-cols-5 gap-2">
             {Object.entries(VISUAL_LABELS).slice(0, 5).map(([r, label]) => {
@@ -431,6 +459,7 @@ export function RecycleBinWindow({ address }: RecycleBinWindowProps) {
       <div className="bevel-in-thin bg-[#061512] p-2 flex items-center justify-between gap-2 font-mono text-[10px]">
         <span className="text-iceaccent/60">
           {selectedCount} of {cards.filter((c) => c.rarity !== "GENESIS").length} burnable selected
+          <span className="text-iceaccent/35"> · showing {displayedCards.length}/{cards.length}</span>
         </span>
         <span className="flex items-center gap-2">
           <Coins size={11} className="text-aqua" />
@@ -441,7 +470,7 @@ export function RecycleBinWindow({ address }: RecycleBinWindowProps) {
             onClick={selectAll}
             className="bevel-in-thin px-2 py-0.5 text-[9px] text-iceaccent/70 hover:text-ice"
           >
-            select all
+            select visible
           </button>
           <button
             onClick={selectNone}
@@ -450,6 +479,36 @@ export function RecycleBinWindow({ address }: RecycleBinWindowProps) {
             clear
           </button>
         </span>
+      </div>
+
+      <div className="bevel-in-thin bg-[#050d0b] p-2 font-mono text-[10px]">
+        <div className="mb-1 flex items-center justify-between gap-2">
+          <span className="text-iceaccent/45 uppercase tracking-[0.16em]">sort / filter by rarity</span>
+          <button
+            onClick={() => setRaritySort((v) => (v === "low-high" ? "high-low" : "low-high"))}
+            className="bevel-in-thin px-2 py-0.5 text-[9px] text-aqua hover:text-ice"
+          >
+            {raritySort === "low-high" ? "low → high" : "high → low"}
+          </button>
+        </div>
+        <div className="flex flex-wrap gap-1.5">
+          {RARITY_FILTERS.map((filter) => {
+            const idx = rarityIndex(filter);
+            const active = rarityFilter === filter;
+            const label = filter === "ALL" ? "ALL" : (VISUAL_LABELS[idx] ?? filter);
+            return (
+              <button
+                key={filter}
+                onClick={() => setRarityFilter(filter)}
+                className={`bevel-in-thin px-2 py-0.5 text-[9px] transition-colors ${
+                  active ? "bg-[#063226] text-aqua" : "bg-[#071512] text-iceaccent/55 hover:text-ice"
+                }`}
+              >
+                <span className={idx >= 0 ? RARITY_COLORS[idx] : ""}>{label}</span>
+              </button>
+            );
+          })}
+        </div>
       </div>
 
       
@@ -510,8 +569,8 @@ export function RecycleBinWindow({ address }: RecycleBinWindowProps) {
 
       
       <div className="grid gap-2 sm:grid-cols-2 lg:grid-cols-3">
-        {cards.map((c) => {
-          const rarityNum = c.rarity as unknown as number;
+        {displayedCards.map((c) => {
+          const rarityNum = rarityIndex(c.rarity);
           const isGenesis = rarityNum === 5;
           const rate = burnRates[rarityNum] ?? 0n;
           const isSelected = selected.has(c.instanceId);
@@ -532,7 +591,7 @@ export function RecycleBinWindow({ address }: RecycleBinWindowProps) {
                   disabled={isGenesis}
                   className="absolute top-2 left-2 z-10 w-4 h-4 accent-aqua"
                 />
-                <CollectionCard card={c} versionBadge="V11" />
+                <CollectionCard card={c} versionBadge="V10" />
               </label>
               <div className="bevel-in-thin bg-[#061512] mt-1 px-2 py-1 font-mono text-[10px] flex items-center justify-between">
                 <span className={RARITY_COLORS[rarityNum] ?? "text-ice"}>

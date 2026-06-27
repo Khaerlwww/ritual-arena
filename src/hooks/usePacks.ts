@@ -4,7 +4,7 @@
 //
 //   1. Load community pool JSON for *display only* (Pool Overview panel).
 //   2. Open a pack via `useOpenPack`:
-//        - PackManager.openInitiatePack() / openRitualPack()
+//        - open initiate / ritual pack
 //        - The card draw is decided on-chain (block-hash PRNG — testnet
 //          scope; swap in VRF for mainnet)
 //        - The NFT lands directly in the user's wallet
@@ -70,7 +70,7 @@ export interface UsePacksResult {
   initiateCost: number;
   ritualistCost: number;
   // TRUE drop probabilities (basis points 0..10000, per InternalRarity 0..4)
-  // from PackManager.initiatePack() / ritualPack(). Sum to 10000.
+  // from the live pack configuration. Sum to 10000.
   initiateDropBps: Record<number, number> | undefined;
   ritualDropBps: Record<number, number> | undefined;
 

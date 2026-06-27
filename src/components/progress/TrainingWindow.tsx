@@ -164,6 +164,7 @@ export function TrainingWindow({
   const tokenId = selected?.tokenId ? Number(selected.tokenId) : undefined;
   const chainTraining = useTrainingProgress(address, tokenId);
   const trainingWrites = useTrainingWrites();
+  const expectedXp = 55;
   const expectedAp = 25;
   const baseXp = minted ? 200 : 0;
   const totalXp = chainTraining.progress.totalXp;
@@ -243,7 +244,7 @@ export function TrainingWindow({
       await Promise.all([chainTraining.refetch(), Promise.resolve(onTrain())]);
       const afterLvl = levelFromXp(chainTraining.progress.totalXp).level;
       const afterPower = snapshotForCard ? snapshotForCard.currentPower : undefined;
-      setBurst(`+25 XP  +25 AP`);
+      setBurst(`+${expectedXp} XP  +${expectedAp} AP`);
       window.setTimeout(() => setBurst(undefined), 1200);
       const unlocked = EVOLUTION_THRESHOLDS.find((u) => beforeLvl < u.level && afterLvl >= u.level);
       if (unlocked) {
@@ -338,7 +339,7 @@ export function TrainingWindow({
             <div className="mt-3 grid gap-1.5 text-[11px]">
               <div className="flex items-center justify-between">
                 <span className="text-iceaccent/70">Training XP</span>
-                <span className="text-aqua">+25 XP</span>
+                <span className="text-aqua">+{expectedXp} XP</span>
               </div>
               <div className="flex items-center justify-between">
                 <span className="text-iceaccent/70">Arena Points</span>
@@ -369,7 +370,7 @@ export function TrainingWindow({
                   <CheckCircle2 size={16} /> Training complete
                 </>
               ) : !chainTraining.supported || !supported ? (
-                "Training contract not configured"
+                "Training is unavailable right now"
               ) : !hasAnthem ? (
                 "Forge an Identity Card first"
               ) : isPending ? (

@@ -164,7 +164,7 @@ export function useBurnHistory(address?: Address): UseBurnHistoryResult {
     }
   }, [wallet]);
 
-  // Initial backfill + listen for live burns emitted by useCardBurner.
+  // Initial backfill + listen for live recycle events emitted by the recycler hook.
   useEffect(() => {
     if (!wallet) return;
     void refetch();

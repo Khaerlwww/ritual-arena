@@ -1,7 +1,7 @@
 // src/lib/packNftAbi.ts
-// RitualPackNFT ABI slice — must match contracts/pack/RitualPackNFT.sol (current V11 runtime).
+// Collection NFT ABI slice.
 //
-// Current contract layout:
+// V10 contract layout (re-deployed 2026-06-21, address 0xc381fCd8f673E673Bd0927b2dd33B6C189570342):
 //   struct CardData {
 //     uint8   packType;   // 0 = INITIATE, 1 = RITUALIST
 //     uint256 cardId;     // pool-card-type identity (NOT NFT tokenId)
@@ -12,13 +12,13 @@
 //   }
 //   function mint(address to, uint8 packType, uint256 cardId, uint8 rarity, uint16 power, string role, string metadataURI) onlyRole(MINTER_ROLE) returns (uint256 tokenId)
 //   function cardData(uint256 tokenId) view returns (CardData)
-//   function burn(uint256 tokenId)  // current deflation sink, owner-or-approved only, GENESIS rejected
+//   function burn(uint256 tokenId)  // V10: deflation sink, owner-or-approved only, GENESIS rejected
 //   function setApprovalForAll(address operator, bool approved)  // ERC721 standard
 //
-// NOTE: serialNumber + maxSupply live on PackManager (NOT on the NFT in current runtime):
-//   - serialNumber: PackManager.mintedByCardId(cardId)
-//   - maxSupply:    PackManager.maxSupplyOf(cardId)
-// See src/lib/packManagerAbi.ts for those getters.
+// NOTE: serialNumber + maxSupply live on the pack manager (not on the NFT):
+//   - serialNumber: minted supply for the card id
+//   - maxSupply:    maximum supply for the card id
+// See the pack manager ABI for those getters.
 
 export const RITUAL_PACK_NFT_ABI = [
   // ── Mint (only callable by MINTER_ROLE — usually PackManager) ──────
@@ -38,7 +38,7 @@ export const RITUAL_PACK_NFT_ABI = [
     outputs: [{ name: "tokenId", type: "uint256" }],
   },
 
-  // ── Current CardData struct (must match contracts/pack/RitualPackNFT.sol) ─
+  // ── V9 CardData struct (event/struct signature) ─
   // NOTE: actual decoding uses the custom `packCardDataDecoder` helper
   // (NOT viem's tuple decoder), because viem 2.52.x miscalculates the
   // dynamic-string offset inside a tuple-with-string and throws
@@ -149,7 +149,7 @@ export const RITUAL_PACK_NFT_ABI = [
     outputs: [{ name: "", type: "address" }],
   },
 
-  // ── Current CardMinted event (must match contracts/pack/RitualPackNFT.sol) ──
+  // ── V9 CardMinted event (event/struct signature) ──
   // event CardMinted(uint256 indexed tokenId, address indexed to, uint8 packType, uint256 cardId, uint8 rarity, uint16 power, string role, string metadataURI);
   {
     type: "event",

@@ -367,7 +367,7 @@ export function useStakingWrites() {
       phaseLabel: typeof phase = "idle",
       value?: bigint,
     ) => {
-      if (!hasStakingContract) throw new Error("VITE_RITUAL_STAKING_ADDRESS is not configured.");
+      if (!hasStakingContract) throw new Error("Staking is unavailable right now.");
       const walletClient = getSharedWalletClient();
       if (!walletClient) throw new Error("Wallet extension not found.");
       setIsPending(true);

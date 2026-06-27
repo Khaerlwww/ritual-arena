@@ -495,7 +495,7 @@ export const identityRegistryAbi = [
             "type": "uint64"
           }
         ],
-        "internalType": "struct IdentityRegistry.IdentitySnapshot",
+        "internalType": "struct IdentitySnapshot",
         "name": "",
         "type": "tuple"
       }

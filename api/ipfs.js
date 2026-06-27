@@ -48,7 +48,7 @@ export default async function handler(req, res) {
 
   const jwt = process.env.PINATA_JWT;
   const allowedOrigin = process.env.IPFS_ALLOWED_ORIGIN;
-  if (!jwt) return json(res, 503, { error: "IPFS proxy is not configured." });
+  if (!jwt) return json(res, 503, { error: "IPFS upload is unavailable right now." });
   if (allowedOrigin && req.headers.origin !== allowedOrigin) return json(res, 403, { error: "Origin not allowed." });
 
   try {

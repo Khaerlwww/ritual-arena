@@ -1,6 +1,6 @@
 // useAchievements.ts
-// Reads achievement state from AchievementRegistry contract.
-// Falls back to frontend-derived achievements if registry not configured.
+// Reads achievement state from the live achievements registry.
+// Falls back to frontend-derived achievements when unavailable.
 
 import { useEffect, useState, useCallback } from "react";
 import type { Address } from "viem";

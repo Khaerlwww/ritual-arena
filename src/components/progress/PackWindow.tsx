@@ -115,7 +115,7 @@ function PoolOverview({ pool }: { pool: CollectionPool }) {
           })}
         </p>
         <p className="mt-1 text-iceaccent/30">
-          Pool metadata only. Live supply is tracked on chain by PackManager.
+          Pool metadata only. Live supply updates on chain.
         </p>
       </div>
     </div>
@@ -202,7 +202,7 @@ function APGate({
   if (!apReady) {
     return (
       <div className="bevel-in-thin bg-[#1a0f0f] p-2 font-mono text-[10px] text-[#ff8a8a]">
-        AP contract not deployed — packs are disabled. Check chains.ts apPackAddress.
+        AP is unavailable right now — packs are disabled.
       </div>
     );
   }
@@ -216,7 +216,7 @@ function APGate({
   if (apBalance < cost) {
     return (
       <div className="bevel-in-thin bg-[#1f1305] p-2 font-mono text-[10px] text-[#E0C15A]">
-        Need {cost} AP to open {packLabel}. You have {apBalance} AP. Train cards to earn more.
+        Need {cost} AP to open {packLabel}. Train cards to earn more.
       </div>
     );
   }
@@ -464,12 +464,30 @@ export function PackWindow({
     );
   }
 
-  // Loading state (pool / owned still loading)
-  if (loading || !pool) {
+  // Loading state (pool / owned still loading). If the pool failed to load,
+  // do not keep the user on the spinner forever — show a retryable error.
+  if (loading && !error) {
     return (
       <div className="grid place-items-center p-8 font-mono text-[11px] text-iceaccent/60">
         <RitualMark size={42} spin={false} glow shine />
         <p className="mt-3 text-aqua">loading community pack pool…</p>
+      </div>
+    );
+  }
+
+  if (!pool) {
+    return (
+      <div className="grid gap-3 p-3 font-mono text-[11px] text-iceaccent/70">
+        <div className="bevel-in-thin bg-[#140f0f] p-3 text-[#ff8a8a]">
+          Collection pack pool is unavailable right now.
+          {error ? <span className="block pt-1 text-[10px] text-[#ffb3b3]/75">{error}</span> : null}
+        </div>
+        <button
+          onClick={refetch}
+          className="bevel-out-thin w-max bg-wgray px-2 py-1 font-mono text-[10px] text-aqua"
+        >
+          retry
+        </button>
       </div>
     );
   }

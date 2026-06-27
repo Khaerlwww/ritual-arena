@@ -253,7 +253,7 @@ export function useTrainingWrites() {
 
   const train = useCallback(
     async (tokenId: number) => {
-      if (!hasTrainingContract) throw new Error("VITE_RITUAL_TRAINING_ADDRESS is not configured.");
+      if (!hasTrainingContract) throw new Error("Training is unavailable right now.");
       const walletClient = getSharedWalletClient();
       if (!walletClient) throw new Error("Wallet extension not found.");
       setPhase("awaitingSignature");

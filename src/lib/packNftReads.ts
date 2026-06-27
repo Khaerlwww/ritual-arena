@@ -1,12 +1,12 @@
 // src/lib/packNftReads.ts
-// Shared RitualPackNFT current read helpers. The struct returned by
-// `cardData(tokenId)` matches contracts/pack/RitualPackNFT.sol:
+// Shared collection NFT read helpers. The struct returned by
+// `cardData(tokenId)` follows the live collection NFT tuple:
 //   (uint8 packType, uint256 cardId, uint8 rarity, uint16 power, string role, uint64 mintedAt)
 //
-// IMPORTANT: In the current runtime, `serialNumber` and `maxSupply` are NOT stored on the
-// NFT. They live on PackManager:
-//   - serialNumber = PackManager.mintedByCardId(cardId)        // increments on every mint
-//   - maxSupply    = PackManager.maxSupplyOf(cardId)           // set on pool-card add
+// IMPORTANT: In V10, `serialNumber` and `maxSupply` are NOT stored on the
+// NFT. They live on the pack manager:
+//   - serialNumber = minted supply for the card id        // increments on every mint
+//   - maxSupply    = maximum supply for the card id           // set on pool-card add
 // Use `readCardWithSupply` to fetch all fields + supply in one multicall.
 //
 // Used by:
@@ -26,10 +26,10 @@ import {
 } from "./chains";
 
 /**
- * Current CardData struct from RitualPackNFT.cardData(tokenId).
+ * CardData struct from the collection NFT read.
  * On-chain tuple order: packType, cardId, rarity, power, role, mintedAt.
  */
-export interface DecodedCardData {
+export interface DecodedCardDataV9 {
   packType: number;
   cardId: bigint;
   rarity: number;
@@ -42,7 +42,7 @@ export interface DecodedCardData {
  * Card + supply (combined view used by UI). Serial + maxSupply are
  * read from PackManager, not the NFT.
  */
-export interface DecodedCardWithSupply extends DecodedCardData {
+export interface DecodedCardWithSupply extends DecodedCardDataV9 {
   tokenId: bigint;
   serialNumber: bigint;
   maxSupply: bigint;
@@ -60,7 +60,7 @@ const CARD_DATA_ABI_ITEM = (
   }[]
 ).find((x) => x.type === "function" && x.name === "cardData")!;
 
-// Current Pack NFT — canonical address from chains.ts (single source of truth).
+// V9 Pack NFT — canonical address from chains.ts (single source of truth).
 export const PACK_NFT_ADDRESS: Address = CANONICAL_PACK_NFT_ADDRESS;
 export const PACK_MANAGER_ADDRESS: Address = CANONICAL_PACK_MANAGER_ADDRESS;
 
@@ -76,10 +76,10 @@ export function getPackNftAddressOrDefault(): Address {
  * Read the on-chain cardData for a single tokenId.
  * Returns undefined on failure (missing token, contract revert, RPC drop).
  */
-export async function readCardData(
+export async function readCardDataV10(
   packAddress: Address,
   tokenId: bigint,
-): Promise<DecodedCardData | undefined> {
+): Promise<DecodedCardDataV9 | undefined> {
   try {
     const callData = encodeFunctionData({
       abi: [CARD_DATA_ABI_ITEM],
@@ -109,7 +109,7 @@ export async function readCardWithSupply(
 ): Promise<DecodedCardWithSupply | undefined> {
   if (!PACK_NFT_ADDRESS || !PACK_MANAGER_ADDRESS) return undefined;
   try {
-    const cardData = await readCardData(PACK_NFT_ADDRESS, tokenId);
+    const cardData = await readCardDataV10(PACK_NFT_ADDRESS, tokenId);
     if (!cardData) return undefined;
     // Pull serial + maxSupply from PackManager in parallel.
     const [serial, max] = await Promise.all([

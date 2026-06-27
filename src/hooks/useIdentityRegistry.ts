@@ -34,7 +34,7 @@ function tryWatchIdentityScoreUpdated(
 }
 
 // RANK_LABELS lives in src/lib/identityRanks.ts and is the single source
-// of truth (mirrors IdentityRegistry.sol).
+// of truth (mirrors the on-chain identity ranks).
 
 type Snapshot = {
   trainingScore: bigint;
@@ -163,7 +163,7 @@ export function useIdentityRegistry(
     // The 4 component scores from the registry's getIdentity() snapshot.
     // These are the SAME values the leaderboard reads. sum(components)
     // is always equal to `score` (the registry's totalScore) — this
-    // invariant is enforced by IdentityRegistry._setComponent on-chain.
+    // invariant is enforced by the identity score update on-chain.
     // We surface them here so the UI (Profile / Breakdown) reads from
     // the same source as the leaderboard.
     const components = {

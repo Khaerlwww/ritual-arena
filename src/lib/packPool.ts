@@ -15,6 +15,7 @@
 // (bitty→BITTY, ritty→RITTY, etc.), not from the JSON's `rarity` field
 // (which uses a legacy visual bucketing scheme that is now overridden).
 
+import bundledPoolJson from "../data/ritual-pack-pool.json";
 import {
   INTERNAL_RARITIES,
   RARITY_TIER_CONFIG,
@@ -84,11 +85,9 @@ const POOL_STORAGE_KEY = "ritual-arena:pack-pool:v1";
 
 /** Genesis is admin-configurable; default matches RADIANT RITUALIST. */
 function genesisMaxSupply(): number {
-  // Allow env override at build time. Defaults to 3 — admins can change.
-  const fromEnv =
-    typeof import.meta !== "undefined" && (import.meta as any).env?.VITE_GENESIS_MAX_SUPPLY;
-  const parsed = fromEnv ? Number.parseInt(String(fromEnv), 10) : NaN;
-  return Number.isFinite(parsed) && parsed > 0 ? parsed : 3;
+  // Keep this constant public-safe; dynamic import.meta.env access makes Vite
+  // inject the whole client env object into the production bundle.
+  return 3;
 }
 
 // --------------------------------------------------------------------
@@ -118,13 +117,17 @@ export async function loadCollectionPool(fetchImpl: typeof fetch = fetch): Promi
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       json = (await res.json()) as RawPoolJson;
     } catch (err) {
-      // Offline / dev: try localStorage cache.
+      // Offline / deploy fallback order:
+      // 1) browser localStorage cache from a previous good load,
+      // 2) bundled JSON imported into the Vite bundle.
+      // The bundled fallback protects fresh browsers when Vercel/CDN routing
+      // mis-serves /data/ritual-pack-pool.json.
       const cached = readPoolFromStorage();
       if (cached) {
         _cachedPool = applyMintedSupplyOverlay(cached);
         return _cachedPool;
       }
-      throw new Error(`Failed to load pack pool: ${(err as Error).message}`);
+      json = bundledPoolJson as RawPoolJson;
     }
     const pool = buildPoolFromJson(json);
     writePoolToStorage(json);
@@ -324,7 +327,7 @@ function isV5PackMode(): boolean {
 
 // V4 legacy functions (recordMint, _clearMintLedger, mergeMintedSuppliesLegacy)
 // were removed in V5. In V5+ pack mints happen on-chain via
-// PackManager.openXxxPack and the chain is the only source of truth.
+// pack open writes and the chain is the only source of truth.
 export function recordMint(_pool: CollectionPool, _cardId: number): boolean {
   return false;
 }

@@ -1,7 +1,6 @@
 // src/lib/contractDomains.ts
 // EIP-712 domain + typed data builders shared by the FE. Must match
-// the on-chain hash functions in contracts/pack/RitualPackNFT.sol
-// and contracts/marketplace/RitualMarketplace.sol.
+// the on-chain typed-data hash functions.
 
 import type { Address } from "viem";
 

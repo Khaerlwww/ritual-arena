@@ -1,11 +1,11 @@
 // src/hooks/useOpenPack.ts
-// Opens a pack on-chain via PackManager. Single-phase state machine so
+// Opens a pack on-chain via a single-phase state machine so
 // the UI can render a step indicator and block re-entry during a tx.
 //
 // Flow (for packs with apCost > 0):
 //   1. checking      — read pack cost + AP balance + allowance (no prompts)
-//   2. approving     — wallet prompt: RitualAP.approve(PackManager, cost)
-//   3. opening       — wallet prompt: PackManager.openInitiatePack() / openRitualPack()
+//   2. approving     — wallet prompt: approve AP spend for the pack
+//   3. opening       — wallet prompt: open initiate / ritual pack
 //   4. confirming    — tx submitted, waiting for receipt
 //   5. done          — CardMinted event parsed
 //
@@ -44,7 +44,7 @@ export type PackPhase =
   | "idle"
   | "checking"      // reading pack cost + AP balance + allowance (no prompts)
   | "approving"     // user is signing RitualAP.approve
-  | "opening"       // user is signing PackManager.openXxxPack
+  | "opening"       // user is signing the pack open transaction
   | "confirming"    // tx submitted, waiting for receipt
   | "done"          // success — event parsed
   | "error";        // last attempt failed; `error` is set
@@ -139,7 +139,7 @@ export function useOpenPack(): UseOpenPackResult {
         if (cfg.apCost > 0n) {
           const apAddr = getAPAddress();
           if (!apAddr) {
-            throw new Error("Pack costs AP but apPackAddress not configured");
+            throw new Error("Packs are unavailable right now.");
           }
           // Atomic pre-flight: read balance + allowance in parallel.
           // Fail-fast: don't show the user a wallet prompt if we know it'll revert.
@@ -203,7 +203,7 @@ export function useOpenPack(): UseOpenPackResult {
         setPhase("opening");
         setPendingStepLabel("Open pack");
         // Estimate gas explicitly with 30% headroom — wallets sometimes
-        // set the limit too close to estimate, and PackManager.openPack
+        // set the limit too close to estimate, and the pack open transaction
         // is heavy (3 mints + AP transfer + event emit = ~9.2M gas).
         // OOG gives "reason string unavailable" with no recovery.
         const openGas = await publicClient.estimateContractGas({
@@ -228,7 +228,7 @@ export function useOpenPack(): UseOpenPackResult {
           throw new Error("Pack open transaction reverted on-chain (no state available for trace)");
         }
 
-        // Decode PackOpenedBatch event (one batch event per pack
+        // Decode PackOpenedBatch event (V9 emits one batch event per pack
         // with the 3 tokenIds in an array — much easier than 3 individual
         // PackOpened events).
         const tokenIdList: bigint[] = [];

@@ -1,7 +1,7 @@
 // src/lib/packManagerAbi.ts
-// PackManager ABI slice — must match contracts/pack/PackManager.sol (current V11 runtime).
+// Pack manager ABI slice.
 //
-// Current contract layout:
+// V10 contract layout (re-deployed 2026-06-21, address 0xAd96175CaA412C3D42BCcF6C59eC2Fc8ee2c8CCb):
 //   struct PackConfig { uint256 apCost; uint16 bps0..bps4; }    // rarity BPS (0..4)
 //   PackConfig public initiatePack; PackConfig public ritualPack;
 //   RitualPackNFT public immutable card;                        // = PackNFT
@@ -13,7 +13,7 @@
 //   mapping(uint8 => uint256) public defaultMaxByRarity;
 //   function openInitiatePack() / openRitualistPack() returns (uint256[] tokenIds)
 //
-// Events (must match contracts/pack/PackManager.sol exactly):
+// Events:
 //   PackOpened(address indexed user, uint8 packType, uint256 tokenId, uint256 cardId, uint8 rarity, string role, uint256 serial, uint256 apCost)
 //   PackOpenedBatch(address indexed user, uint8 packType, uint256[] tokenIds, uint8[] rarities, uint256[] serials)
 //   PoolCardAdded(uint8 indexed packType, uint256 cardId, uint8 rarity, uint256 maxSupply)
@@ -87,7 +87,7 @@ export const PACK_MANAGER_ABI = [
     inputs: [{ name: "packType", type: "uint8" }],
     outputs: [{ name: "", type: "uint256" }],
   },
-  // Per-card supply tracking (current supply model — replaces PackNFT's
+  // Per-card supply tracking (V9 supply model — replaces PackNFT's
   // serialNumber/maxSupply fields from the old V8 layout).
   {
     type: "function",
@@ -141,7 +141,7 @@ export const PACK_MANAGER_ABI = [
     outputs: [{ name: "", type: "address" }],
   },
 
-  // ── Events (must match contracts/pack/PackManager.sol) ──────────────
+  // ── Events (event signature) ──────────────
   // PackOpened(address indexed opener, uint8 indexed packType, uint256 indexed tokenId,
   //            uint256 cardId, uint8 rarity, string role, uint256 serial, uint256 apCost)
   {

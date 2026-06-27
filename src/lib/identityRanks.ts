@@ -1,6 +1,6 @@
 // src/lib/identityRanks.ts
 // Single source of truth for Identity Rank tiers + label mapping.
-// Mirrors IdentityRegistry.sol exactly:
+// Mirrors the live identity rank tiers:
 //   rankScore = identityScore (already 0..1000, no scaling)
 //   0..99     -> INITIATE
 //   100..249  -> ASCENDANT
@@ -71,7 +71,7 @@ export function rankFromScore(totalScore: number): RankLabelOrUnknown {
   return RANK_UNKNOWN;
 }
 
-/** Compute the rank uint8 (same algorithm as IdentityRegistry.rankForScore). */
+/** Compute the rank uint8 (same algorithm as the live rank tier mapping). */
 export function rankUintFromScore(totalScore: number): number {
   const rs = rankScoreFromIdentityScore(totalScore);
   for (let i = 0; i < RANK_THRESHOLDS.length; i++) {

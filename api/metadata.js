@@ -68,8 +68,7 @@ export default async function handler(req, res) {
 
   if (!ANTHEM_ADDRESS || !RPC_URL) {
     return res.status(503).json({
-      error: "Metadata service not configured",
-      hint: "Set ANTHEM_ADDRESS and RITUAL_RPC_URL in Vercel environment variables.",
+      error: "Metadata service is unavailable right now.",
     });
   }
 

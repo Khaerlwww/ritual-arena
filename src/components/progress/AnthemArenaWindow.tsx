@@ -979,7 +979,7 @@ function LiveActivityFeed({ identity }: { identity: ReturnType<typeof useIdentit
       <CliHeader path="Live Activity" icon={Activity} />
       <div className="bevel-in bg-coal p-3 font-mono text-[11px]">
         <p className="mb-2 text-[10px] text-iceaccent/55">
-          Recent top wallets on IdentityRegistry. Live updates on every IdentityScoreUpdated event.
+          Recent top wallets from the live identity ranking.
         </p>
         {recent.length === 0 ? (
           <div className="bevel-in-thin flex flex-col items-center gap-2 bg-[#061512] p-4 text-center">

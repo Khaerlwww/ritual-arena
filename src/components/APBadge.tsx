@@ -5,7 +5,7 @@
 //
 // Shows "AP —" when:
 //   - no wallet connected
-//   - VITE_RITUAL_AP_ADDRESS not configured
+//   - AP service unavailable
 // Shows "AP <number>" when balance is available.
 // Auto-refreshes on inbound AP Transfer events (mints, receives).
 // Refresh can also be triggered explicitly via .refetch().
@@ -35,7 +35,7 @@ export function APBadge({ address }: { address?: Address }) {
     : "—";
   const title = configured
     ? `AP balance from RitualAP contract (${ap.state!.decimals} decimals, cap ${ap.state!.cap.toLocaleString()})`
-    : "AP contract not deployed (chains.ts apAddress missing)";
+    : "AP is unavailable right now.";
 
   return (
     <span

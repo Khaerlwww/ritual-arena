@@ -104,7 +104,7 @@ async function blobToBase64(file: Blob) {
 
 /** Pin a binary blob (image/audio) and return its ipfs:// URI. */
 export async function pinFile(file: Blob, name: string): Promise<string> {
-  if (!UPLOAD_URL) throw new Error("VITE_IPFS_UPLOAD_URL not set");
+  if (!UPLOAD_URL) throw new Error("IPFS upload is unavailable right now.");
 
   // Probe endpoint first — if unreachable, throw a specific error
   const available = await probeEndpoint();
@@ -140,7 +140,7 @@ export async function pinFile(file: Blob, name: string): Promise<string> {
 
 /** Pin a JSON object (metadata) and return its ipfs:// URI. */
 export async function pinJson(data: unknown, name: string): Promise<string> {
-  if (!UPLOAD_URL) throw new Error("VITE_IPFS_UPLOAD_URL not set");
+  if (!UPLOAD_URL) throw new Error("IPFS upload is unavailable right now.");
 
   const available = await probeEndpoint();
   if (!available) {

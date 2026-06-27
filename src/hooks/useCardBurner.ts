@@ -3,15 +3,15 @@
 // Frontend hook for the NFT deflation sink (CardBurner contract).
 //
 // Flow for burning a card:
-//   1. User must approve CardBurner to burn their RitualPackNFTs:
-//      RitualPackNFT.setApprovalForAll(CardBurner, true)  (one-time)
-//   2. User calls CardBurner.burnCard(tokenId) — burns NFT + mints AP
+//   1. User must approve the recycler to burn their collection cards:
+//      setApprovalForAll(recycler, true)  (one-time)
+//   2. User recycles a selected card — burns NFT + mints AP
 //   3. UI emits `ap-changed` + `nft-changed` via event bus for cross-hook
 //      invalidation. The gallery + AP badge refresh automatically.
 //
 // Phase machine (mirrors useOpenPack):
 //   idle → checking (preflight) → approving (one-time setApprovalForAll)
-//        → burning (CardBurner.burnCard or burnCards) → confirming
+//        → burning (single or batch recycle) → confirming
 //        → done | error
 //
 // Rate table is read live from the contract (burnRates[r]) so owner

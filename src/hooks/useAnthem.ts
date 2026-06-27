@@ -478,7 +478,7 @@ export function useAnthemWrites() {
   const mintAnthem = useCallback(
     async (args: MintArgs, value?: bigint) => {
       if (!hasAnthemContract) {
-        throw new Error("VITE_RITUAL_ANTHEM_ADDRESS is not configured. Deploy the contract to Ritual testnet first.");
+        throw new Error("Forge is unavailable right now.");
       }
       const walletClient = getSharedWalletClient();
       if (!walletClient) throw new Error("Wallet extension not found.");
@@ -601,7 +601,7 @@ export function useAnthemWrites() {
   );
 
   const checkIn = useCallback(async () => {
-    if (!hasAnthemContract) throw new Error("Contract not configured.");
+    if (!hasAnthemContract) throw new Error("Ritual services are unavailable right now.");
     const walletClient = getSharedWalletClient();
     if (!walletClient) throw new Error("Wallet extension not found.");
     setIsPending(true);
@@ -628,7 +628,7 @@ export function useAnthemWrites() {
 
   const updateMetadata = useCallback(
     async (metadataURI: string, audioURI: string) => {
-      if (!hasAnthemContract) throw new Error("Contract not configured.");
+      if (!hasAnthemContract) throw new Error("Ritual services are unavailable right now.");
       const walletClient = getSharedWalletClient();
       if (!walletClient) throw new Error("Wallet extension not found.");
       setIsPending(true);
@@ -656,7 +656,7 @@ export function useAnthemWrites() {
   );
 
   const dailyCheckIn = useCallback(async () => {
-    if (!hasAnthemContract) throw new Error("Contract not configured.");
+    if (!hasAnthemContract) throw new Error("Ritual services are unavailable right now.");
     const walletClient = getSharedWalletClient();
     if (!walletClient) throw new Error("Wallet extension not found.");
     setIsPending(true);
@@ -754,9 +754,9 @@ export function useAnthemWrites() {
         const errBody = await res.json().catch(() => ({}));
         // Re-throw backend error messages that are actionable
         if (errBody.error && (
-          errBody.error.includes("signer is not configured") ||
-          errBody.error.includes("attestation service is not configured") ||
-          errBody.error.includes("not configured correctly")
+          errBody.error.includes("Forge authorization is unavailable right now") ||
+          errBody.error.includes("Forge verification service is unavailable") ||
+          errBody.error.includes("not available")
         )) {
           throw new Error(errBody.error);
         }

@@ -245,7 +245,7 @@ export default async function handler(req, res) {
 
   if (!ANTHEM_ADDRESS || !RPC_URL) {
     res.setHeader("Content-Type", "application/json");
-    return res.status(503).json({ error: "Card image service not configured" });
+    return res.status(503).json({ error: "Card image service is unavailable right now." });
   }
 
   try {

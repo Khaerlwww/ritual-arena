@@ -73,9 +73,9 @@ import { INTERNAL_RARITIES, internalToVisualRarity, roleToInternalRarity, type I
 import { type PackResultCard } from "../types/packCard";
 import { identityCardAbi } from "../abi/identityCard";
 import { AnthemCard, type GalleryItem } from "./AnthemCard";
+import { ForgedCardsMarquee } from "./ForgedCardsMarquee";
 import { ForgeSuccessModal, type ForgeSuccessCard } from "./ForgeSuccessModal";
 import { RitualMark } from "./Logo";
-import { WindowControls } from "./win2k";
 import {
   DesktopWindow,
   MenuList,
@@ -212,65 +212,6 @@ function WindowLoading({ label = "Loading module" }: { label?: string }) {
     </div>
   );
 }
-
-function uniqueForgedCards(items: GalleryItem[], limit = 10) {
-  const seen = new Set<string>();
-  return items
-    .filter((item) => item.wallet || item.tokenId)
-    .filter((item) => {
-      const key = `${item.tokenId ?? "no-token"}:${(item.wallet ?? "no-wallet").toLowerCase()}`;
-      if (seen.has(key)) return false;
-      seen.add(key);
-      return true;
-    })
-    .slice(0, limit);
-}
-
-function ForgedCardsMarquee({
-  items,
-  snapshotForItem,
-  onOpenGallery,
-}: {
-  items: GalleryItem[];
-  snapshotForItem: (item: GalleryItem) => { currentPower?: number; currentRarity?: number } | undefined;
-  onOpenGallery: () => void;
-}) {
-  const cards = useMemo(() => uniqueForgedCards(items, 10), [items]);
-  const shouldMarquee = cards.length >= 4;
-  const visibleCards = shouldMarquee ? [...cards, ...cards] : cards;
-
-  if (cards.length === 0) {
-    return null;
-  }
-
-  return (
-    <section className="bevel-in-thin relative mt-5 overflow-hidden bg-[#061512] p-2" aria-label="Recently forged Identity Cards">
-      <div className="mb-2 flex items-center justify-between gap-3 px-1">
-        <div>
-          <p className="font-display text-[11px] font-extrabold uppercase tracking-[0.22em] text-aqua">Recently Forged</p>
-          <p className="font-mono text-[10px] text-iceaccent/55">live identity cards onchain</p>
-        </div>
-        <button type="button" onClick={onOpenGallery} className="win-btn !px-2 !py-1 text-[10px]">
-          View all
-        </button>
-      </div>
-
-      <div className={shouldMarquee ? "forge-marquee-mask overflow-hidden" : "overflow-x-auto pb-1"}>
-        <div className={`${shouldMarquee ? "forge-card-marquee-track w-max" : "w-full justify-start"} flex gap-3 py-1`}>
-          {visibleCards.map((item, i) => (
-            <div
-              key={`forged-${item.wallet ?? item.tokenId ?? "card"}-${i}`}
-              className="w-[150px] shrink-0"
-            >
-              <AnthemCard item={item} snapshot={snapshotForItem(item)} />
-            </div>
-          ))}
-        </div>
-      </div>
-    </section>
-  );
-}
-
 
 /**
  * Turn a noisy wallet/network error into one short, human line.
@@ -536,7 +477,7 @@ export function RitualAnthemApp() {
   const [status, setStatus] = useState(
     hasAnthemContract
       ? "C:\\\\> ritual-arena ready. Connect wallet to forge your Identity Card on Ritual Chain."
-      : "C:\\\\> contracts not configured. Set VITE_RITUAL_ANTHEM_ADDRESS (and the other VITE_RITUAL_*_ADDRESS env vars) in .env.production and on Vercel to enable on-chain features.",
+      : "C:\\\\> Ritual services are unavailable right now.",
   );
   const [tokenId, setTokenId] = useState<number>();
   const [mintedImage, setMintedImage] = useState<string>();
@@ -748,7 +689,7 @@ export function RitualAnthemApp() {
   }, [address, gallery, mintedItem]);
 
   // Identity Score / Rank are computed exclusively by `useIdentityRegistry`
-  // (which reads `IdentityRegistry.getIdentity(wallet)`). There is no local
+  // (which reads the live identity score read). There is no local
   // fallback calculation. If the registry has not yet recorded the wallet
   // (`identity.canonical === false`), the Profile shows "Sync Pending"
   // rather than a derived value.
@@ -956,7 +897,7 @@ export function RitualAnthemApp() {
   // ── Forge flow (no scan power/rarity — fixed at 1/INITIATE) ──
   const mint = async () => {
     if (!forgePreview) return setStatus("Prepare your card first.");
-    if (!hasAnthemContract) return setStatus("Contracts not configured. Set VITE_RITUAL_ANTHEM_ADDRESS in .env.production (and on Vercel for the live build) so the IdentityCard contract can be reached.");
+    if (!hasAnthemContract) return setStatus("Forge is unavailable right now.");
     if (!hasWallet) return setStatus("No wallet extension found. Install MetaMask and refresh.");
     try {
       let acct = address;
@@ -1658,21 +1599,29 @@ export function RitualAnthemApp() {
                 <span className="bg-black/30 px-1.5 py-0.5 font-mono text-[10px] font-bold text-iceaccent">
                   {minted ? `FORGED #${tokenId}` : "PREVIEW"}
                 </span>
-                <WindowControls />
               </div>
               <div className="bevel-in bg-coal p-4">
                 {/* Live holographic NFT preview — updates as you type a username */}
-                <div className="bevel-in-thin relative mb-4 overflow-hidden bg-[#071512]">
+                <div className="magic-preview-shell bevel-in-thin relative mb-4 overflow-hidden bg-[#071512]">
+                  <div className="magic-preview-aura" aria-hidden="true" />
                   {cardPreviewUrl ? (
-                    <img src={cardPreviewUrl} alt="Generated card preview" className="block w-full" />
+                    <div className="magic-preview-card">
+                      <img src={cardPreviewUrl} alt="Generated card preview" className="block w-full" />
+                      <span className="magic-preview-rainbow" aria-hidden="true" />
+                      <span className="magic-preview-sheen" aria-hidden="true" />
+                      <span className="magic-preview-sparkles" aria-hidden="true" />
+                    </div>
                   ) : (
                     <div
-                      className="grid aspect-square w-full place-items-center p-6 text-center"
+                      className="magic-preview-card grid aspect-square w-full place-items-center p-6 text-center"
                       style={{
                         background: `linear-gradient(135deg, ${liveCard.gradient?.[0] ?? "#071512"}, ${liveCard.gradient?.[2] ?? "#063a33"})`,
                       }}
                     >
-                      <div className="grid gap-3">
+                      <div className="magic-preview-rainbow" aria-hidden="true" />
+                      <div className="magic-preview-sheen" aria-hidden="true" />
+                      <div className="magic-preview-sparkles" aria-hidden="true" />
+                      <div className="relative z-[2] grid gap-3">
                         <RitualMark size={54} />
                         <div>
                           <p className="font-handle text-2xl font-bold text-aqua">{previewHandle ? `@${previewHandle}` : "@preview"}</p>

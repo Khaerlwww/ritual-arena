@@ -51,7 +51,7 @@ export function useMarketplaceActions(): UseMarketplaceActionsResult {
 
         const mkt = getMarketplaceAddress();
         const apAddr = getAPAddress();
-        if (!apAddr) throw new Error("VITE_RITUAL_AP_ADDRESS not configured");
+        if (!apAddr) throw new Error("Marketplace is unavailable right now.");
 
         // 1) Read the listing fee from the marketplace (1e18 = 1 AP).
         //    Burned inside `list()` — seller must approve at least this
@@ -184,7 +184,7 @@ export function useMarketplaceActions(): UseMarketplaceActionsResult {
 
         const mkt = getMarketplaceAddress();
         const apAddr = getAPAddress();
-        if (!apAddr) throw new Error("VITE_RITUAL_AP_ADDRESS not configured");
+        if (!apAddr) throw new Error("Marketplace is unavailable right now.");
 
         // 1) Approve AP for the marketplace
         const allow = (await publicClient.readContract({

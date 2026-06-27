@@ -54,15 +54,14 @@ export function useAPBalance(wallet?: Address): UseAPBalanceResult {
     }
     const apAddr = getAPAddress();
     if (!apAddr) {
-      // VITE_RITUAL_AP_ADDRESS not set — surface as "unconfigured"
-      // rather than silently returning 0.
+      // Surface AP service outage instead of silently returning 0.
       setState({
         balance: 0,
         decimals: 18,
         cap: 21_000_000,
         totalSupply: 0,
         source: "unconfigured",
-        label: "AP contract not deployed (set VITE_RITUAL_AP_ADDRESS)",
+        label: "AP is unavailable right now.",
       });
       return;
     }

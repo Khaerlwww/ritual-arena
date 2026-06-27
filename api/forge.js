@@ -25,7 +25,7 @@ export default async function handler(req, res) {
 
   const privateKey = process.env.ATTESTATION_SIGNER_KEY || process.env.ATTESTATION_VERIFIER_PRIVATE_KEY;
   if (!privateKey) {
-    return json(res, 503, { error: "ATTESTATION_SIGNER_KEY not set" });
+    return json(res, 503, { error: "Forge authorization is unavailable right now." });
   }
 
   let body;
@@ -79,9 +79,8 @@ export default async function handler(req, res) {
       signature: sig,
       expiry: String(expiry),
       nonce: String(nonce),
-      _debug: { walletAddr: wallet.address, digest, keyStart: privateKey.slice(0, 12) },
     });
   } catch (e) {
-    return json(res, 500, { error: e.message || "Signing failed" });
+    return json(res, 500, { error: "Forge authorization failed." });
   }
 }

@@ -3,7 +3,7 @@
 // No AP, staking, or marketplace contributions.
 //
 // Rank/score math now lives in src/lib/identityRanks.ts (single source
-// of truth, mirrors IdentityRegistry.sol). This file is the React
+// of truth, mirrors the live identity rank tiers). This file is the React
 // IdentityView shape + the fallback passed to useIdentityRegistry.
 
 import type { Address } from "viem";
@@ -37,7 +37,7 @@ export interface IdentityView {
   /** Canonical currentRarity from IdentityRegistry (-1 if not yet recorded). */
   currentRarity?: number;
   /**
-   * Canonical component scores from `IdentityRegistry.getIdentity(wallet)`:
+   * Canonical component scores from the live identity score read:
    * the SAME values that the leaderboard reads. `sum(components)`
    * is always equal to `score` (the registry's `totalScore`). When
    * `canonical` is false (registry has not yet recorded the wallet),

@@ -1,0 +1,4275 @@
+{
+  "version": 1,
+  "name": "Ritual Community Pack Pool",
+  "total": 304,
+  "rarities": {
+    "COMMON": [
+      {
+        "id": 205,
+        "discordId": "401697502119854080",
+        "username": "judochy",
+        "displayName": ". Judochy",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F401697502119854080%2F1d13669d2807e3b4ab26d4c752027c6b.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 206,
+        "discordId": "412575927436836864",
+        "username": "omaeroi",
+        "displayName": "yusuke",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F412575927436836864%2F5ccdb377f3fc2e0bb72d0c71fa901980.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 207,
+        "discordId": "444415364273537025",
+        "username": "toanleo",
+        "displayName": "LegendLeO",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F444415364273537025%2F314f2b61ccfe739a9cd0942e74099ca2.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 208,
+        "discordId": "445395174693011457",
+        "username": "jinnv0802",
+        "displayName": "Duteyang",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F445395174693011457%2F3d971eeebe29dd285eed1360e94312e3.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 209,
+        "discordId": "495808260029284364",
+        "username": "agata2525",
+        "displayName": "AgataaXBT",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F495808260029284364%2Favatars%2Ff0e2830ec8b098af3fb5a41d5487775f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 210,
+        "discordId": "498082394641924096",
+        "username": "stussy_eth",
+        "displayName": "Stussy",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F498082394641924096%2Fc19b8094be1feefd6af3c633e3ebdaf2.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 211,
+        "discordId": "546374092446629906",
+        "username": "larasings",
+        "displayName": "! 𝕃𝔸ℝ𝔸",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F546374092446629906%2Fe87bcd563d1afdbfaf8a7ec1ece8b5a4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 212,
+        "discordId": "564123480526946325",
+        "username": ".mrdcs",
+        "displayName": "mrdcs",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F564123480526946325%2Favatars%2F1d2224eae08250cb407ecd746c02a61c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 213,
+        "discordId": "580006380883279877",
+        "username": "kamal1723",
+        "displayName": "Kamall",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F580006380883279877%2Fa807ba3888c7f227f4b37ea1804f80a3.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 214,
+        "discordId": "581228315575058480",
+        "username": "mahabubshanto24",
+        "displayName": "MS",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F581228315575058480%2Favatars%2Fa_813d175311411ce857d27a59133ffc93.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 215,
+        "discordId": "621136687107407882",
+        "username": "splendor_0",
+        "displayName": "Splendor",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F621136687107407882%2Fc1358e10bbe58e57368a28adec9f1414.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 216,
+        "discordId": "659358327565975562",
+        "username": "juniorr1945",
+        "displayName": "0xJuniorr",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F659358327565975562%2F20ed170bcfe984d474f39d1bcaac37ee.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 217,
+        "discordId": "670597003876761630",
+        "username": "szaxbt",
+        "displayName": "OxSzaJoestar",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F670597003876761630%2Favatars%2Ff65e39d2f5c3d569ad0fed73456678b1.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 218,
+        "discordId": "675602510823555072",
+        "username": "hanvis_75",
+        "displayName": "Cutie HanVis",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F675602510823555072%2F4d60925b12a2004da1dba2c53c53784e.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 219,
+        "discordId": "689966738120376437",
+        "username": "elkhawaga20222",
+        "displayName": "adelkhater",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F689966738120376437%2F124b7be484bb4812b97568eeb3bcc225.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 220,
+        "discordId": "696735263275352124",
+        "username": "0xhaiyo",
+        "displayName": "0xhaiyoo_",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F696735263275352124%2Ffa6cd3f38d619bc69a8b6575b12b1616.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 221,
+        "discordId": "714452147923582977",
+        "username": "sevix48",
+        "displayName": "Nexthral",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F714452147923582977%2Ffa704d834fdd2306abda6eab5cc9cc22.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 222,
+        "discordId": "736946962011652098",
+        "username": "kambingputih",
+        "displayName": "Asu x Asra",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F736946962011652098%2Fc7358bd108b7e7dea885c624cdceb734.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 223,
+        "discordId": "749514588021719121",
+        "username": "arronkun",
+        "displayName": "Park Jing Goy",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F749514588021719121%2F22a5134fe77542c3c0a37df165af07be.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 224,
+        "discordId": "752134014147493909",
+        "username": "billykrukru",
+        "displayName": "Billie Simpsons",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F752134014147493909%2Fd1d7727a7e612e50cecfe51321abc89a.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 225,
+        "discordId": "783142521810714684",
+        "username": "bbrruangkutub",
+        "displayName": "icebear 아이스베어",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F783142521810714684%2Favatars%2Fe59cb24d852a06a9e6b5ad2996f97b8f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 226,
+        "discordId": "820539217628626985",
+        "username": "marksocrates",
+        "displayName": "MarkSocrates",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F820539217628626985%2F0b07ed82f2e08db6c3ce8f9302740ddf.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 227,
+        "discordId": "844223422681710603",
+        "username": "minuryyyyy",
+        "displayName": "Minury",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F844223422681710603%2Fc57327ac70fbda518866a17d5b90fe49.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 228,
+        "discordId": "864816252290859018",
+        "username": "l0nw0lf_",
+        "displayName": "l0nw0lf",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F864816252290859018%2Fc84f57aa158cfed24e1c895a3d8475bd.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 229,
+        "discordId": "869625621637128212",
+        "username": "welwel08",
+        "displayName": "welwel08",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F869625621637128212%2Fab8f16b644c97725c7a3eeef2f3cd57e.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 230,
+        "discordId": "870332080570138704",
+        "username": "sonpro21082002",
+        "displayName": "Cutie Sonnui",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F870332080570138704%2F858abecee631dfefc178cc499624aa18.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 231,
+        "discordId": "872501285826482247",
+        "username": "sabphire",
+        "displayName": "Sabphire",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F872501285826482247%2F203bd2461c51b41be67a9f421b203e47.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 232,
+        "discordId": "879970626708840458",
+        "username": "zydneykyliee",
+        "displayName": "zydney",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F879970626708840458%2Fec63e5ad9bf33bcba0fe341d5a71ab1c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 233,
+        "discordId": "891672724043350096",
+        "username": "wooam_",
+        "displayName": "wooam_",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F891672724043350096%2Favatars%2Facd173d8af928be56c96441f9ef9a9fb.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 234,
+        "discordId": "891740635135107113",
+        "username": "noob_spencer",
+        "displayName": "Mad | Spens",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F891740635135107113%2F46a3dcebe24195878763bbe93f807fb4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 235,
+        "discordId": "895520312479870977",
+        "username": "charrly4020",
+        "displayName": "Chuarlii",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F895520312479870977%2Ffce11ee9b770cd8cd3ddfcc5b6e1f114.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 236,
+        "discordId": "895546410261438476",
+        "username": "celinemamboo",
+        "displayName": "celineboo",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F895546410261438476%2F8e80aed7dbe8dd8f3f6679d247232c50.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 237,
+        "discordId": "908308979845845022",
+        "username": "sytada",
+        "displayName": "Sytada",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F908308979845845022%2F9c91caf54b05fef734be38d597face94.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 238,
+        "discordId": "921711000095424523",
+        "username": "bossbaby19_",
+        "displayName": "! boss baby",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F921711000095424523%2Favatars%2F1b5d151043b2d39d6438327b4bb7ca70.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 239,
+        "discordId": "926074436065583155",
+        "username": "jindo_88",
+        "displayName": "jindo $$",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F926074436065583155%2Fc1aa318e4ce041ee421edd95a89cade0.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 240,
+        "discordId": "928307927318675476",
+        "username": "jimgreen.btc",
+        "displayName": "jimgreen",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F928307927318675476%2Fb89ad8633ada1e3f93605d335be52d06.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 241,
+        "discordId": "946703696278994944",
+        "username": "omarnouval",
+        "displayName": "omartuta",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F946703696278994944%2F4801f7662d7419bf37193345bacf342a.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 242,
+        "discordId": "948826437983563848",
+        "username": "mao_mao1l",
+        "displayName": "Mao",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F948826437983563848%2Faad3f2c6e86d575a99eb6450a2063f37.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 243,
+        "discordId": "948868332461912075",
+        "username": "greejerr",
+        "displayName": "Pikachuuu",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F948868332461912075%2Fd7b840fd6dd28188acdd5f009b4b11fa.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 244,
+        "discordId": "953150131786612796",
+        "username": "sagar0u",
+        "displayName": "Sagar",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F953150131786612796%2F753c2f930c11204c2a8bf8ae6444f568.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 245,
+        "discordId": "953548263057948684",
+        "username": "eustasskid56",
+        "displayName": "Captain Kid",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F953548263057948684%2F841b9f253ca22910e54605a64ba56c2b.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 246,
+        "discordId": "953586071734730782",
+        "username": "goldenboyvee",
+        "displayName": "𝙂𝙤𝙡𝙙𝙚𝙣 𝘽𝙤𝙮",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F953586071734730782%2Fca612d809de8fc1371ad2d20921c5a40.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 247,
+        "discordId": "959315165550104628",
+        "username": "chronic_10",
+        "displayName": "0xPamanSam",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F959315165550104628%2Favatars%2Fede458b226c5393ed738152600fa282b.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 248,
+        "discordId": "968309935412764713",
+        "username": "zknetwork",
+        "displayName": "Dian | cvk",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F968309935412764713%2F5ccf45546280cef122acd404732058fb.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 249,
+        "discordId": "977361304329256980",
+        "username": "jajah_jah",
+        "displayName": "jajah",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F977361304329256980%2Fbc28735ebc23196cafdc7d15303e88d6.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 250,
+        "discordId": "983980663243935815",
+        "username": "sijeya",
+        "displayName": "jeya",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F983980663243935815%2Ffc9fb0bc6fe49c60790f994d83b4346f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 251,
+        "discordId": "988653447677100050",
+        "username": "captainlsmith",
+        "displayName": "Smith",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F988653447677100050%2F14af79285e99998e6b2a4222cd57a297.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 252,
+        "discordId": "999354202499321907",
+        "username": "pemburuhadiah_",
+        "displayName": "Skyzee",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F999354202499321907%2Fc13035d297970e6b01be86319199cc17.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 253,
+        "discordId": "1004685933460865075",
+        "username": "flyhigh005",
+        "displayName": "Doctor_Op",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1004685933460865075%2Fd9c2b3b3f075a3100304999cbccc358c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 254,
+        "discordId": "1016673595793100871",
+        "username": "rinzz_88",
+        "displayName": "Rinzz",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1016673595793100871%2Favatars%2Ff5cb86cc0158753c6fce647b737ab4c4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 255,
+        "discordId": "1021478084593057893",
+        "username": "hazun2305",
+        "displayName": "Cutie Doris",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1021478084593057893%2Favatars%2F13aa26c10d9bdd767193ea3ebad18901.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 256,
+        "discordId": "1043885945541373992",
+        "username": "web3shafin",
+        "displayName": "SHAFIN",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1043885945541373992%2F55817a18fe7ba632f6bc21155ee5fe45.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 257,
+        "discordId": "1059766065028141146",
+        "username": "jasminei",
+        "displayName": "jas",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1059766065028141146%2F127814b422e48755ad0bc0096c8bb8c1.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 258,
+        "discordId": "1070024503276601405",
+        "username": "sayangxbt",
+        "displayName": "Sayang",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1070024503276601405%2F99d6274a9c10b47e64a386a28fbd1b40.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 259,
+        "discordId": "1070605950962122762",
+        "username": "reena6787",
+        "displayName": "Reena✨",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1070605950962122762%2Fdea32b39dd7d4122df3baa392071bd5e.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 260,
+        "discordId": "1078324834553036801",
+        "username": "perezclifford",
+        "displayName": "Perezclifford",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1078324834553036801%2F0f4eb372592f64068dca469f655b2fb4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 261,
+        "discordId": "1090910686714015744",
+        "username": "fromsa11",
+        "displayName": "fromsa",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1090910686714015744%2Fa79f5a66017846977d97fc42f94db58f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 262,
+        "discordId": "1092221053129982022",
+        "username": "mayorhuncho72",
+        "displayName": "MayorHuncho",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1092221053129982022%2F50beebc37976707c91e6ca6638222754.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 263,
+        "discordId": "1093409763624226846",
+        "username": "ashweb3_2",
+        "displayName": "ASH",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1093409763624226846%2F47f7a5ea8fecfc94cc0240d40ccc11a4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 264,
+        "discordId": "1095129428188745758",
+        "username": "septian227",
+        "displayName": "Elegantwinter",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1095129428188745758%2Feb57c11aa5a646303e2b50aaf2a92c88.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 265,
+        "discordId": "1099326120609988619",
+        "username": "manas_pro76178",
+        "displayName": "ProManas",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1099326120609988619%2F493235376dc8f23d686ea40caf5a872d.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 266,
+        "discordId": "1109424547758878740",
+        "username": "aakriti64",
+        "displayName": "Aakriti",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1109424547758878740%2F4c2a82a82e4b38c2ac18ef96a9ba5e72.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 267,
+        "discordId": "1116717049121615945",
+        "username": "manh100kk",
+        "displayName": "Cutie Mạnh100k",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1116717049121615945%2Fcd8e4186b9ec4de2a970db0846aded82.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 268,
+        "discordId": "1136098510714966076",
+        "username": "henloworld2002",
+        "displayName": "Psycho | Chaddette",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1136098510714966076%2Favatars%2Fb2b071b2836de552e4a7c5e385a2570b.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 269,
+        "discordId": "1144587221282848769",
+        "username": "vikash517",
+        "displayName": "Hulk",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1144587221282848769%2F508929e346b1e09657875881cf9d46c5.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 270,
+        "discordId": "1153958317983547392",
+        "username": "hamiweb3",
+        "displayName": "Hami | Ritual",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1153958317983547392%2F2550a49fe965f3aa17e9a48c30217e04.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 271,
+        "discordId": "1157166095736774686",
+        "username": "rapspoint_",
+        "displayName": "raps",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1157166095736774686%2F37fb512001fbd632fd3310acc3416cf4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 272,
+        "discordId": "1189105324976775169",
+        "username": "nxrskyaa",
+        "displayName": "Nxrskyaa",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1189105324976775169%2F9b7fee536b60d054977ea9abe58542aa.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 273,
+        "discordId": "1194615201564205170",
+        "username": "temofeiwe99",
+        "displayName": "Tema",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1194615201564205170%2F1e75d46df2652e8fe861f00dea004670.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 274,
+        "discordId": "1201586094165196899",
+        "username": "silent_501",
+        "displayName": "Creed",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1201586094165196899%2F799416cc2e223400212e2fb002e81e2c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 275,
+        "discordId": "1202570648187043870",
+        "username": "mav_1k",
+        "displayName": "Mav",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1202570648187043870%2F24c1239742019f1b3a8f7b4e4cbac702.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 276,
+        "discordId": "1208298796891643938",
+        "username": "lumi_48903_49675",
+        "displayName": "iamlummyjay",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1208298796891643938%2F6eecb2d81682995b15e39d30e91615bf.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 277,
+        "discordId": "1208647435669471273",
+        "username": "hitman_4577",
+        "displayName": "CaptainMarvel",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1208647435669471273%2Fb1f59444d76ac381d1777e7971b5b187.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 278,
+        "discordId": "1209902562468298805",
+        "username": "manhlouiss",
+        "displayName": "Mạnh",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1209902562468298805%2F6898f765225953f622a77678c68cea30.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 279,
+        "discordId": "1210120435329400833",
+        "username": "ayanmridha379",
+        "displayName": "Ayaan09",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1210120435329400833%2Fbc883871ff0a0349321711b39b9bf564.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 280,
+        "discordId": "1216407223475896441",
+        "username": "imrn2.",
+        "displayName": "0xMrn",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1216407223475896441%2Feb22a4e8116ba799de1ed6d023927573.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 281,
+        "discordId": "1222100457439236180",
+        "username": "tynoih_11186",
+        "displayName": "Tynoihfly",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1222100457439236180%2F40ace00b2aeb7fa7f8d2c3b7fd5caef6.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 282,
+        "discordId": "1225792790533771339",
+        "username": "ariii0770",
+        "displayName": "ari",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1225792790533771339%2Favatars%2Fa77968867a610d1592d3ae42a1fbccc7.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 283,
+        "discordId": "1229823646684418149",
+        "username": "uzzal222_89783",
+        "displayName": "Uzzal Das",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1229823646684418149%2F27383e416e35bc77c3fb36efe2951cf8.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 284,
+        "discordId": "1232690602508816487",
+        "username": "fenie_1039",
+        "displayName": "Fenie",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1232690602508816487%2F6b4f042f14f81e00e18446495283a419.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 285,
+        "discordId": "1233038347744706645",
+        "username": "mzain2292",
+        "displayName": "ZAIN",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1233038347744706645%2F65722e5822e34bfbd20eab0272c0f8e6.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 286,
+        "discordId": "1233260681906753549",
+        "username": "mihoyolim500",
+        "displayName": "mihoyolim",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1233260681906753549%2F1eb02cea9363c1109fa0329fc400862a.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 287,
+        "discordId": "1244492312843784315",
+        "username": "ladytee0650",
+        "displayName": "Lady tee",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1244492312843784315%2Ff907d30fd22ec9bb388e9796780a597b.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 288,
+        "discordId": "1247197494526480396",
+        "username": "thimaiii",
+        "displayName": "Thi Mai",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1247197494526480396%2F35bdb3123187f909dc6e48c9793d2b68.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 289,
+        "discordId": "1260630867751993407",
+        "username": "yycc0156",
+        "displayName": "yy cc",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1260630867751993407%2Favatars%2F7e98c7ba26dff8ac0860b89a32b80cc3.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 290,
+        "discordId": "1264603032306450447",
+        "username": "chogowe",
+        "displayName": "CHOGOWE",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1264603032306450447%2F0957b39b72c4f5138a348b0b7b082b64.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 291,
+        "discordId": "1267115880966258789",
+        "username": "nicx777",
+        "displayName": "nicx",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1267115880966258789%2F040c5d97899902869c836206b695db53.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 292,
+        "discordId": "1280451645540663316",
+        "username": "kadriweee",
+        "displayName": "Kadriweee",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1280451645540663316%2F7be0e7f88b565425321d54761262a3c2.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 293,
+        "discordId": "1280736233005252660",
+        "username": "ferryfadillahhh",
+        "displayName": "Ferryfadillah",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1280736233005252660%2Fc4f76cdc930e49716241cc9551298ff1.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 294,
+        "discordId": "1288267875039186968",
+        "username": "nickpc2025",
+        "displayName": "NICK",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1288267875039186968%2Faa8ee2fb09881f0da5e486ccb13191a0.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 295,
+        "discordId": "1304852598993719329",
+        "username": "kamrulbroz",
+        "displayName": "Kamrul",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1304852598993719329%2F91be1fa2e1734141956fc75e5a4ee40f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 296,
+        "discordId": "1305815133779398667",
+        "username": "ariseaura",
+        "displayName": "𝐀𝐑𝐈𝐒𝐄𝐀𝐔𝐑𝐀 - INVICTUS",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1305815133779398667%2F6c9b6e141db6e9ba8ba00ba35d98fc04.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 297,
+        "discordId": "1307042160230797413",
+        "username": "akashkumarwtf",
+        "displayName": "Akash",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1307042160230797413%2F23f7e66743a4af41b0c4406f6c3817a0.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 298,
+        "discordId": "1331021135189643384",
+        "username": "mikan_nft",
+        "displayName": "Mikan",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1331021135189643384%2Fabf22bafef8cc51c8a16cd71dc31e3e6.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 299,
+        "discordId": "1331109229066715197",
+        "username": "katitune",
+        "displayName": "Katitune",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1331109229066715197%2F9d890d74a56e901e0430e474ae38d728.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 300,
+        "discordId": "1333034684036419667",
+        "username": "abdo095546",
+        "displayName": "Bunz",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1333034684036419667%2Fe30a8b14f6c2b41456d57286ba688b49.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 301,
+        "discordId": "1333895178330706032",
+        "username": "feryrustandi_93944",
+        "displayName": "FeryXBT",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fembed%2Favatars%2F2.png",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 302,
+        "discordId": "1372567235377238077",
+        "username": "0xmiisty",
+        "displayName": "Sûmî",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1372567235377238077%2Ff08163560419cf0de24c34b95f1259b6.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 303,
+        "discordId": "1402325658125729832",
+        "username": "de.doubleu",
+        "displayName": "de.doubleu",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1402325658125729832%2F8100a1e5cbcc620c1bc64088ccd4a79c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 304,
+        "discordId": "1419963453342355518",
+        "username": "tataweb3",
+        "displayName": "Tata",
+        "role": "INITIATE",
+        "rarity": "COMMON",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1419963453342355518%2Fca644dae98669691e22918563d3efe54.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "initiate",
+          "at": 1780272000000
+        }
+      }
+    ],
+    "RARE": [
+      {
+        "id": 5,
+        "discordId": "401697502119854080",
+        "username": "judochy",
+        "displayName": ". Judochy",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F401697502119854080%2F1d13669d2807e3b4ab26d4c752027c6b.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 6,
+        "discordId": "412575927436836864",
+        "username": "omaeroi",
+        "displayName": "yusuke",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F412575927436836864%2F5ccdb377f3fc2e0bb72d0c71fa901980.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 10,
+        "discordId": "444415364273537025",
+        "username": "toanleo",
+        "displayName": "LegendLeO",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F444415364273537025%2F314f2b61ccfe739a9cd0942e74099ca2.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 11,
+        "discordId": "445395174693011457",
+        "username": "jinnv0802",
+        "displayName": "Duteyang",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F445395174693011457%2F3d971eeebe29dd285eed1360e94312e3.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 12,
+        "discordId": "495808260029284364",
+        "username": "agata2525",
+        "displayName": "AgataaXBT",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F495808260029284364%2Favatars%2Ff0e2830ec8b098af3fb5a41d5487775f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 13,
+        "discordId": "498082394641924096",
+        "username": "stussy_eth",
+        "displayName": "Stussy",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F498082394641924096%2Fc19b8094be1feefd6af3c633e3ebdaf2.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 16,
+        "discordId": "546374092446629906",
+        "username": "larasings",
+        "displayName": "! 𝕃𝔸ℝ𝔸",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F546374092446629906%2Fe87bcd563d1afdbfaf8a7ec1ece8b5a4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 17,
+        "discordId": "564123480526946325",
+        "username": ".mrdcs",
+        "displayName": "mrdcs",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F564123480526946325%2Favatars%2F1d2224eae08250cb407ecd746c02a61c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 19,
+        "discordId": "580006380883279877",
+        "username": "kamal1723",
+        "displayName": "Kamall",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F580006380883279877%2Fa807ba3888c7f227f4b37ea1804f80a3.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 20,
+        "discordId": "581228315575058480",
+        "username": "mahabubshanto24",
+        "displayName": "MS",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F581228315575058480%2Favatars%2Fa_813d175311411ce857d27a59133ffc93.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 22,
+        "discordId": "621136687107407882",
+        "username": "splendor_0",
+        "displayName": "Splendor",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F621136687107407882%2Fc1358e10bbe58e57368a28adec9f1414.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 24,
+        "discordId": "659358327565975562",
+        "username": "juniorr1945",
+        "displayName": "0xJuniorr",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F659358327565975562%2F20ed170bcfe984d474f39d1bcaac37ee.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 25,
+        "discordId": "670597003876761630",
+        "username": "szaxbt",
+        "displayName": "OxSzaJoestar",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F670597003876761630%2Favatars%2Ff65e39d2f5c3d569ad0fed73456678b1.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 26,
+        "discordId": "675602510823555072",
+        "username": "hanvis_75",
+        "displayName": "Cutie HanVis",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F675602510823555072%2F4d60925b12a2004da1dba2c53c53784e.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 27,
+        "discordId": "689966738120376437",
+        "username": "elkhawaga20222",
+        "displayName": "adelkhater",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F689966738120376437%2F124b7be484bb4812b97568eeb3bcc225.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 28,
+        "discordId": "696735263275352124",
+        "username": "0xhaiyo",
+        "displayName": "0xhaiyoo_",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F696735263275352124%2Ffa6cd3f38d619bc69a8b6575b12b1616.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 30,
+        "discordId": "714452147923582977",
+        "username": "sevix48",
+        "displayName": "Nexthral",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F714452147923582977%2Ffa704d834fdd2306abda6eab5cc9cc22.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 32,
+        "discordId": "736946962011652098",
+        "username": "kambingputih",
+        "displayName": "Asu x Asra",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F736946962011652098%2Fc7358bd108b7e7dea885c624cdceb734.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 36,
+        "discordId": "749514588021719121",
+        "username": "arronkun",
+        "displayName": "Park Jing Goy",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F749514588021719121%2F22a5134fe77542c3c0a37df165af07be.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 37,
+        "discordId": "752134014147493909",
+        "username": "billykrukru",
+        "displayName": "Billie Simpsons",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F752134014147493909%2Fd1d7727a7e612e50cecfe51321abc89a.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 40,
+        "discordId": "783142521810714684",
+        "username": "bbrruangkutub",
+        "displayName": "icebear 아이스베어",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F783142521810714684%2Favatars%2Fe59cb24d852a06a9e6b5ad2996f97b8f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 41,
+        "discordId": "820539217628626985",
+        "username": "marksocrates",
+        "displayName": "MarkSocrates",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F820539217628626985%2F0b07ed82f2e08db6c3ce8f9302740ddf.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 45,
+        "discordId": "844223422681710603",
+        "username": "minuryyyyy",
+        "displayName": "Minury",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F844223422681710603%2Fc57327ac70fbda518866a17d5b90fe49.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 46,
+        "discordId": "864816252290859018",
+        "username": "l0nw0lf_",
+        "displayName": "l0nw0lf",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F864816252290859018%2Fc84f57aa158cfed24e1c895a3d8475bd.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 47,
+        "discordId": "869625621637128212",
+        "username": "welwel08",
+        "displayName": "welwel08",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F869625621637128212%2Fab8f16b644c97725c7a3eeef2f3cd57e.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 48,
+        "discordId": "870332080570138704",
+        "username": "sonpro21082002",
+        "displayName": "Cutie Sonnui",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F870332080570138704%2F858abecee631dfefc178cc499624aa18.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 49,
+        "discordId": "872501285826482247",
+        "username": "sabphire",
+        "displayName": "Sabphire",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F872501285826482247%2F203bd2461c51b41be67a9f421b203e47.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 52,
+        "discordId": "879970626708840458",
+        "username": "zydneykyliee",
+        "displayName": "zydney",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F879970626708840458%2Fec63e5ad9bf33bcba0fe341d5a71ab1c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 58,
+        "discordId": "891672724043350096",
+        "username": "wooam_",
+        "displayName": "wooam_",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F891672724043350096%2Favatars%2Facd173d8af928be56c96441f9ef9a9fb.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 60,
+        "discordId": "891740635135107113",
+        "username": "noob_spencer",
+        "displayName": "Mad | Spens",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F891740635135107113%2F46a3dcebe24195878763bbe93f807fb4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 61,
+        "discordId": "895520312479870977",
+        "username": "charrly4020",
+        "displayName": "Chuarlii",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F895520312479870977%2Ffce11ee9b770cd8cd3ddfcc5b6e1f114.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 62,
+        "discordId": "895546410261438476",
+        "username": "celinemamboo",
+        "displayName": "celineboo",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F895546410261438476%2F8e80aed7dbe8dd8f3f6679d247232c50.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 68,
+        "discordId": "908308979845845022",
+        "username": "sytada",
+        "displayName": "Sytada",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F908308979845845022%2F9c91caf54b05fef734be38d597face94.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 71,
+        "discordId": "921711000095424523",
+        "username": "bossbaby19_",
+        "displayName": "! boss baby",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F921711000095424523%2Favatars%2F1b5d151043b2d39d6438327b4bb7ca70.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 73,
+        "discordId": "926074436065583155",
+        "username": "jindo_88",
+        "displayName": "jindo $$",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F926074436065583155%2Fc1aa318e4ce041ee421edd95a89cade0.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 74,
+        "discordId": "928307927318675476",
+        "username": "jimgreen.btc",
+        "displayName": "jimgreen",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F928307927318675476%2Fb89ad8633ada1e3f93605d335be52d06.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 78,
+        "discordId": "946703696278994944",
+        "username": "omarnouval",
+        "displayName": "omartuta",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F946703696278994944%2F4801f7662d7419bf37193345bacf342a.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 79,
+        "discordId": "948826437983563848",
+        "username": "mao_mao1l",
+        "displayName": "Mao",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F948826437983563848%2Faad3f2c6e86d575a99eb6450a2063f37.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 80,
+        "discordId": "948868332461912075",
+        "username": "greejerr",
+        "displayName": "Pikachuuu",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F948868332461912075%2Fd7b840fd6dd28188acdd5f009b4b11fa.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 82,
+        "discordId": "953150131786612796",
+        "username": "sagar0u",
+        "displayName": "Sagar",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F953150131786612796%2F753c2f930c11204c2a8bf8ae6444f568.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 83,
+        "discordId": "953548263057948684",
+        "username": "eustasskid56",
+        "displayName": "Captain Kid",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F953548263057948684%2F841b9f253ca22910e54605a64ba56c2b.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 84,
+        "discordId": "953586071734730782",
+        "username": "goldenboyvee",
+        "displayName": "𝙂𝙤𝙡𝙙𝙚𝙣 𝘽𝙤𝙮",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F953586071734730782%2Fca612d809de8fc1371ad2d20921c5a40.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 86,
+        "discordId": "959315165550104628",
+        "username": "chronic_10",
+        "displayName": "0xPamanSam",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F959315165550104628%2Favatars%2Fede458b226c5393ed738152600fa282b.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 88,
+        "discordId": "968309935412764713",
+        "username": "zknetwork",
+        "displayName": "Dian | cvk",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F968309935412764713%2F5ccf45546280cef122acd404732058fb.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 90,
+        "discordId": "977361304329256980",
+        "username": "jajah_jah",
+        "displayName": "jajah",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F977361304329256980%2Fbc28735ebc23196cafdc7d15303e88d6.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 91,
+        "discordId": "983980663243935815",
+        "username": "sijeya",
+        "displayName": "jeya",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F983980663243935815%2Ffc9fb0bc6fe49c60790f994d83b4346f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 93,
+        "discordId": "988653447677100050",
+        "username": "captainlsmith",
+        "displayName": "Smith",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F988653447677100050%2F14af79285e99998e6b2a4222cd57a297.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 94,
+        "discordId": "999354202499321907",
+        "username": "pemburuhadiah_",
+        "displayName": "Skyzee",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F999354202499321907%2Fc13035d297970e6b01be86319199cc17.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 95,
+        "discordId": "1004685933460865075",
+        "username": "flyhigh005",
+        "displayName": "Doctor_Op",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1004685933460865075%2Fd9c2b3b3f075a3100304999cbccc358c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 96,
+        "discordId": "1016673595793100871",
+        "username": "rinzz_88",
+        "displayName": "Rinzz",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1016673595793100871%2Favatars%2Ff5cb86cc0158753c6fce647b737ab4c4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 98,
+        "discordId": "1021478084593057893",
+        "username": "hazun2305",
+        "displayName": "Cutie Doris",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1021478084593057893%2Favatars%2F13aa26c10d9bdd767193ea3ebad18901.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 99,
+        "discordId": "1043885945541373992",
+        "username": "web3shafin",
+        "displayName": "SHAFIN",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1043885945541373992%2F55817a18fe7ba632f6bc21155ee5fe45.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 100,
+        "discordId": "1059766065028141146",
+        "username": "jasminei",
+        "displayName": "jas",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1059766065028141146%2F127814b422e48755ad0bc0096c8bb8c1.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 101,
+        "discordId": "1070024503276601405",
+        "username": "sayangxbt",
+        "displayName": "Sayang",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1070024503276601405%2F99d6274a9c10b47e64a386a28fbd1b40.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 102,
+        "discordId": "1070605950962122762",
+        "username": "reena6787",
+        "displayName": "Reena✨",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1070605950962122762%2Fdea32b39dd7d4122df3baa392071bd5e.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 104,
+        "discordId": "1078324834553036801",
+        "username": "perezclifford",
+        "displayName": "Perezclifford",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1078324834553036801%2F0f4eb372592f64068dca469f655b2fb4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 105,
+        "discordId": "1090910686714015744",
+        "username": "fromsa11",
+        "displayName": "fromsa",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1090910686714015744%2Fa79f5a66017846977d97fc42f94db58f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 106,
+        "discordId": "1092221053129982022",
+        "username": "mayorhuncho72",
+        "displayName": "MayorHuncho",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1092221053129982022%2F50beebc37976707c91e6ca6638222754.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 107,
+        "discordId": "1093409763624226846",
+        "username": "ashweb3_2",
+        "displayName": "ASH",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1093409763624226846%2F47f7a5ea8fecfc94cc0240d40ccc11a4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 108,
+        "discordId": "1095129428188745758",
+        "username": "septian227",
+        "displayName": "Elegantwinter",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1095129428188745758%2Feb57c11aa5a646303e2b50aaf2a92c88.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 109,
+        "discordId": "1099326120609988619",
+        "username": "manas_pro76178",
+        "displayName": "ProManas",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1099326120609988619%2F493235376dc8f23d686ea40caf5a872d.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 110,
+        "discordId": "1109424547758878740",
+        "username": "aakriti64",
+        "displayName": "Aakriti",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1109424547758878740%2F4c2a82a82e4b38c2ac18ef96a9ba5e72.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 111,
+        "discordId": "1116717049121615945",
+        "username": "manh100kk",
+        "displayName": "Cutie Mạnh100k",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1116717049121615945%2Fcd8e4186b9ec4de2a970db0846aded82.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 112,
+        "discordId": "1136098510714966076",
+        "username": "henloworld2002",
+        "displayName": "Psycho | Chaddette",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1136098510714966076%2Favatars%2Fb2b071b2836de552e4a7c5e385a2570b.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 114,
+        "discordId": "1144587221282848769",
+        "username": "vikash517",
+        "displayName": "Hulk",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1144587221282848769%2F508929e346b1e09657875881cf9d46c5.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 115,
+        "discordId": "1153958317983547392",
+        "username": "hamiweb3",
+        "displayName": "Hami | Ritual",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1153958317983547392%2F2550a49fe965f3aa17e9a48c30217e04.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 116,
+        "discordId": "1157166095736774686",
+        "username": "rapspoint_",
+        "displayName": "raps",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1157166095736774686%2F37fb512001fbd632fd3310acc3416cf4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 117,
+        "discordId": "1189105324976775169",
+        "username": "nxrskyaa",
+        "displayName": "Nxrskyaa",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1189105324976775169%2F9b7fee536b60d054977ea9abe58542aa.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 119,
+        "discordId": "1194615201564205170",
+        "username": "temofeiwe99",
+        "displayName": "Tema",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1194615201564205170%2F1e75d46df2652e8fe861f00dea004670.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 123,
+        "discordId": "1201586094165196899",
+        "username": "silent_501",
+        "displayName": "Creed",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1201586094165196899%2F799416cc2e223400212e2fb002e81e2c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 125,
+        "discordId": "1202570648187043870",
+        "username": "mav_1k",
+        "displayName": "Mav",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1202570648187043870%2F24c1239742019f1b3a8f7b4e4cbac702.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 126,
+        "discordId": "1208298796891643938",
+        "username": "lumi_48903_49675",
+        "displayName": "iamlummyjay",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1208298796891643938%2F6eecb2d81682995b15e39d30e91615bf.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 127,
+        "discordId": "1208647435669471273",
+        "username": "hitman_4577",
+        "displayName": "CaptainMarvel",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1208647435669471273%2Fb1f59444d76ac381d1777e7971b5b187.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 128,
+        "discordId": "1209902562468298805",
+        "username": "manhlouiss",
+        "displayName": "Mạnh",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1209902562468298805%2F6898f765225953f622a77678c68cea30.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 129,
+        "discordId": "1210120435329400833",
+        "username": "ayanmridha379",
+        "displayName": "Ayaan09",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1210120435329400833%2Fbc883871ff0a0349321711b39b9bf564.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 131,
+        "discordId": "1216407223475896441",
+        "username": "imrn2.",
+        "displayName": "0xMrn",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1216407223475896441%2Feb22a4e8116ba799de1ed6d023927573.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 132,
+        "discordId": "1222100457439236180",
+        "username": "tynoih_11186",
+        "displayName": "Tynoihfly",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1222100457439236180%2F40ace00b2aeb7fa7f8d2c3b7fd5caef6.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 133,
+        "discordId": "1225792790533771339",
+        "username": "ariii0770",
+        "displayName": "ari",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1225792790533771339%2Favatars%2Fa77968867a610d1592d3ae42a1fbccc7.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 134,
+        "discordId": "1229823646684418149",
+        "username": "uzzal222_89783",
+        "displayName": "Uzzal Das",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1229823646684418149%2F27383e416e35bc77c3fb36efe2951cf8.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 135,
+        "discordId": "1232690602508816487",
+        "username": "fenie_1039",
+        "displayName": "Fenie",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1232690602508816487%2F6b4f042f14f81e00e18446495283a419.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 136,
+        "discordId": "1233038347744706645",
+        "username": "mzain2292",
+        "displayName": "ZAIN",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1233038347744706645%2F65722e5822e34bfbd20eab0272c0f8e6.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 137,
+        "discordId": "1233260681906753549",
+        "username": "mihoyolim500",
+        "displayName": "mihoyolim",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1233260681906753549%2F1eb02cea9363c1109fa0329fc400862a.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 138,
+        "discordId": "1244492312843784315",
+        "username": "ladytee0650",
+        "displayName": "Lady tee",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1244492312843784315%2Ff907d30fd22ec9bb388e9796780a597b.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 139,
+        "discordId": "1247197494526480396",
+        "username": "thimaiii",
+        "displayName": "Thi Mai",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1247197494526480396%2F35bdb3123187f909dc6e48c9793d2b68.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 144,
+        "discordId": "1260630867751993407",
+        "username": "yycc0156",
+        "displayName": "yy cc",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1260630867751993407%2Favatars%2F7e98c7ba26dff8ac0860b89a32b80cc3.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 145,
+        "discordId": "1264603032306450447",
+        "username": "chogowe",
+        "displayName": "CHOGOWE",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1264603032306450447%2F0957b39b72c4f5138a348b0b7b082b64.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 146,
+        "discordId": "1267115880966258789",
+        "username": "nicx777",
+        "displayName": "nicx",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1267115880966258789%2F040c5d97899902869c836206b695db53.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 147,
+        "discordId": "1280451645540663316",
+        "username": "kadriweee",
+        "displayName": "Kadriweee",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1280451645540663316%2F7be0e7f88b565425321d54761262a3c2.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 148,
+        "discordId": "1280736233005252660",
+        "username": "ferryfadillahhh",
+        "displayName": "Ferryfadillah",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1280736233005252660%2Fc4f76cdc930e49716241cc9551298ff1.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 149,
+        "discordId": "1288267875039186968",
+        "username": "nickpc2025",
+        "displayName": "NICK",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1288267875039186968%2Faa8ee2fb09881f0da5e486ccb13191a0.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 151,
+        "discordId": "1304852598993719329",
+        "username": "kamrulbroz",
+        "displayName": "Kamrul",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1304852598993719329%2F91be1fa2e1734141956fc75e5a4ee40f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 152,
+        "discordId": "1305815133779398667",
+        "username": "ariseaura",
+        "displayName": "𝐀𝐑𝐈𝐒𝐄𝐀𝐔𝐑𝐀 - INVICTUS",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1305815133779398667%2F6c9b6e141db6e9ba8ba00ba35d98fc04.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 153,
+        "discordId": "1307042160230797413",
+        "username": "akashkumarwtf",
+        "displayName": "Akash",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1307042160230797413%2F23f7e66743a4af41b0c4406f6c3817a0.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 159,
+        "discordId": "1331021135189643384",
+        "username": "mikan_nft",
+        "displayName": "Mikan",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1331021135189643384%2Fabf22bafef8cc51c8a16cd71dc31e3e6.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 160,
+        "discordId": "1331109229066715197",
+        "username": "katitune",
+        "displayName": "Katitune",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1331109229066715197%2F9d890d74a56e901e0430e474ae38d728.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 161,
+        "discordId": "1333034684036419667",
+        "username": "abdo095546",
+        "displayName": "Bunz",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1333034684036419667%2Fe30a8b14f6c2b41456d57286ba688b49.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 162,
+        "discordId": "1333895178330706032",
+        "username": "feryrustandi_93944",
+        "displayName": "FeryXBT",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fembed%2Favatars%2F2.png",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 164,
+        "discordId": "1372567235377238077",
+        "username": "0xmiisty",
+        "displayName": "Sûmî",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1372567235377238077%2Ff08163560419cf0de24c34b95f1259b6.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 167,
+        "discordId": "1402325658125729832",
+        "username": "de.doubleu",
+        "displayName": "de.doubleu",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1402325658125729832%2F8100a1e5cbcc620c1bc64088ccd4a79c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 169,
+        "discordId": "1419963453342355518",
+        "username": "tataweb3",
+        "displayName": "Tata",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1419963453342355518%2Fca644dae98669691e22918563d3efe54.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 170,
+        "discordId": "1420462067772686427",
+        "username": "kathrine03765",
+        "displayName": "MIRA",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1420462067772686427%2Fd62197813f6d4d5905acc06abeaca04a.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 172,
+        "discordId": "1445154319425863763",
+        "username": "white_999",
+        "displayName": "White",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1445154319425863763%2F5acc72cde778a0df1c6dc2427a38996f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 173,
+        "discordId": "1445402755035300015",
+        "username": "fatima_1o1",
+        "displayName": "Fatima",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1445402755035300015%2Fb416afbdf1cd1e932301f9c21127674e.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 174,
+        "discordId": "1453424808627929098",
+        "username": "bella98321",
+        "displayName": "Bella",
+        "role": "BITTY",
+        "rarity": "RARE",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1453424808627929098%2F69b0ac0e97864548ecdff5f6acb29ef9.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "No Role",
+          "toRole": "bitty",
+          "at": 1780272000000
+        }
+      }
+    ],
+    "EPIC": [
+      {
+        "id": 2,
+        "discordId": "862038217422536734",
+        "username": "esper5868",
+        "displayName": "esper°|(❖,❖)",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F862038217422536734%2Fb8b497488a16ac83d0280642c0fec934.png%3Fsize%3D128",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780981901211
+        }
+      },
+      {
+        "id": 3,
+        "discordId": "375327885776650240",
+        "username": "weeklang",
+        "displayName": "Weeklang",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F375327885776650240%2F232f59d2599c6812d16f1121a4a7ce00.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 4,
+        "discordId": "378868297573072896",
+        "username": "ghooolyache",
+        "displayName": "ghooolyache",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F378868297573072896%2Fb4ff1e8fb706e0c07cb18c0acddeff9f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 7,
+        "discordId": "431826144459751424",
+        "username": "opnion_",
+        "displayName": "Gus. 0xrumora",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F431826144459751424%2Fae1981a1404824710acadfd9e760e3af.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 8,
+        "discordId": "434561417933225987",
+        "username": "absollothareclya",
+        "displayName": "鳳Cabsolpii🌸",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F434561417933225987%2F4f6c06b8937a59ddb74c6a39da5bd959.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 9,
+        "discordId": "443922241185513472",
+        "username": "kimchiii0319",
+        "displayName": "KIMCHI",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F443922241185513472%2Favatars%2F6dfc1531e3deb8e2719fd189bd557f01.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 14,
+        "discordId": "498486381161611265",
+        "username": "1btc.eth",
+        "displayName": "S H Ξ N²⁶ |89|",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F498486381161611265%2Favatars%2Fa45157031ab212ecf0d262f0416218c3.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 15,
+        "discordId": "527940515941974037",
+        "username": "afonso003",
+        "displayName": "afonso003",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F527940515941974037%2Favatars%2Ff31f68d80bc2bc75e2072dbc11171705.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 21,
+        "discordId": "583001132671172611",
+        "username": "vans_1611",
+        "displayName": "Vans",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F583001132671172611%2Fb8103799c53c53b6998985f831066a7f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 23,
+        "discordId": "623069909794029568",
+        "username": "rahul8096",
+        "displayName": "Rahul",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F623069909794029568%2F4460d2527761936e30acce70a43d6918.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 29,
+        "discordId": "697804182975021097",
+        "username": "riyadekhezzane",
+        "displayName": "Riyade",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F697804182975021097%2F3df123bf9b7c3b7aef0959c1455bbb05.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 31,
+        "discordId": "717582881999945818",
+        "username": "tanjiiiiiiii",
+        "displayName": "BIEN",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F717582881999945818%2F0a318065c71df57854af248e49294743.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 34,
+        "discordId": "743031011234807848",
+        "username": "heatweb3",
+        "displayName": "Heat🔥",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F743031011234807848%2Favatars%2F4bf918105046bca85c33ec5db289c84e.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 35,
+        "discordId": "743478851346104418",
+        "username": "alybadbad",
+        "displayName": "Psycho | alybadbad",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F743478851346104418%2Favatars%2F89042412a98f3c1ece9bd67140d6da68.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 38,
+        "discordId": "769192900072046602",
+        "username": "arokmub",
+        "displayName": "ArokMub",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F769192900072046602%2Fc461c372d0e911ae15b236164c7c14ab.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 39,
+        "discordId": "775484547806527491",
+        "username": "whuanjg",
+        "displayName": "whuan",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F775484547806527491%2F559a5b656b9202af98e1e7e0ae9b0f10.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 43,
+        "discordId": "835203900763668501",
+        "username": "kalmeunity",
+        "displayName": "KALMEUNITY",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F835203900763668501%2Fa9d50050096115a4de772844d14396e7.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 44,
+        "discordId": "837205972387627048",
+        "username": "classic7045",
+        "displayName": "biig_classic",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F837205972387627048%2F79a0b46bd5bf42b0865f8abcedff3696.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 51,
+        "discordId": "877585910223470633",
+        "username": "slook0",
+        "displayName": "KK",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F877585910223470633%2F5c822374e10c32dc91c47e35f0ff1018.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 53,
+        "discordId": "883762495637041152",
+        "username": "joh3729",
+        "displayName": "joh",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F883762495637041152%2Favatars%2Fc06342ae91f8ea73cd19695d96b1c662.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 55,
+        "discordId": "886220928655187990",
+        "username": "ivanplayer_26",
+        "displayName": "ivanplayer26",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F886220928655187990%2F3f60ce02fc57a3cc5bc8ee9d4497debd.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 56,
+        "discordId": "889088865741185084",
+        "username": "saintex1",
+        "displayName": "SaintEx✞",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F889088865741185084%2F5ee1691ddb76558b8f877bc231e68208.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 57,
+        "discordId": "889905604565532762",
+        "username": "thanquang_",
+        "displayName": "Cao Thần Quang",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F889905604565532762%2F107ec9ea96543f5b49795f0c2cf25e62.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 63,
+        "discordId": "896028359727931462",
+        "username": "vidangnhat",
+        "displayName": "vidang",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F896028359727931462%2Fd6ee36734f8ff4b26db306ebac64de3c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 65,
+        "discordId": "897438248580821012",
+        "username": "investsecrety",
+        "displayName": "INVESTOR",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F897438248580821012%2Ff2385b217aaf446c38db11813ab4357c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 66,
+        "discordId": "905070757606989824",
+        "username": "vinh92220",
+        "displayName": "Vương Quang Vinh",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F905070757606989824%2Fdb9583273ea11ba80f4066f2e399af80.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 69,
+        "discordId": "909838028946690099",
+        "username": "pugovka_mari",
+        "displayName": "Pugovka_Mari_Van",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F909838028946690099%2Fac72eb176fa988210701d71b74bc1c1c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 70,
+        "discordId": "915201869142429706",
+        "username": "yes2511",
+        "displayName": "yes2511",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F915201869142429706%2Fca65fc7fc9ea2ccb3d0419675600fc1d.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 75,
+        "discordId": "932955105710440468",
+        "username": "aleeyasyen",
+        "displayName": "Babysyen Sayang",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F932955105710440468%2Favatars%2Fa_b2aa243590ff3ee8b5c243f0696804e1.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 76,
+        "discordId": "937701600179413022",
+        "username": "officerpayne07",
+        "displayName": "OfficerPayne",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F937701600179413022%2F60d8ace55618f2466cbe4077bf1f8808.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 77,
+        "discordId": "939011327689621546",
+        "username": "m1sterkrabss",
+        "displayName": "Eugene Krabs",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F939011327689621546%2Ff130583bd105638708ce50a40f149ec3.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 81,
+        "discordId": "951657967546151022",
+        "username": "puttichai_crypto",
+        "displayName": "Puttichai Anastasia",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F951657967546151022%2F1bbd10e5088a21f06442d8f429fc2cfc.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 85,
+        "discordId": "955591506964676688",
+        "username": "bigmeech2905",
+        "displayName": "Big Meech",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F955591506964676688%2F310c7bea13fe6d427785457dee751057.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 87,
+        "discordId": "959948706562592768",
+        "username": "emeli_mag",
+        "displayName": "Emeli_mag",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F959948706562592768%2F6929ab6e03822ef714dd0134baa0f2c1.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 89,
+        "discordId": "970805903664226325",
+        "username": "herrybrown09",
+        "displayName": "Browny 🧸",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F970805903664226325%2Fe03c68fc775649afcdcfd0aeffbb1f36.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 92,
+        "discordId": "984964206740774963",
+        "username": "aylos_",
+        "displayName": "Aylos",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F984964206740774963%2F3b8cad9a2d399e1a814f665cbf6ca811.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 97,
+        "discordId": "1021085321489825913",
+        "username": "omexii.",
+        "displayName": "omexii",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1021085321489825913%2Fc03c5205559731759c354fe8f9401bcc.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 103,
+        "discordId": "1071154031659077734",
+        "username": "bas_baster",
+        "displayName": "Baster",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1071154031659077734%2F8700fbd611af5055c8325dc2fcd31fcf.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 113,
+        "discordId": "1137790107169075280",
+        "username": "0xarees",
+        "displayName": "Ares",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1137790107169075280%2F42c38a5590d142e7a763c54c6362edf1.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 120,
+        "discordId": "1197585790931304579",
+        "username": "lucky77_god",
+        "displayName": "Lucky77",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1197585790931304579%2F5c732d6975f6f8f3a8de8632d9a2191a.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 121,
+        "discordId": "1200068540024229962",
+        "username": "qaziharis1",
+        "displayName": "Qazi Haris",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1200068540024229962%2F84ca3cbd6553dbcfd4e7dda7237f7e59.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 122,
+        "discordId": "1200464545244790835",
+        "username": "snooowflake.",
+        "displayName": "FLAKKYYYY",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1200464545244790835%2F836fda7f188a1a307c6cd575d2ec5a3d.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 124,
+        "discordId": "1202221935711227986",
+        "username": "nika06551",
+        "displayName": "Nika",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1202221935711227986%2F6c6a5670222b69e757309b448ea32e35.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 130,
+        "discordId": "1215978559659708462",
+        "username": "sabi_boy11",
+        "displayName": "Prodigal SabiBoy",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1215978559659708462%2Faa7c2fd2bbc1a7fe6b32a4074d0f3991.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 140,
+        "discordId": "1248703429124034650",
+        "username": "oxdubest",
+        "displayName": "DUBEST",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1248703429124034650%2Fb7feed5e250bca148243f167c1cfbfa0.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 141,
+        "discordId": "1251228084670300161",
+        "username": "dream07a",
+        "displayName": "Dream 💭",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1251228084670300161%2F67a51bac54409aca5b9756312d46d718.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 142,
+        "discordId": "1253628994486800517",
+        "username": "fffin",
+        "displayName": "FFINN",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1253628994486800517%2F7e8518f63ace37e40105ad32f931d7c6.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 150,
+        "discordId": "1291786136242491444",
+        "username": "elliei43134",
+        "displayName": "Nana",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1291786136242491444%2F5b5e3ebdd5b0232d2100f3e3509df608.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 155,
+        "discordId": "1314716771693105234",
+        "username": "killian_117",
+        "displayName": "Kazekage IGARA",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1314716771693105234%2F5bf0c1f2af10736ceb03a4a0c34a71c0.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 156,
+        "discordId": "1320864294400819262",
+        "username": "ch4laa",
+        "displayName": "chala cilung",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1320864294400819262%2F870204de07a497db2470956e66b54b87.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 158,
+        "discordId": "1327596841746960388",
+        "username": "flylucifer666",
+        "displayName": "Flylucifer",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1327596841746960388%2F46bc668421a7c7909a7b0ecf30aa51c9.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 165,
+        "discordId": "1377934034084302931",
+        "username": "crypticream_73120",
+        "displayName": "Cryptic Ream",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1377934034084302931%2F708307865b52ffae055153cc239c6cf4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 166,
+        "discordId": "1380516191679811596",
+        "username": "0xkreko",
+        "displayName": "𝕂𝕣𝕖𝕜𝕠XBT",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1380516191679811596%2Favatars%2F77c3341d2898510f2d30498a7e196567.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 168,
+        "discordId": "1404155460919103531",
+        "username": "iamayushpareek",
+        "displayName": "Ayush",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1404155460919103531%2F723e6a5a8157b6023345900bcbe87f53.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 171,
+        "discordId": "1430463201925005422",
+        "username": "sera_nie204",
+        "displayName": "Cutie Sera",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1430463201925005422%2Fa3c44ec517c224651de44769b2bc3f7c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 180,
+        "discordId": "802845819900264458",
+        "username": "temnik_84",
+        "displayName": "Temnik-cook",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F802845819900264458%2F3e6a1ea27a50e602f95df4ff0f030047.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 181,
+        "discordId": "1239368655196782684",
+        "username": "marshalahushein",
+        "displayName": "Shen",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1239368655196782684%2Favatars%2Faf9e2b8a8146d46e139d2e49663c7257.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 194,
+        "discordId": "611352996277911552",
+        "username": "candy_xx44",
+        "displayName": "CANDY",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F611352996277911552%2F505d162f2e6e925631855efd8014448a.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 198,
+        "discordId": "1140236780344442971",
+        "username": "spencer009061_",
+        "displayName": "Spencer",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1140236780344442971%2Fb828235b864ac79947e2722f4664b653.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 199,
+        "discordId": "1304150576212349083",
+        "username": "tamara901",
+        "displayName": "Tamara901",
+        "role": "RITTY",
+        "rarity": "EPIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1304150576212349083%2Fcbfbf80331604d00e361adaf2979e3ef.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "bitty",
+          "toRole": "ritty",
+          "at": 1780272000000
+        }
+      }
+    ],
+    "LEGENDARY": [
+      {
+        "id": 1,
+        "discordId": "392321900577161219",
+        "username": "decka_tan",
+        "displayName": "Decka Chan (❖,❖)",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F392321900577161219%2Favatars%2F6dd99eba30b85b9e0683deeeab440497.png%3Fsize%3D128",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1781280001596
+        }
+      },
+      {
+        "id": 18,
+        "discordId": "574875922164088852",
+        "username": "damggu",
+        "displayName": "Damggu",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F574875922164088852%2Favatars%2Fb86815ae7196d834e04b1f3822f6ce4f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 33,
+        "discordId": "742370610583175282",
+        "username": "kikiundo",
+        "displayName": "키키운도",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F742370610583175282%2Favatars%2Febf106379eb6f619b50805059fb6dced.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 42,
+        "discordId": "827558086444843048",
+        "username": "vivaan2018",
+        "displayName": "Believe",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F827558086444843048%2F78205bd309e8bd1bedca0de7128f6d35.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 50,
+        "discordId": "873442739881115658",
+        "username": "dappy0070",
+        "displayName": "dappy",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F873442739881115658%2Favatars%2Fe7f82315b1ecb08ea5869ca600c6f89a.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 54,
+        "discordId": "885170588518326312",
+        "username": "rebirth90",
+        "displayName": "Rebirth",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F885170588518326312%2F699c3790cfb7ec16d1ec541bf689ce90.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 59,
+        "discordId": "891719384123441192",
+        "username": "thangchelsea0636",
+        "displayName": "Cutie Enzo",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F891719384123441192%2Fd853c14177701603618b6452366cd648.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 64,
+        "discordId": "896451419350134824",
+        "username": "jinee.super",
+        "displayName": "jinee 지니",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F896451419350134824%2Favatars%2F262ece58c84bbb0ad9dc5259715dd2fd.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 67,
+        "discordId": "906225436013527040",
+        "username": "tutubear",
+        "displayName": "tutubear",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F906225436013527040%2Favatars%2Fa_7bef420c2b2df97d025b3e535d6b2ce3.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 72,
+        "discordId": "923690297475612712",
+        "username": "aetherion.eth",
+        "displayName": "0xAetherion",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F923690297475612712%2F0888500ede8463136acbe5253596a63f.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 118,
+        "discordId": "1194216896074096640",
+        "username": "wo1n1",
+        "displayName": "Won",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1194216896074096640%2F0dbf784c3ce11a52a26bb68507912a50.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 143,
+        "discordId": "1256557375842943037",
+        "username": "0xtanoy",
+        "displayName": "Tanoy",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1256557375842943037%2Favatars%2F4582de44064fd91973f0049ce0e278a9.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 154,
+        "discordId": "1310605191887982614",
+        "username": "ccrriiy",
+        "displayName": "크리",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1310605191887982614%2F90d012f700d1332c6f219ee88fc1a4fd.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 157,
+        "discordId": "1322472141525880832",
+        "username": "tutufly_yy",
+        "displayName": "tutufly",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1322472141525880832%2Fa2b9a0faabaf1a83c25a492df69e5db3.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 163,
+        "discordId": "1335186346901372929",
+        "username": "0x_dezzy",
+        "displayName": "Dezzy",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1335186346901372929%2Fd915090d895cfe4c64c73dc50c722861.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 175,
+        "discordId": "522051127655530539",
+        "username": "badang",
+        "displayName": "BADANG",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F522051127655530539%2Favatars%2Fa_383e4e2b69f25522a9e46182c0844d41.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 176,
+        "discordId": "311545772438978561",
+        "username": "rakswp",
+        "displayName": "Raka",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F311545772438978561%2F6559259dd85e77f0b66464113b91eae0.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 177,
+        "discordId": "398382848081526796",
+        "username": "shroomskull",
+        "displayName": "shroomskull",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F398382848081526796%2Favatars%2Fa_9409e202d06a6241d4d240211bde53ca.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 178,
+        "discordId": "757232685042368553",
+        "username": "kippoxbt",
+        "displayName": "Kippo.G",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F757232685042368553%2Favatars%2F8d8dd4c352701070157788a789ac04fe.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 179,
+        "discordId": "802158561248935967",
+        "username": "0xbatagor",
+        "displayName": "Batagor",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F802158561248935967%2Favatars%2Fa83d07886403e59c8aa12fa0aa4a5d8e.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 182,
+        "discordId": "912660899318353961",
+        "username": "sterjke",
+        "displayName": "STER",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F912660899318353961%2F6a6db3fdd1635ee970edf9f14cabc990.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 183,
+        "discordId": "952540155988836443",
+        "username": "bagholder5816",
+        "displayName": "BAGHOLDER",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F952540155988836443%2F9f141b552367e67a571356c6c93dc11b.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 184,
+        "discordId": "955118621800165416",
+        "username": "kitoccrypto",
+        "displayName": "Mr Lil pop",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F955118621800165416%2F04349ef49b56b77774f9cbee7093fea6.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 186,
+        "discordId": "1101776572127645819",
+        "username": "oahid9",
+        "displayName": "oahid",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1101776572127645819%2Fa_b4d8119d7f3d52cb9ec256a613674880.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 188,
+        "discordId": "1256149930880405597",
+        "username": "rohit14_6",
+        "displayName": "Rohit",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1256149930880405597%2Fe613113b257ebae1d442daf159ac6e45.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 189,
+        "discordId": "1289876060774731779",
+        "username": "damic9",
+        "displayName": "UNCLE TAX",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1289876060774731779%2F4e44e37179c6c883dcaff00de1f2b7b7.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 190,
+        "discordId": "1318122857783492652",
+        "username": "imani25",
+        "displayName": "Mad | Kej",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1318122857783492652%2F794a932f2532c7425f196748481f050e.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 191,
+        "discordId": "1320740897557577748",
+        "username": "starknight50x",
+        "displayName": "STAR KNIGHT",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1320740897557577748%2F6775bc5eebc647278dc908821fd69ba7.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 195,
+        "discordId": "839158783774032013",
+        "username": "stanelope",
+        "displayName": "stanelope",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F839158783774032013%2Favatars%2F6fcdaf2b4581dae1eb3362ab358b145d.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 196,
+        "discordId": "866598293180907531",
+        "username": "ms.jaeee",
+        "displayName": "J",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F866598293180907531%2F75889e862bef6889336fe1182a1f4713.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 197,
+        "discordId": "883494397533106197",
+        "username": "hussein77f",
+        "displayName": "H U S S E I N",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F883494397533106197%2Favatars%2Fed80fc4b76cc371e8cf6f0271c2543f1.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 200,
+        "discordId": "1321516062130442401",
+        "username": "saamzzzbro",
+        "displayName": "Saamzz",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1321516062130442401%2Ffeaca4b5809346042f72b49f67255bee.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 201,
+        "discordId": "1368177740263587890",
+        "username": "softieeexx",
+        "displayName": "Softie",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1368177740263587890%2F284eca06da62d031d5bf8e239f1c1ca6.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 202,
+        "discordId": "845096320266928189",
+        "username": "marvtech",
+        "displayName": "Marvelcrypt",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F845096320266928189%2F7aa337d4af71690311899185a2e6df5e.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 203,
+        "discordId": "910542223114919976",
+        "username": "willox3227",
+        "displayName": "willox",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F910542223114919976%2F51c8191614655b21f1b01deca7bfe97c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 204,
+        "discordId": "1333528542842978326",
+        "username": ".choco_vdg",
+        "displayName": "C𝐇🅾Ｃ🅞",
+        "role": "RITUALIST",
+        "rarity": "LEGENDARY",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1333528542842978326%2F994c8ad7a94929c366ebf05cf7442692.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "ritty",
+          "toRole": "Ritualist",
+          "at": 1780272000000
+        }
+      }
+    ],
+    "MYTHIC": [
+      {
+        "id": 185,
+        "discordId": "971544973935779960",
+        "username": "hanriiver",
+        "displayName": ";",
+        "role": "RADIANT RITUALIST",
+        "rarity": "MYTHIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F971544973935779960%2Fbaa8187f57979991d38812e415d41191.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "Ritualist",
+          "toRole": "Radiant Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 187,
+        "discordId": "1217491576012406835",
+        "username": "marcellus00393",
+        "displayName": "MARCELLUS",
+        "role": "RADIANT RITUALIST",
+        "rarity": "MYTHIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Favatars%2F1217491576012406835%2F760a6408b6097db26632c9a258fb61c4.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "Ritualist",
+          "toRole": "Radiant Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 192,
+        "discordId": "1294426205193371680",
+        "username": "kash_060",
+        "displayName": "kash",
+        "role": "RADIANT RITUALIST",
+        "rarity": "MYTHIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1294426205193371680%2Favatars%2F970f42a852bc64b72954157c51e41447.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "Ritualist",
+          "toRole": "Radiant Ritualist",
+          "at": 1780272000000
+        }
+      },
+      {
+        "id": 193,
+        "discordId": "1192333998245023784",
+        "username": "hinata_naruto",
+        "displayName": "hinata",
+        "role": "RADIANT RITUALIST",
+        "rarity": "MYTHIC",
+        "avatarUrl": "/api/proxy-avatar?url=https%3A%2F%2Fcdn.discordapp.com%2Fguilds%2F1210468736205852672%2Fusers%2F1192333998245023784%2Favatars%2F059dae0bc28d908da4fae4c2fc3c7d3c.png%3Fsize%3D256",
+        "source": {
+          "fromRole": "Ritualist",
+          "toRole": "Radiant Ritualist",
+          "at": 1780272000000
+        }
+      }
+    ],
+    "GENESIS": [],
+    "UNKNOWN": []
+  }
+}
