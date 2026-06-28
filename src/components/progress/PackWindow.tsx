@@ -214,11 +214,7 @@ function APGate({
     );
   }
   if (apBalance < cost) {
-    return (
-      <div className="bevel-in-thin bg-[#1f1305] p-2 font-mono text-[10px] text-[#E0C15A]">
-        Need {cost} AP to open {packLabel}. Train cards to earn more.
-      </div>
-    );
+    return null;
   }
   return null;
 }
@@ -541,7 +537,7 @@ export function PackWindow({
       
       {(showInitiateGate || showRitualGate) && apReady && (
         <div className="bevel-in-thin bg-[#080808] p-2 font-mono text-[10px] text-iceaccent/60">
-          Each pack costs {initiateCost} AP · Opening takes 2 wallet prompts (approval + mint).
+          Spend AP to open collection packs. Approval may be required once.
         </div>
       )}
 

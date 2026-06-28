@@ -42,7 +42,7 @@ export function ForgedCardsMarquee({
           <p className="flex items-center gap-1.5 font-display text-[11px] font-extrabold uppercase tracking-[0.22em] text-aqua">
             <Sparkles size={12} /> Top Forged Cards
           </p>
-          <p className="font-mono text-[10px] text-iceaccent/55">live on-chain identity cards · auto moving</p>
+          <p className="font-mono text-[10px] text-iceaccent/55">On-chain identity cards forged by the community</p>
         </div>
         <button type="button" onClick={onOpenGallery} className="win-btn !px-2 !py-1 text-[10px]">
           View all

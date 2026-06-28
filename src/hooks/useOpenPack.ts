@@ -155,7 +155,7 @@ export function useOpenPack(): UseOpenPackResult {
           ]);
           if (bal < cfg.apCost) {
             throw new Error(
-              `Insufficient AP: need ${formatAp(cfg.apCost)} AP, you have ${formatAp(bal)} AP. Train cards to earn more.`,
+              `Insufficient AP.`,
             );
           }
           if (allow < cfg.apCost) {
